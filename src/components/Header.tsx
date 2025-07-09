@@ -4,13 +4,11 @@ import { Menu, X, User, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,69 +45,60 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <NavigationMenu>
-              <NavigationMenuList>
-                {navItems.map((item) => (
-                  <NavigationMenuItem key={item.name}>
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                About Us
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48 bg-white">
+                {aboutDropdown.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
                     <Link
                       to={item.href}
-                      className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 cursor-pointer"
                     >
                       {item.name}
                     </Link>
-                  </NavigationMenuItem>
+                  </DropdownMenuItem>
                 ))}
-                
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                    About Us
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[200px]">
-                      {aboutDropdown.map((item) => (
-                        <NavigationMenuLink key={item.name} asChild>
-                          <Link
-                            to={item.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-green-600"
-                          >
-                            <div className="text-sm font-medium leading-none">{item.name}</div>
-                          </Link>
-                        </NavigationMenuLink>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                    Resources
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[200px]">
-                      {resourcesDropdown.map((item) => (
-                        <NavigationMenuLink key={item.name} asChild>
-                          <Link
-                            to={item.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-green-600"
-                          >
-                            <div className="text-sm font-medium leading-none">{item.name}</div>
-                          </Link>
-                        </NavigationMenuLink>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48 bg-white">
+                {resourcesDropdown.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link
+                      to={item.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 cursor-pointer"
+                    >
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-                <NavigationMenuItem>
-                  <Link
-                    to="#contact"
-                    className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <Link
+              to="#contact"
+              className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* Action Buttons */}
@@ -117,6 +106,13 @@ export const Header = () => {
             <Button variant="outline" size="sm" className="border-green-600 text-green-600 hover:bg-green-50">
               <User className="w-4 h-4 mr-2" />
               Member Login
+            </Button>
+            <Button 
+              size="sm" 
+              className="bg-green-600 hover:bg-green-700"
+              onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank")}
+            >
+              Online Portal
             </Button>
             <Button size="sm" className="bg-green-600 hover:bg-green-700">
               <Phone className="w-4 h-4 mr-2" />
@@ -192,6 +188,12 @@ export const Header = () => {
                 <Button variant="outline" className="w-full border-green-600 text-green-600 hover:bg-green-50">
                   <User className="w-4 h-4 mr-2" />
                   Member Login
+                </Button>
+                <Button 
+                  className="w-full bg-green-600 hover:bg-green-700"
+                  onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank")}
+                >
+                  Online Portal
                 </Button>
                 <Button className="w-full bg-green-600 hover:bg-green-700">
                   <Phone className="w-4 h-4 mr-2" />

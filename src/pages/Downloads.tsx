@@ -9,21 +9,31 @@ const Downloads = () => {
   const downloadCategories = [
     {
       title: "Membership Forms",
-      description: "Forms required for membership application and account opening",
+      description: "Forms required for membership application and account management",
       files: [
-        { name: "Membership Application Form", type: "PDF", size: "2.3 MB", date: "Updated Dec 2024" },
-        { name: "Account Opening Form", type: "PDF", size: "1.8 MB", date: "Updated Dec 2024" },
-        { name: "Know Your Customer (KYC) Form", type: "PDF", size: "1.2 MB", date: "Updated Nov 2024" },
+        { name: "Membership Application", type: "PDF", size: "2.3 MB", date: "Updated Dec 2024" },
+        { name: "ATM Pin Reset Form", type: "PDF", size: "1.1 MB", date: "Updated Dec 2024" },
+        { name: "Alternative Guarantee Form", type: "PDF", size: "1.5 MB", date: "Updated Dec 2024" },
+        { name: "Authority for Share Contribution", type: "PDF", size: "1.2 MB", date: "Updated Nov 2024" },
+        { name: "Cessation Form", type: "PDF", size: "1.3 MB", date: "Updated Nov 2024" },
+        { name: "Dormant Account Activation", type: "PDF", size: "1.0 MB", date: "Updated Dec 2024" },
       ]
     },
     {
       title: "Loan Applications",
-      description: "Downloadable forms for various loan products",
+      description: "Downloadable forms for various loan products and applications",
       files: [
-        { name: "Personal Loan Application", type: "PDF", size: "2.1 MB", date: "Updated Dec 2024" },
-        { name: "Vehicle Loan Application", type: "PDF", size: "2.5 MB", date: "Updated Nov 2024" },
-        { name: "Mortgage Loan Application", type: "PDF", size: "3.2 MB", date: "Updated Nov 2024" },
-        { name: "Education Loan Form", type: "PDF", size: "1.9 MB", date: "Updated Oct 2024" },
+        { name: "Employers Authority to Apply Loan", type: "PDF", size: "1.8 MB", date: "Updated Dec 2024" },
+        { name: "Group Minute Extract Form", type: "PDF", size: "1.4 MB", date: "Updated Nov 2024" },
+      ]
+    },
+    {
+      title: "Banking Forms",
+      description: "Forms for mobile banking and other banking services",
+      files: [
+        { name: "M-Banking Application Form", type: "PDF", size: "1.6 MB", date: "Updated Dec 2024" },
+        { name: "Pin Reset Form", type: "PDF", size: "1.1 MB", date: "Updated Dec 2024" },
+        { name: "TNT Insurance Form", type: "PDF", size: "2.0 MB", date: "Updated Nov 2024" },
       ]
     },
     {

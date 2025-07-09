@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 
 export const Contact = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/254700000000?text=Hello%20TNT%20SACCO,%20I%20need%20assistance", "_blank");
+    window.open("https://wa.me/254111050510?text=Hello%20TNT%20SACCO,%20I%20need%20assistance", "_blank");
   };
 
   return (
@@ -80,8 +80,8 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Phone</h4>
-                  <p className="text-gray-600">+254 700 000 000</p>
-                  <p className="text-gray-600">+254 20 1234567</p>
+                  <p className="text-gray-600">+254 111 050 510</p>
+                  <p className="text-gray-600">+254 712 585874</p>
                 </div>
               </div>
 
@@ -92,7 +92,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Email</h4>
                   <p className="text-gray-600">info@tntsacco.co.ke</p>
-                  <p className="text-gray-600">support@tntsacco.co.ke</p>
+                  <p className="text-gray-600">tntsacco@yahoo.com</p>
                 </div>
               </div>
 
@@ -102,9 +102,9 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Address</h4>
-                  <p className="text-gray-600">TNT Plaza, Kimathi Street</p>
-                  <p className="text-gray-600">P.O. Box 12345-00100</p>
-                  <p className="text-gray-600">Nairobi, Kenya</p>
+                  <p className="text-gray-600">TRANSNATIONAL TIMES DT SACCO LTD</p>
+                  <p className="text-gray-600">Teachers Plaza, Ground Floor. Kitale</p>
+                  <p className="text-gray-600">P.O. Box 2274 - 30200 Kitale</p>
                 </div>
               </div>
 
@@ -147,7 +147,7 @@ export const Contact = () => {
               <div className="text-center text-gray-500">
                 <MapPin className="w-12 h-12 mx-auto mb-2" />
                 <p>Interactive Map</p>
-                <p className="text-sm">Google Maps integration would go here</p>
+                <p className="text-sm">Teachers Plaza, Kitale</p>
               </div>
             </div>
           </div>

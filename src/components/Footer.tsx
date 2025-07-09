@@ -65,16 +65,22 @@ export const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-green-400" />
-                <span className="text-gray-300">+254 700 000 000</span>
+                <div>
+                  <div className="text-gray-300">+254 111 050 510</div>
+                  <div className="text-gray-300">+254 712 585874</div>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-green-400" />
-                <span className="text-gray-300">info@tntsacco.co.ke</span>
+                <div>
+                  <div className="text-gray-300">info@tntsacco.co.ke</div>
+                  <div className="text-gray-300">tntsacco@yahoo.com</div>
+                </div>
               </div>
               <div className="text-gray-300">
-                TNT Plaza, Kimathi Street<br />
-                P.O. Box 12345-00100<br />
-                Nairobi, Kenya
+                TRANSNATIONAL TIMES DT SACCO LTD<br />
+                Teachers Plaza, Ground Floor. Kitale<br />
+                P.O. Box 2274 - 30200 Kitale
               </div>
             </div>
           </div>
