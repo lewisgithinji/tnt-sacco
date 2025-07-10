@@ -1,5 +1,6 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import logoImage from "@/assets/tnt-sacco-logo-green.png";
 
 export const Footer = () => {
@@ -95,9 +96,9 @@ export const Footer = () => {
               © {currentYear} TNT SACCO. All rights reserved. Licensed by SASRA.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Cookie Policy</a>
+              <Link to="/privacy-policy" className="text-gray-300 hover:text-green-400 transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-gray-300 hover:text-green-400 transition-colors">Terms of Service</Link>
+              <Link to="/cookie-policy" className="text-gray-300 hover:text-green-400 transition-colors">Cookie Policy</Link>
             </div>
           </div>
         </div>
