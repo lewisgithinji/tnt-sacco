@@ -1,37 +1,124 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Home, Car, GraduationCap, Building } from "lucide-react";
+import { CheckCircle, GraduationCap, Heart, CreditCard, Car, Building, Smartphone, TrendingUp, Briefcase, DollarSign, Truck, Wheat, Milk, Shield } from "lucide-react";
 
 const LoanProducts = () => {
   const loanProducts = [
     {
-      title: "Personal Loans",
-      description: "Quick and flexible personal loans for your immediate needs",
-      features: ["Up to KES 5M", "Flexible repayment terms", "Quick approval", "Competitive rates"],
-      icon: <Building className="h-8 w-8 text-green-600" />,
+      title: "Elimu Plus Loan",
+      description: "A comprehensive facility that enables members for self-development through education advancement for themselves or their loved ones",
+      features: [
+        "Longer repayment period for flexibility",
+        "Covers education advancement costs",
+        "Supports personal and family education goals",
+        "Competitive interest rates for education"
+      ],
+      icon: <GraduationCap className="h-8 w-8 text-green-600" />,
+      rate: "From 10% p.a."
+    },
+    {
+      title: "Premium Loan",
+      description: "An emergency facility designed to address urgent financial needs such as medical expenses and funeral costs",
+      features: [
+        "Quick approval for emergency situations",
+        "Covers medical and healthcare expenses",
+        "Funeral and bereavement support",
+        "Flexible repayment terms"
+      ],
+      icon: <Heart className="h-8 w-8 text-red-600" />,
       rate: "From 12% p.a."
     },
     {
-      title: "Mortgage Loans",
-      description: "Achieve your dream of homeownership with our mortgage solutions",
-      features: ["Up to 95% financing", "Up to 25 years repayment", "Fixed or variable rates", "Construction loans available"],
-      icon: <Home className="h-8 w-8 text-blue-600" />,
-      rate: "From 14% p.a."
-    },
-    {
-      title: "Asset Finance",
-      description: "Finance your vehicle or equipment purchases",
-      features: ["New and used vehicles", "Equipment financing", "Up to 5 years repayment", "Flexible terms"],
-      icon: <Car className="h-8 w-8 text-purple-600" />,
+      title: "Emergency Express Loan",
+      description: "An instant phone advance to finance budget deficits and discreet personal needs, available for Fosa salary earners",
+      features: [
+        "Instant phone-based application",
+        "Quick budget deficit financing",
+        "Available 24/7 through mobile platform",
+        "For members earning salary through Fosa"
+      ],
+      icon: <Smartphone className="h-8 w-8 text-blue-600" />,
       rate: "From 15% p.a."
     },
     {
-      title: "Education Loans",
-      description: "Invest in your future with our education financing",
-      features: ["Local and international studies", "Flexible repayment", "Grace period available", "Parent/student loans"],
-      icon: <GraduationCap className="h-8 w-8 text-orange-600" />,
-      rate: "From 10% p.a."
+      title: "Elimu Bora Loan",
+      description: "Education financing facility for members and their dependents covering fees and costs from primary to university level",
+      features: [
+        "Covers primary, secondary, college, and university education",
+        "One-year flexible repayment period",
+        "Supports both fees and educational materials",
+        "Available for members and dependents"
+      ],
+      icon: <GraduationCap className="h-8 w-8 text-purple-600" />,
+      rate: "From 8% p.a."
+    },
+    {
+      title: "Asset Finance",
+      description: "Enables SACCO members to acquire productive assets including land, motor vehicles, motorcycles, and machinery",
+      features: [
+        "Land acquisition financing",
+        "New and used motor vehicles",
+        "Motorcycles and equipment",
+        "Productive business machinery"
+      ],
+      icon: <Car className="h-8 w-8 text-orange-600" />,
+      rate: "From 14% p.a."
+    },
+    {
+      title: "Project Finance",
+      description: "Business project financing for SACCO members with ongoing projects that need financial support based on feasibility",
+      features: [
+        "Business project development support",
+        "Feasibility-based assessment",
+        "Ability to repay evaluation",
+        "Long-term business growth support"
+      ],
+      icon: <Building className="h-8 w-8 text-teal-600" />,
+      rate: "From 16% p.a."
+    }
+  ];
+
+  const additionalLoans = [
+    {
+      title: "Jipange Loan",
+      description: "Long-term FOSA loan specifically designed for newly employed teachers before they qualify for other loan facilities",
+      icon: <Briefcase className="h-6 w-6 text-indigo-600" />
+    },
+    {
+      title: "Zidisha Loan", 
+      description: "One-year facility designed to boost your non-withdrawable deposits and enhance your savings capacity",
+      icon: <TrendingUp className="h-6 w-6 text-green-600" />
+    },
+    {
+      title: "Tech Advance",
+      description: "Financing for small technology assets including mobile phones, laptops, tablets, smart TVs, gas cookers, and solar panels",
+      icon: <Smartphone className="h-6 w-6 text-blue-600" />
+    },
+    {
+      title: "Business Booster Loan",
+      description: "Working capital facility for business people based on business turnover and cash flow analysis",
+      icon: <DollarSign className="h-6 w-6 text-purple-600" />
+    },
+    {
+      title: "Mifugo Loan",
+      description: "Specialized loan allowing dairy farmers to purchase good quality cows for increased milk production",
+      icon: <Milk className="h-6 w-6 text-orange-600" />
+    },
+    {
+      title: "Kilimo Imara Loan",
+      description: "Short-term agricultural loans designed for horticultural, poultry, and sugarcane farmers",
+      icon: <Wheat className="h-6 w-6 text-green-600" />
+    },
+    {
+      title: "Chai Loan",
+      description: "Short-term financing for tea farmers covering farm development, capital investment, and consumption needs",
+      icon: <Wheat className="h-6 w-6 text-teal-600" />
+    },
+    {
+      title: "Bima Loan",
+      description: "Credit facility to pay insurance premiums in easy installments for various insurance policies",
+      icon: <Shield className="h-6 w-6 text-red-600" />
     }
   ];
 
@@ -79,7 +166,22 @@ const LoanProducts = () => {
             ))}
           </div>
 
-          <div className="mt-16 grid md:grid-cols-2 gap-8">
+          <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Specialized Loan Products</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {additionalLoans.map((loan, index) => (
+                <div key={index} className="border-l-4 border-blue-500 pl-4 py-3 hover:bg-gray-50 transition-colors">
+                  <div className="flex items-center gap-3 mb-2">
+                    {loan.icon}
+                    <h3 className="font-semibold text-gray-900">{loan.title}</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">{loan.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-sm p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Loan Requirements</h2>
               <ul className="space-y-3 text-gray-700">
