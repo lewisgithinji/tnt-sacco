@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logoImage from "@/assets/tnt-sacco-logo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,8 +46,12 @@ export const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="bg-gradient-to-r from-green-600 to-blue-600 text-white font-bold text-2xl px-4 py-2 rounded-lg">
-              TNT SACCO
+            <Link to="/" className="flex items-center">
+              <img 
+                src={logoImage} 
+                alt="TransNational Times DT Sacco" 
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
 

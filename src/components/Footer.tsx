@@ -1,5 +1,6 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import logoImage from "@/assets/tnt-sacco-logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white font-bold text-2xl px-4 py-2 rounded-lg inline-block">
-              TNT SACCO
-            </div>
+            <img 
+              src={logoImage} 
+              alt="TransNational Times DT Sacco" 
+              className="h-12 w-auto"
+            />
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering Kenyan families and businesses with comprehensive financial services. 
               Your trusted partner in building a secure financial future.
