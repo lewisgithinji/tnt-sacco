@@ -14,7 +14,7 @@ export const Footer = () => {
             <img 
               src={logoImage} 
               alt="TransNational Times DT Sacco" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering Kenyan families and businesses with comprehensive financial services. 
