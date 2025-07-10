@@ -15,7 +15,6 @@ export const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Loans", href: "#loans" },
   ];
@@ -25,11 +24,19 @@ export const Header = () => {
     { name: "Board of Directors", href: "/board-of-directors" },
   ];
 
+  const productsDropdown = [
+    { name: "Deposit Products", href: "/deposit-products" },
+    { name: "Loan Products", href: "/loan-products" },
+  ];
+
   const resourcesDropdown = [
     { name: "Downloads", href: "/downloads" },
     { name: "FAQ", href: "/faq" },
     { name: "News", href: "/news" },
     { name: "Media Center", href: "/media-center" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-of-service" },
+    { name: "Cookie Policy", href: "/cookie-policy" },
   ];
 
   return (
@@ -62,6 +69,25 @@ export const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-48 bg-white">
                 {aboutDropdown.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link
+                      to={item.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 cursor-pointer"
+                    >
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                Products
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48 bg-white">
+                {productsDropdown.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
                     <Link
                       to={item.href}
@@ -150,6 +176,21 @@ export const Header = () => {
               <div className="px-3 py-2">
                 <div className="text-gray-900 font-medium mb-2">About Us</div>
                 {aboutDropdown.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-gray-600 hover:text-green-600 block px-3 py-1 text-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Products Section */}
+              <div className="px-3 py-2">
+                <div className="text-gray-900 font-medium mb-2">Products</div>
+                {productsDropdown.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}

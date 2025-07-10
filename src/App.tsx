@@ -12,6 +12,11 @@ import ManagementStaff from "./pages/ManagementStaff";
 import BoardOfDirectors from "./pages/BoardOfDirectors";
 import News from "./pages/News";
 import MediaCenter from "./pages/MediaCenter";
+import DepositProducts from "./pages/DepositProducts";
+import LoanProducts from "./pages/LoanProducts";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +34,11 @@ const App = () => (
           <Route path="/board-of-directors" element={<BoardOfDirectors />} />
           <Route path="/news" element={<News />} />
           <Route path="/media-center" element={<MediaCenter />} />
+          <Route path="/deposit-products" element={<DepositProducts />} />
+          <Route path="/loan-products" element={<LoanProducts />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
