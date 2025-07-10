@@ -120,7 +120,7 @@ export const Header = () => {
             </DropdownMenu>
 
             <Link
-              to="#contact"
+              to="/#contact"
               className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Contact
@@ -218,7 +218,7 @@ export const Header = () => {
               </div>
 
               <Link
-                to="#contact"
+                to="/#contact"
                 className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
