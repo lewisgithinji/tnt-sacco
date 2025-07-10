@@ -16,8 +16,6 @@ export const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "#services" },
-    { name: "Loans", href: "#loans" },
   ];
 
   const aboutDropdown = [
@@ -53,7 +51,7 @@ export const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -130,7 +128,7 @@ export const Header = () => {
           </nav>
 
           {/* Action Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
             <Button variant="outline" size="sm" className="border-green-600 text-green-600 hover:bg-green-50">
               <User className="w-4 h-4 mr-2" />
               Member Login
