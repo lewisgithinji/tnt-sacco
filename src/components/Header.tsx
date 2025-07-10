@@ -35,9 +35,6 @@ export const Header = () => {
     { name: "FAQ", href: "/faq" },
     { name: "News", href: "/news" },
     { name: "Media Center", href: "/media-center" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
-    { name: "Terms of Service", href: "/terms-of-service" },
-    { name: "Cookie Policy", href: "/cookie-policy" },
   ];
 
   return (
