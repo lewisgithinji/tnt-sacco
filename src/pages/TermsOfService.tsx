@@ -128,8 +128,12 @@ const TermsOfService = () => {
                 </p>
                 <div className="text-gray-700">
                   <p>Email: info@tntsacco.co.ke</p>
-                  <p>Phone: +254 700 000 000</p>
-                  <p>Address: TNT SACCO, P.O. Box 12345, Nairobi, Kenya</p>
+                  <p>Email: tntsacco@yahoo.com</p>
+                  <p>Phone: +254 111 050 510</p>
+                  <p>Phone: +254 712 585874</p>
+                  <p>Address: TRANSNATIONAL TIMES DT SACCO LTD<br />
+                     Teachers Plaza, Ground Floor. Kitale<br />
+                     P.O. Box 2274 - 30200 Kitale</p>
                 </div>
               </section>
             </div>
