@@ -1,27 +1,75 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Banknote, TrendingUp, Shield } from "lucide-react";
+import { CheckCircle, Users, Building2, Wallet, PiggyBank, Target, Heart } from "lucide-react";
 
 const DepositProducts = () => {
   const products = [
     {
-      title: "Savings Account",
-      description: "Flexible savings account with competitive interest rates",
-      features: ["No minimum balance", "Monthly interest payments", "Free withdrawals", "Mobile banking access"],
-      icon: <Banknote className="h-8 w-8 text-green-600" />
+      title: "Share Capital Account",
+      description: "Represents your ownership of the society in terms of shares",
+      features: [
+        "Ensures SACCO's financial stability and growth",
+        "Basis for distributing surplus in form of dividends", 
+        "Builds your ownership stake in the SACCO",
+        "Required for all SACCO members"
+      ],
+      icon: <Users className="h-8 w-8 text-green-600" />
     },
     {
-      title: "Fixed Deposit Account",
-      description: "Higher returns for fixed-term deposits",
-      features: ["Higher interest rates", "Terms from 3-24 months", "Automatic renewal option", "Certificate of deposit"],
-      icon: <TrendingUp className="h-8 w-8 text-blue-600" />
+      title: "BOSA Deposits Account", 
+      description: "A deposit account where members save and build up their non-withdrawable deposits",
+      features: [
+        "Non-withdrawable savings that build over time",
+        "Enhances your borrowing capacity",
+        "Contributes to SACCO's lending capital",
+        "Earns competitive interest rates"
+      ],
+      icon: <Building2 className="h-8 w-8 text-blue-600" />
     },
     {
-      title: "Junior Savings",
-      description: "Special savings account for children and students",
-      features: ["Lower minimum balance", "Educational materials", "Parent/guardian monitoring", "Gift incentives"],
-      icon: <Shield className="h-8 w-8 text-purple-600" />
+      title: "Payroll Account",
+      description: "A savings and salary/pension processing account for salaried/pension members",
+      features: [
+        "Convenient salary and pension processing",
+        "Allows for voluntary additional deposits",
+        "Funds are easily accessible when needed",
+        "Streamlined payroll management"
+      ],
+      icon: <Wallet className="h-8 w-8 text-purple-600" />
+    },
+    {
+      title: "Akiba Savings Account",
+      description: "A voluntary savings account for all SACCO members for personal savings outside salaries",
+      features: [
+        "Flexible savings for all member types",
+        "Personal savings separate from employment income",
+        "Competitive interest rates",
+        "Easy deposits and withdrawals"
+      ],
+      icon: <PiggyBank className="h-8 w-8 text-orange-600" />
+    },
+    {
+      title: "Lengo Savings Account", 
+      description: "An investment account designed to help you build savings to achieve your life dreams",
+      features: [
+        "Goal-oriented savings for houses, land, cars, holidays",
+        "Investment terms: 3 months, 6 months, and 12 months",
+        "Higher returns for longer investment periods",
+        "Helps turn your dreams into achievable goals"
+      ],
+      icon: <Target className="h-8 w-8 text-teal-600" />
+    },
+    {
+      title: "Junior Savings Account",
+      description: "A plan for investing in your dependents' future, operated by parent/guardian",
+      features: [
+        "Designed for minors (persons below 18 years)",
+        "Opened and operated by parent/guardian",
+        "Builds financial foundation for children",
+        "Educational savings with attractive returns"
+      ],
+      icon: <Heart className="h-8 w-8 text-pink-600" />
     }
   ];
 
