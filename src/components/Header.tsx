@@ -45,7 +45,7 @@ export const Header = () => {
               <img 
                 src={logoImage} 
                 alt="TransNational Times DT Sacco" 
-                className="h-16 w-auto filter drop-shadow-sm"
+                className="h-16 w-auto max-w-[200px] lg:max-w-[250px] filter drop-shadow-sm object-contain"
               />
             </Link>
           </div>
