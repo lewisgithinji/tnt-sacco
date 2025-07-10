@@ -8,58 +8,76 @@ import { Button } from "@/components/ui/button";
 const ManagementStaff = () => {
   const managementTeam = [
     {
-      name: "James Mwangi",
-      position: "Chief Executive Officer",
+      name: "Mr. George Malava",
+      position: "C.E.O",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
-      bio: "James brings over 15 years of experience in cooperative financial services. He holds an MBA in Finance and has been instrumental in TNT SACCO's digital transformation and growth strategy.",
-      qualifications: ["MBA Finance - University of Nairobi", "CPA (K)", "Certified Credit Professional"],
-      email: "j.mwangi@tntsacco.co.ke",
+      bio: "Mr. George Malava leads TNT SACCO with extensive experience in cooperative financial services and strategic leadership.",
+      qualifications: ["MBA Finance", "Certified Cooperative Manager", "Leadership Development"],
+      email: "g.malava@tntsacco.co.ke",
       phone: "+254 700 001 001"
     },
     {
-      name: "Mary Wanjiku",
-      position: "Chief Operating Officer",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b332c9a2?w=400",
-      bio: "Mary oversees daily operations and member services. With 12 years in cooperative management, she ensures operational excellence and member satisfaction across all our service channels.",
-      qualifications: ["Masters in Business Administration", "Certified Cooperative Manager", "Project Management Professional"],
-      email: "m.wanjiku@tntsacco.co.ke",
+      name: "Ms Helga Mmogi",
+      position: "Finance Manager",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b634?w=400",
+      bio: "Ms. Helga Mmogi oversees financial operations and ensures sound financial management practices across the organization.",
+      qualifications: ["CPA (K)", "Masters in Finance", "Financial Management Certification"],
+      email: "h.mmogi@tntsacco.co.ke",
       phone: "+254 700 001 002"
     },
     {
-      name: "David Kimani",
-      position: "Chief Financial Officer",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
-      bio: "David manages our financial operations and risk management. He is a qualified accountant with extensive experience in financial planning and regulatory compliance in the SACCO sector.",
-      qualifications: ["CPA (K)", "Masters in Finance", "Risk Management Certification"],
-      email: "d.kimani@tntsacco.co.ke",
+      name: "Ms. Everlyn Nyongesa",
+      position: "Credit Disb Manager",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+      bio: "Ms. Everlyn Nyongesa manages credit disbursement processes and ensures efficient loan processing for members.",
+      qualifications: ["Bachelor of Commerce - Finance", "Certified Credit Manager", "Loan Management Professional"],
+      email: "e.nyongesa@tntsacco.co.ke",
       phone: "+254 700 001 003"
     },
     {
-      name: "Grace Achieng",
-      position: "Head of Credit & Risk",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
-      bio: "Grace leads our credit department and risk management framework. She has 10 years of experience in credit analysis and has implemented innovative lending solutions for our members.",
-      qualifications: ["Bachelor of Commerce - Finance", "Certified Credit Manager", "Risk Assessment Professional"],
-      email: "g.achieng@tntsacco.co.ke",
+      name: "Mr Kevin Oduor",
+      position: "Marketing Manager",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+      bio: "Mr. Kevin Oduor leads marketing initiatives and member engagement strategies to grow TNT SACCO's membership base.",
+      qualifications: ["Bachelor of Marketing", "Digital Marketing Specialist", "Brand Management Professional"],
+      email: "k.oduor@tntsacco.co.ke",
       phone: "+254 700 001 004"
     },
     {
-      name: "Peter Mutua",
-      position: "Head of Information Technology",
+      name: "Mr Henry Wetosi",
+      position: "Internal Auditor",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400",
-      bio: "Peter leads our digital banking initiatives and IT infrastructure. He has spearheaded the development of our mobile banking platform and digital service delivery channels.",
-      qualifications: ["Masters in Information Technology", "Certified Information Systems Manager", "Fintech Specialist"],
-      email: "p.mutua@tntsacco.co.ke",
+      bio: "Mr. Henry Wetosi ensures compliance and internal controls through comprehensive audit processes and risk assessment.",
+      qualifications: ["CPA (K)", "Certified Internal Auditor", "Risk Management Professional"],
+      email: "h.wetosi@tntsacco.co.ke",
       phone: "+254 700 001 005"
     },
     {
-      name: "Susan Njeri",
-      position: "Head of Human Resources",
+      name: "Mrs Maureen Wasike",
+      position: "Fosa Manager",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
-      bio: "Susan manages our human capital and organizational development. She has been key in building our team culture and implementing professional development programs for our staff.",
-      qualifications: ["Masters in Human Resource Management", "Certified HR Professional", "Leadership Development Specialist"],
-      email: "s.njeri@tntsacco.co.ke",
+      bio: "Mrs. Maureen Wasike manages Front Office Service Activities (FOSA) and ensures excellent customer service delivery.",
+      qualifications: ["Bachelor of Business Administration", "Customer Service Excellence", "Banking Operations"],
+      email: "m.wasike@tntsacco.co.ke",
       phone: "+254 700 001 006"
+    },
+    {
+      name: "Mr. Douglas Mbirika",
+      position: "ICT Manager",
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400",
+      bio: "Mr. Douglas Mbirika leads ICT initiatives and digital transformation to enhance service delivery and operational efficiency.",
+      qualifications: ["Masters in Information Technology", "Certified IT Manager", "Digital Banking Specialist"],
+      email: "d.mbirika@tntsacco.co.ke",
+      phone: "+254 700 001 007"
+    },
+    {
+      name: "Ms Joyceline Azenga",
+      position: "Credit Manager Recoveries",
+      image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400",
+      bio: "Ms. Joyceline Azenga specializes in credit recovery processes and maintains healthy loan portfolios for sustainable growth.",
+      qualifications: ["Bachelor of Commerce", "Certified Debt Recovery Specialist", "Credit Risk Management"],
+      email: "j.azenga@tntsacco.co.ke",
+      phone: "+254 700 001 008"
     }
   ];
 
