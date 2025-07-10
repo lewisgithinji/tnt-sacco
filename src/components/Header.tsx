@@ -50,7 +50,7 @@ export const Header = () => {
               <img 
                 src={logoImage} 
                 alt="TransNational Times DT Sacco" 
-                className="h-16 w-auto"
+                className="h-16 w-auto bg-gray-50 p-2 rounded-lg"
               />
             </Link>
           </div>
