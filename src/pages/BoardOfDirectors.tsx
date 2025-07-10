@@ -8,67 +8,106 @@ import { Button } from "@/components/ui/button";
 const BoardOfDirectors = () => {
   const boardMembers = [
     {
-      name: "Dr. Margaret Nyambura",
-      position: "Chairperson",
+      name: "Mr Evans Sichangi",
+      position: "Chairman",
       image: "https://images.unsplash.com/photo-1559209172-f84cdacf134d?w=400",
-      experience: "15+ years in cooperative governance",
-      background: "Former CEO of a leading microfinance institution with extensive experience in financial services and cooperative development.",
-      tenure: "2019 - Present",
-      expertise: ["Strategic Planning", "Corporate Governance", "Risk Management"]
+      experience: "Extensive leadership experience",
+      background: "Experienced leader with deep understanding of cooperative governance and strategic direction.",
+      tenure: "Current",
+      expertise: ["Strategic Leadership", "Corporate Governance", "Cooperative Management"]
     },
     {
-      name: "John Kihara",
-      position: "Vice Chairperson",
+      name: "Mr Isaac Famba",
+      position: "Vice Chairman",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
-      experience: "12+ years in banking sector",
-      background: "Senior banking executive with deep knowledge in credit management and financial planning, bringing valuable industry insights to the board.",
-      tenure: "2020 - Present",
-      expertise: ["Credit Management", "Financial Planning", "Banking Operations"]
+      experience: "Senior leadership experience",
+      background: "Strategic leader with extensive experience in cooperative development and member relations.",
+      tenure: "Current",
+      expertise: ["Leadership", "Strategy", "Member Relations"]
     },
     {
-      name: "Agnes Wambui",
-      position: "Secretary",
+      name: "Mr Manoa Alichula",
+      position: "Hon Secretary",
       image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400",
-      experience: "10+ years in legal practice",
-      background: "Practicing advocate with specialization in corporate law and regulatory compliance, ensuring TNT SACCO maintains the highest legal standards.",
-      tenure: "2021 - Present",
-      expertise: ["Corporate Law", "Regulatory Compliance", "Governance"]
+      experience: "Administrative excellence",
+      background: "Dedicated professional ensuring proper governance documentation and board administration.",
+      tenure: "Current",
+      expertise: ["Administration", "Governance", "Documentation"]
     },
     {
-      name: "Paul Otieno",
+      name: "Mr Robert Omari",
       position: "Treasurer",
       image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400",
-      experience: "18+ years in finance",
-      background: "Certified Public Accountant with extensive experience in financial management and audit, overseeing TNT SACCO's financial integrity.",
-      tenure: "2018 - Present",
-      expertise: ["Financial Management", "Audit & Compliance", "Risk Assessment"]
+      experience: "Financial management expertise",
+      background: "Financial expert overseeing TNT SACCO's financial integrity and fiscal responsibility.",
+      tenure: "Current",
+      expertise: ["Financial Management", "Budget Oversight", "Fiscal Planning"]
     },
     {
-      name: "Rose Muthoni",
+      name: "Ms Leah Wafubwa",
       position: "Director",
       image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400",
-      experience: "8+ years in cooperative movement",
-      background: "Active member of the cooperative movement with strong grassroots connections and deep understanding of member needs and expectations.",
-      tenure: "2022 - Present",
-      expertise: ["Member Relations", "Community Development", "Cooperative Principles"]
+      experience: "Cooperative development",
+      background: "Experienced professional bringing valuable insights to board governance and member service.",
+      tenure: "Current",
+      expertise: ["Member Relations", "Cooperative Development", "Strategic Planning"]
     },
     {
-      name: "Samuel Kiprop",
+      name: "Mr Robert Masinde",
       position: "Director",
       image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400",
-      experience: "14+ years in IT & Innovation",
-      background: "Technology leader with expertise in digital transformation and fintech solutions, driving TNT SACCO's technological advancement.",
-      tenure: "2020 - Present",
-      expertise: ["Digital Transformation", "Fintech", "Innovation Strategy"]
+      experience: "Business development",
+      background: "Strategic thinker with expertise in business development and organizational growth.",
+      tenure: "Current",
+      expertise: ["Business Development", "Strategic Growth", "Market Analysis"]
     },
     {
-      name: "Elizabeth Kariuki",
+      name: "Mr. Abraham Kemboi",
       position: "Director",
       image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=400",
-      experience: "11+ years in business development",
-      background: "Entrepreneur and business development expert focused on SME growth and financial inclusion, championing business-friendly SACCO products.",
-      tenure: "2021 - Present",
-      expertise: ["Business Development", "SME Finance", "Market Strategy"]
+      experience: "Industry expertise",
+      background: "Professional with extensive experience in cooperative governance and member advocacy.",
+      tenure: "Current",
+      expertise: ["Governance", "Member Advocacy", "Policy Development"]
+    },
+    {
+      name: "Mr. Otwori Joshua Momanyi",
+      position: "Director",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+      experience: "Strategic leadership",
+      background: "Dedicated leader focused on cooperative excellence and member satisfaction.",
+      tenure: "Current",
+      expertise: ["Leadership", "Member Service", "Strategic Development"]
+    },
+    {
+      name: "Ms Phylis Bonareri",
+      position: "Director",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b634?w=400",
+      experience: "Professional excellence",
+      background: "Committed professional bringing diverse perspectives to board governance and decision-making.",
+      tenure: "Current",
+      expertise: ["Governance", "Strategic Planning", "Member Relations"]
+    }
+  ];
+
+  const supervisoryCommittee = [
+    {
+      name: "Mr Steady Wamela",
+      position: "Supervisory Chair",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400",
+      background: "Experienced leader overseeing the supervisory functions and ensuring compliance with cooperative regulations."
+    },
+    {
+      name: "Mr Mulongo Wanjala",
+      position: "Supervisory Secretary",
+      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400",
+      background: "Administrative professional managing supervisory committee documentation and coordination."
+    },
+    {
+      name: "Ms Margaret Muiruri",
+      position: "Supervisory Member",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+      background: "Dedicated member ensuring oversight and accountability in SACCO operations and governance."
     }
   ];
 
@@ -158,6 +197,45 @@ const BoardOfDirectors = () => {
                           </span>
                         ))}
                       </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Supervisory Committee */}
+        <section className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Supervisory Committee
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                The Supervisory Committee provides independent oversight and ensures compliance 
+                with cooperative regulations and governance standards.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {supervisoryCommittee.map((member, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardHeader className="text-center pb-4">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                    />
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <p className="text-green-600 font-medium">{member.position}</p>
+                  </CardHeader>
+                  <CardContent>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">Role</h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {member.background}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
