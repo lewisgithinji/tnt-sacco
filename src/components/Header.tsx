@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoImage from "@/assets/tnt-sacco-logo.png";
+import logoImage from "@/assets/tnt-sacco-logo-green.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ export const Header = () => {
               <img 
                 src={logoImage} 
                 alt="TransNational Times DT Sacco" 
-                className="h-16 w-auto bg-gray-50 p-2 rounded-lg"
+                className="h-16 w-auto"
               />
             </Link>
           </div>

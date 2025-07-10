@@ -1,6 +1,6 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
-import logoImage from "@/assets/tnt-sacco-logo.png";
+import logoImage from "@/assets/tnt-sacco-logo-green.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ export const Footer = () => {
             <img 
               src={logoImage} 
               alt="TransNational Times DT Sacco" 
-              className="h-16 w-auto bg-white p-2 rounded-lg"
+              className="h-16 w-auto"
             />
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering Kenyan families and businesses with comprehensive financial services. 
