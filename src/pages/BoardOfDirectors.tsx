@@ -322,7 +322,7 @@ const BoardOfDirectors = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-green-600">Governance Committee</CardTitle>
+                  <CardTitle className="text-green-600">Finance and Administration Committee</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
@@ -332,6 +332,22 @@ const BoardOfDirectors = () => {
                     <li>• Board performance review</li>
                     <li>• Policy development</li>
                     <li>• Strategic planning</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-green-600">Education Committee</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Organises member and staff education programmes.
+                  </p>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Member education and awareness</li>
+                    <li>• Staff and board training</li>
+                    <li>• Induction of new members</li>
                   </ul>
                 </CardContent>
               </Card>

@@ -115,10 +115,36 @@ export const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Financial Services
+            Our Services
           </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Salary processing</h3>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Savings accounts</h3>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Pension processing</h3>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Safe custody</h3>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Cheque processing</h3>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Money transfer</h3>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Credit facilities</h3>
+            </div>
+            <div className="text-center">
+              <h3 className="font-semibold text-gray-900">Financial literacy</h3>
+            </div>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From savings to loans, we provide a complete range of financial products 
+            From savings to credit facilities, we provide a complete range of financial products 
             designed to meet your needs at every stage of life.
           </p>
         </div>

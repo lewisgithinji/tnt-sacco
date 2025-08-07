@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section id="home" className="relative bg-gradient-to-br from-green-50 via-blue-50 to-white py-20 lg:py-32">
+    <section id="home" className="relative bg-gradient-to-br from-blue-50 via-yellow-50 to-white py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -17,9 +17,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                TNT SACCO empowers Kenyan families and businesses with affordable loans, 
-                competitive savings accounts, and comprehensive financial services. 
-                Join thousands of members building their financial future.
+                TNT SACCO is a deposit-taking entity that empowers Kenyan citizens and businesses with comprehensive financial services including affordable credit and competitive savings accounts. Join thousands of members in building your financial future.
               </p>
             </div>
 
@@ -60,7 +58,7 @@ export const Hero = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900">Secure & Licensed</h3>
-                  <p className="text-gray-600">SASRA regulated and insured by Kenya Deposit Insurance Corporation</p>
+                  <p className="text-gray-600">Registered under the Co-operative Act and licensed by SASRA and insured by Kenya Deposit Insurance Corporation</p>
                 </div>
               </div>
             </div>
@@ -72,7 +70,7 @@ export const Hero = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900">Community Focused</h3>
-                  <p className="text-gray-600">Owned and operated by our members for our members</p>
+                  <p className="text-gray-600">Owned and governed by our members for our members</p>
                 </div>
               </div>
             </div>

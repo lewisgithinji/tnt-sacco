@@ -168,9 +168,11 @@ const ManagementStaff = () => {
               Our Leadership Commitment
             </h3>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our management team is committed to maintaining the highest standards of corporate governance, 
+                Our management team is committed to maintaining the highest standards of corporate governance, 
               financial stewardship, and member service. We continuously invest in professional development 
               and innovation to ensure TNT SACCO remains at the forefront of cooperative financial services in Kenya.
+              
+              Note: Detailed CVs for all management staff will be provided shortly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-green-600 hover:bg-green-700">

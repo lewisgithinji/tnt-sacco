@@ -15,7 +15,7 @@ const Downloads = () => {
         { name: "ATM Pin Reset Form", type: "PDF", size: "1.1 MB", date: "Updated Dec 2024" },
         { name: "Alternative Guarantee Form", type: "PDF", size: "1.5 MB", date: "Updated Dec 2024" },
         { name: "Authority for Share Contribution", type: "PDF", size: "1.2 MB", date: "Updated Nov 2024" },
-        { name: "Cessation Form", type: "PDF", size: "1.3 MB", date: "Updated Nov 2024" },
+        { name: "Share Adjustment Form", type: "PDF", size: "1.3 MB", date: "Updated Nov 2024" },
         { name: "Dormant Account Activation", type: "PDF", size: "1.0 MB", date: "Updated Dec 2024" },
       ]
     },

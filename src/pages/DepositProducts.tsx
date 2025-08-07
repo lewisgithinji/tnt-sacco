@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Users, Building2, Wallet, PiggyBank, Target, Heart } from "lucide-react";
+import { CheckCircle, Users, Building2, Wallet, PiggyBank, Target, Heart, TrendingUp } from "lucide-react";
 
 const DepositProducts = () => {
   const products = [
@@ -23,7 +23,8 @@ const DepositProducts = () => {
         "Non-withdrawable savings that build over time",
         "Enhances your borrowing capacity",
         "Contributes to SACCO's lending capital",
-        "Earns competitive interest rates"
+        "Earns competitive interest rates",
+        "Refundable upon cessation or death"
       ],
       icon: <Building2 className="h-8 w-8 text-blue-600" />
     },
@@ -70,6 +71,28 @@ const DepositProducts = () => {
         "Educational savings with attractive returns"
       ],
       icon: <Heart className="h-8 w-8 text-pink-600" />
+    },
+    {
+      title: "Mstaafu Daima",
+      description: "A voluntary savings account designed for retiring members",
+      features: [
+        "Structured payout scheme",
+        "Competitive interest rates",
+        "No uplifting charges upon maturity",
+        "Access to loan facility up to 90% of investment/deposit"
+      ],
+      icon: <Users className="h-8 w-8 text-amber-600" />
+    },
+    {
+      title: "Yield Plus Account",
+      description: "A savings account for members investing lump sums",
+      features: [
+        "Investment period: 1 to 12 months",
+        "Competitive interest rates",
+        "Flexible investment periods",
+        "Higher returns for longer terms"
+      ],
+      icon: <TrendingUp className="h-8 w-8 text-emerald-600" />
     }
   ];
 
