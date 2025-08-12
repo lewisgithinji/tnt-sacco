@@ -82,7 +82,7 @@ export const Hero = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-card-foreground">Competitive Returns</h3>
-                  <p className="text-muted-foreground">Earn up to 12% annual dividend on your savings</p>
+                  <p className="text-muted-foreground">Earn attractive annual dividends on your savings.</p>
                 </div>
               </div>
             </div>
