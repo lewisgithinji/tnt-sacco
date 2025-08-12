@@ -14,7 +14,7 @@ const LoanProducts = () => {
         "Supports personal and family education goals",
         "Competitive rates for education"
       ],
-      icon: <GraduationCap className="h-8 w-8 text-green-600" />
+      icon: <GraduationCap className="h-8 w-8 text-navy" />
     },
     {
       title: "iPremium Loan",
@@ -25,7 +25,7 @@ const LoanProducts = () => {
         "Funeral and bereavement support",
         "Flexible repayment terms"
       ],
-      icon: <Heart className="h-8 w-8 text-red-600" />
+      icon: <Heart className="h-8 w-8 text-navy" />
     },
     {
       title: "Emergency Express",
@@ -36,7 +36,7 @@ const LoanProducts = () => {
         "Available 24/7 through mobile platform",
         "For members earning salary through Fosa"
       ],
-      icon: <Smartphone className="h-8 w-8 text-blue-600" />
+      icon: <Smartphone className="h-8 w-8 text-navy" />
     },
     {
       title: "Elimu Bora",
@@ -47,7 +47,7 @@ const LoanProducts = () => {
         "Supports both fees and educational materials",
         "Available for members and dependents"
       ],
-      icon: <GraduationCap className="h-8 w-8 text-purple-600" />
+      icon: <GraduationCap className="h-8 w-8 text-navy" />
     },
     {
       title: "Tuliza Loan",
@@ -58,7 +58,7 @@ const LoanProducts = () => {
         "Budget deficit financing",
         "Discreet personal needs"
       ],
-      icon: <Smartphone className="h-8 w-8 text-indigo-600" />
+      icon: <Smartphone className="h-8 w-8 text-navy" />
     },
     {
       title: "Jipange Loan",
@@ -69,7 +69,7 @@ const LoanProducts = () => {
         "Bridge to other facilities",
         "FOSA-based lending"
       ],
-      icon: <Briefcase className="h-8 w-8 text-green-600" />
+      icon: <Briefcase className="h-8 w-8 text-navy" />
     },
     {
       title: "Asset Finance",
@@ -80,7 +80,7 @@ const LoanProducts = () => {
         "Motorcycles and equipment",
         "Productive business machinery"
       ],
-      icon: <Car className="h-8 w-8 text-orange-600" />
+      icon: <Car className="h-8 w-8 text-yellow" />
     }
   ];
 
@@ -114,7 +114,7 @@ const LoanProducts = () => {
                   <ul className="space-y-2">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-navy" />
                         <span className="text-sm text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -151,14 +151,14 @@ const LoanProducts = () => {
             </div>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-navy to-blue-600 text-white rounded-lg p-8 text-center">
+          <div className="mt-12 bg-gradient-to-r from-navy to-yellow text-white rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">Ready to Apply?</h2>
             <p className="text-lg mb-6">Visit any of our branches or contact us to start your credit application today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <span className="bg-white text-navy px-6 py-3 rounded-lg font-semibold">
                 Email: loans@tntsacco.co.ke
               </span>
-              <span className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold">
+              <span className="bg-white text-navy px-6 py-3 rounded-lg font-semibold">
                 Call: +254 700 000 000 (final number will be provided later)
               </span>
             </div>

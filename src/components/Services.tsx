@@ -6,9 +6,16 @@ import {
   FileText, 
   Send, 
   CreditCard, 
-  GraduationCap 
+  GraduationCap,
+  Wallet,
+  Users,
+  Target,
+  Heart,
+  TrendingUp,
+  Smartphone,
+  Car
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export const Services = () => {
   const services = [
@@ -62,8 +69,29 @@ export const Services = () => {
     }
   ];
 
+  const savingsProducts = [
+    { title: "Share Capital Account", icon: Users },
+    { title: "BOSA Deposits Account", icon: Building2 },
+    { title: "Payroll Account", icon: Wallet },
+    { title: "Akiba Savings Account", icon: PiggyBank },
+    { title: "Lengo Savings Account", icon: Target },
+    { title: "Junior Savings Account", icon: Heart },
+    { title: "Mstaafu Daima", icon: Users },
+    { title: "Yield Plus Account", icon: TrendingUp },
+  ];
+
+  const loanProducts = [
+    { title: "Elimu Plus", icon: GraduationCap },
+    { title: "Emergency Express", icon: Smartphone },
+    { title: "iPremium Loan", icon: CreditCard },
+    { title: "Elimu Bora", icon: GraduationCap },
+    { title: "Tuliza Loan", icon: Smartphone },
+    { title: "Jipange Loan", icon: Briefcase },
+    { title: "Asset Finance", icon: Car },
+  ];
+
   return (
-    <section id="services" className="py-20 bg-muted/30">
+    <section id="services" className="py-20 bg-navy/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -87,24 +115,50 @@ export const Services = () => {
               <h3 className="text-xl font-bold text-card-foreground mb-4">{service.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
               
-              <Button 
-                size="sm" 
-                className="w-full mt-6 bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                Learn More
-              </Button>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            View All Services
-          </Button>
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-foreground mb-6">Products</h3>
+          <Tabs defaultValue="savings" className="w-full">
+            <TabsList className="bg-yellow/10">
+              <TabsTrigger value="savings">Savings Products</TabsTrigger>
+              <TabsTrigger value="loans">Loan Products</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="savings" className="mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {savingsProducts.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-card border border-border rounded-xl p-6 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1"
+                  >
+                    <div className="inline-flex p-3 rounded-xl bg-yellow/10 text-navy">
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                    <span className="font-medium text-card-foreground">{item.title}</span>
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="loans" className="mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {loanProducts.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-card border border-border rounded-xl p-6 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1"
+                  >
+                    <div className="inline-flex p-3 rounded-xl bg-navy/10 text-navy">
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                    <span className="font-medium text-card-foreground">{item.title}</span>
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </section>

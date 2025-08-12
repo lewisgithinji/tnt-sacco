@@ -14,7 +14,7 @@ const DepositProducts = () => {
         "Builds your ownership stake in the SACCO",
         "Required for all SACCO members"
       ],
-      icon: <Users className="h-8 w-8 text-green-600" />
+      icon: <Users className="h-8 w-8 text-navy" />
     },
     {
       title: "BOSA Deposits Account", 
@@ -26,7 +26,7 @@ const DepositProducts = () => {
         "Earns competitive interest rates",
         "Refundable upon cessation or death"
       ],
-      icon: <Building2 className="h-8 w-8 text-blue-600" />
+      icon: <Building2 className="h-8 w-8 text-navy" />
     },
     {
       title: "Payroll Account",
@@ -37,7 +37,7 @@ const DepositProducts = () => {
         "Funds are easily accessible when needed",
         "Streamlined payroll management"
       ],
-      icon: <Wallet className="h-8 w-8 text-purple-600" />
+      icon: <Wallet className="h-8 w-8 text-navy" />
     },
     {
       title: "Akiba Savings Account",
@@ -48,7 +48,7 @@ const DepositProducts = () => {
         "Competitive interest rates",
         "Easy deposits and withdrawals"
       ],
-      icon: <PiggyBank className="h-8 w-8 text-orange-600" />
+      icon: <PiggyBank className="h-8 w-8 text-navy" />
     },
     {
       title: "Lengo Savings Account", 
@@ -59,7 +59,7 @@ const DepositProducts = () => {
         "Higher returns for longer investment periods",
         "Helps turn your dreams into achievable goals"
       ],
-      icon: <Target className="h-8 w-8 text-teal-600" />
+      icon: <Target className="h-8 w-8 text-navy" />
     },
     {
       title: "Junior Savings Account",
@@ -70,7 +70,7 @@ const DepositProducts = () => {
         "Builds financial foundation for children",
         "Educational savings with attractive returns"
       ],
-      icon: <Heart className="h-8 w-8 text-pink-600" />
+      icon: <Heart className="h-8 w-8 text-navy" />
     },
     {
       title: "Mstaafu Daima",
@@ -81,7 +81,7 @@ const DepositProducts = () => {
         "No uplifting charges upon maturity",
         "Access to loan facility up to 90% of investment/deposit"
       ],
-      icon: <Users className="h-8 w-8 text-amber-600" />
+      icon: <Users className="h-8 w-8 text-yellow" />
     },
     {
       title: "Yield Plus Account",
@@ -92,7 +92,7 @@ const DepositProducts = () => {
         "Flexible investment periods",
         "Higher returns for longer terms"
       ],
-      icon: <TrendingUp className="h-8 w-8 text-emerald-600" />
+      icon: <TrendingUp className="h-8 w-8 text-navy" />
     }
   ];
 
@@ -125,7 +125,7 @@ const DepositProducts = () => {
                   <ul className="space-y-2">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <CheckCircle className="h-4 w-4 text-navy" />
                         <span className="text-sm text-gray-700">{feature}</span>
                       </li>
                     ))}
