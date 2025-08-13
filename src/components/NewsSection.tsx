@@ -63,7 +63,7 @@ export const NewsSection = () => {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium">
+                  <span className="bg-secondary/20 text-primary text-xs px-3 py-1 rounded-full font-medium">
                     {article.category}
                   </span>
                   <div className="flex items-center text-gray-500 text-sm">
@@ -80,7 +80,7 @@ export const NewsSection = () => {
                   {article.excerpt}
                 </p>
                 
-                <Button variant="ghost" className="text-green-600 hover:text-green-700 hover:bg-green-50 p-0">
+                <Button variant="ghost" className="text-primary hover:text-primary hover:bg-secondary/20 p-0">
                   Read More
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -90,7 +90,7 @@ export const NewsSection = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
+          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-secondary/20">
             View All News
           </Button>
         </div>

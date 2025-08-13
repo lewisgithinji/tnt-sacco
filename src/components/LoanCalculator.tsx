@@ -53,7 +53,7 @@ export const LoanCalculator = () => {
           {/* Calculator Form */}
           <div className="bg-gray-50 rounded-2xl p-8">
             <div className="flex items-center mb-8">
-              <Calculator className="w-8 h-8 text-green-600 mr-3" />
+              <Calculator className="w-8 h-8 text-primary mr-3" />
               <h3 className="text-2xl font-bold text-gray-900">Calculate Your Loan</h3>
             </div>
 
@@ -119,24 +119,24 @@ export const LoanCalculator = () => {
                 />
               </div>
 
-              <Button className="w-full h-12 bg-green-600 hover:bg-green-700 text-lg">
+              <Button className="w-full h-12 text-lg">
                 Apply for This Loan
               </Button>
             </div>
           </div>
 
           {/* Results */}
-          <div className="space-y-6">
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
-              <div className="flex items-center mb-6">
-                <TrendingUp className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Loan Summary</h3>
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <TrendingUp className="w-8 h-8 text-primary mr-3" />
+                  <h3 className="text-2xl font-bold text-gray-900">Loan Summary</h3>
               </div>
 
               <div className="space-y-6">
                 <div className="bg-white rounded-xl p-6">
                   <div className="text-sm text-gray-600 mb-1">Monthly Payment</div>
-                  <div className="text-3xl font-bold text-green-600">
+                  <div className="text-3xl font-bold text-primary">
                     KSh {monthlyPayment.toLocaleString('en-KE', { maximumFractionDigits: 0 })}
                   </div>
                 </div>
@@ -150,9 +150,9 @@ export const LoanCalculator = () => {
                   </div>
                   <div className="bg-white rounded-xl p-4">
                     <div className="text-sm text-gray-600 mb-1">Total Interest</div>
-                    <div className="text-xl font-bold text-blue-600">
-                      KSh {totalInterest.toLocaleString('en-KE', { maximumFractionDigits: 0 })}
-                    </div>
+                      <div className="text-xl font-bold text-primary">
+                        KSh {totalInterest.toLocaleString('en-KE', { maximumFractionDigits: 0 })}
+                      </div>
                   </div>
                 </div>
 

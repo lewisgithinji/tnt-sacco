@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-const logoImage = "/lovable-uploads/a0c36e3e-2e63-48bd-b3ab-8955e29478f8.png";
+import logoImage from "@/assets/tnt-sacco-logo-flat.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
