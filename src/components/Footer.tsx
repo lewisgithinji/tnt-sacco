@@ -1,7 +1,7 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoImage from "@/assets/tnt-sacco-logo-new.png";
+const logoImage = "/lovable-uploads/0e936568-22b8-465f-be96-3e5c1f79e98e.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();

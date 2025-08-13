@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoImage from "@/assets/tnt-sacco-logo-new.png";
+const logoImage = "/lovable-uploads/0e936568-22b8-465f-be96-3e5c1f79e98e.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -129,11 +129,16 @@ export const Header = () => {
               <User className="w-4 h-4 mr-2" />
              Members Portal
             </Button>
-            <Button size="sm" variant="secondary" asChild>
-              <Link to="/#contact">
-                <Phone className="w-4 h-4 mr-2" />
-                Contact Us
-              </Link>
+            <Button 
+              size="sm" 
+              variant="secondary" 
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                contactSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Contact Us
             </Button>
           </div>
 
@@ -216,11 +221,17 @@ export const Header = () => {
                   <User className="w-4 h-4 mr-2" />
                   Members Portal
                 </Button>
-                <Button className="w-full" variant="secondary" asChild>
-                  <Link to="/#contact">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Contact Us
-                  </Link>
+                <Button 
+                  className="w-full" 
+                  variant="secondary" 
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    contactSection?.scrollIntoView({ behavior: 'smooth' });
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Contact Us
                 </Button>
               </div>
             </div>
