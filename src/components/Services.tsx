@@ -91,7 +91,7 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-navy/5">
+    <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -119,47 +119,6 @@ export const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-foreground mb-6">Products</h3>
-          <Tabs defaultValue="savings" className="w-full">
-            <TabsList className="bg-yellow/10">
-              <TabsTrigger value="savings">Savings Products</TabsTrigger>
-              <TabsTrigger value="loans">Loan Products</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="savings" className="mt-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {savingsProducts.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-card border border-border rounded-xl p-6 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1"
-                  >
-                    <div className="inline-flex p-3 rounded-xl bg-yellow/10 text-navy">
-                      <item.icon className="w-6 h-6" />
-                    </div>
-                    <span className="font-medium text-card-foreground">{item.title}</span>
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="loans" className="mt-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {loanProducts.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-card border border-border rounded-xl p-6 flex items-center gap-4 hover:shadow-lg transition-all hover:-translate-y-1"
-                  >
-                    <div className="inline-flex p-3 rounded-xl bg-navy/10 text-navy">
-                      <item.icon className="w-6 h-6" />
-                    </div>
-                    <span className="font-medium text-card-foreground">{item.title}</span>
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
       </div>
     </section>
   );
