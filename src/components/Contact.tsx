@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 
 export const Contact = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/254111050510?text=Hello%20TNT%20SACCO,%20I%20need%20assistance", "_blank");
+    window.open("https://wa.me/254111050510?text=Hello%20TNT%20SACCO,%20I%20need%20assistance", "_blank", "noopener,noreferrer");
   };
 
   return (
