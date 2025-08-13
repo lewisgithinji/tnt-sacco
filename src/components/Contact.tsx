@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import Map from "./Map";
-
 export const Contact = () => {
   const handleWhatsApp = () => {
     window.open("https://wa.me/254111050510?text=Hello%20TNT%20SACCO,%20I%20need%20assistance", "_blank", "noopener,noreferrer");
@@ -142,9 +140,6 @@ export const Contact = () => {
                 </div>
               </div>
             </div>
-
-            {/* Map */}
-            <Map />
           </div>
         </div>
       </div>
