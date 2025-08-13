@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+
 export const Contact = () => {
   const handleWhatsApp = () => {
     window.open("https://wa.me/254111050510?text=Hello%20TNT%20SACCO,%20I%20need%20assistance", "_blank", "noopener,noreferrer");
@@ -138,6 +139,27 @@ export const Contact = () => {
                     Chat on WhatsApp
                   </Button>
                 </div>
+              </div>
+            </div>
+            {/* Map */}
+<div className="bg-gray-100 rounded-2xl h-64 overflow-hidden">
+  <iframe
+    title="Transnational Times DT Sacco Head Office Map"
+    width="100%"
+    height="100%"
+    frameBorder="0"
+    scrolling="no"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=34.99339886613383%2C1.0084422964522352%2C35.00339886613383%2C1.0184422964522352&layer=mapnik&marker=1.0134422964522352%2C34.99839886613383"
+  ></iframe>
+</div>
+
+
+            {/* Map */}
+            <div className="bg-gray-100 rounded-2xl h-64 flex items-center justify-center">
+              <div className="text-center text-gray-500">
+                <MapPin className="w-12 h-12 mx-auto mb-2" />
+                <p>Interactive Map</p>
+                <p className="text-sm">Teachers Plaza, Kitale</p>
               </div>
             </div>
           </div>
