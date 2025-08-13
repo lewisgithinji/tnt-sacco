@@ -127,7 +127,7 @@ export const Header = () => {
               onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank", "noopener,noreferrer")}
             >
               <User className="w-4 h-4 mr-2" />
-              Loans Application
+             Members Portal
             </Button>
             <Button size="sm" variant="secondary" asChild>
               <Link to="/#contact">
@@ -214,7 +214,7 @@ export const Header = () => {
                   onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank", "noopener,noreferrer")}
                 >
                   <User className="w-4 h-4 mr-2" />
-                  Loans Application
+                  Members Portal
                 </Button>
                 <Button className="w-full" variant="secondary" asChild>
                   <Link to="/#contact">
