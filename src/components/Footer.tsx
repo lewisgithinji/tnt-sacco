@@ -1,7 +1,7 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-const logoImage = "/lovable-uploads/0e936568-22b8-465f-be96-3e5c1f79e98e.png";
+import logoImage from "@/assets/tnt-sacco-logo-flat.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -54,14 +54,12 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Salary Processing</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Savings Accounts</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Pension Processing</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Safe Custody</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Cheque Processing</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Money Transfer</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Credit Facilities</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Financial Literacy</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Savings Accounts</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Personal Loans</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Mortgage Loans</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Vehicle Financing</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Education Loans</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Insurance Services</a></li>
             </ul>
           </div>
 
@@ -95,7 +93,8 @@ export const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-300">
-              © {currentYear} TNT SACCO. All rights reserved. Licensed by SASRA.
+              © {currentYear} TNT SACCO. All rights reserved. Designed by <a href="https://datacare.co.ke" target="_blank" rel="noopener noreferrer">Datacare</a>.
+
             </div>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy-policy" className="text-gray-300 hover:text-secondary transition-colors">Privacy Policy</Link>
