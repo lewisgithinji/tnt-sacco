@@ -1,7 +1,7 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoImage from "@/assets/tnt-sacco-logo-green.png";
+const logoImage = "/lovable-uploads/a0c36e3e-2e63-48bd-b3ab-8955e29478f8.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,7 @@ export const Footer = () => {
               Your trusted partner in building a secure financial future.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-green-600 transition-colors">
+              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors">
@@ -41,12 +41,12 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="text-gray-300 hover:text-green-400 transition-colors">About Us</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-green-400 transition-colors">Our Services</a></li>
-              <li><a href="#loans" className="text-gray-300 hover:text-green-400 transition-colors">Loan Calculator</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Member Portal</a></li>
-              <li><a href="#news" className="text-gray-300 hover:text-green-400 transition-colors">News & Updates</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-green-400 transition-colors">Contact Us</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-secondary transition-colors">About Us</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Our Services</a></li>
+              <li><a href="#loans" className="text-gray-300 hover:text-secondary transition-colors">Loan Calculator</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Member Portal</a></li>
+              <li><a href="#news" className="text-gray-300 hover:text-secondary transition-colors">News & Updates</a></li>
+              <li><a href="#contact" className="text-gray-300 hover:text-secondary transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
@@ -54,12 +54,12 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Savings Accounts</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Personal Loans</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Mortgage Loans</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Vehicle Financing</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Education Loans</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-green-400 transition-colors">Insurance Services</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Savings Accounts</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Personal Loans</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Mortgage Loans</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Vehicle Financing</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Education Loans</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Insurance Services</a></li>
             </ul>
           </div>
 
@@ -68,14 +68,14 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-green-400" />
+                <Phone className="w-4 h-4 text-secondary" />
                 <div>
                   <div className="text-gray-300">+254 111 050 510</div>
                   <div className="text-gray-300">+254 712 585874</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-green-400" />
+                <Mail className="w-4 h-4 text-secondary" />
                 <div>
                   <div className="text-gray-300">info@tntsacco.co.ke</div>
                   <div className="text-gray-300">tntsacco@yahoo.com</div>
@@ -96,9 +96,9 @@ export const Footer = () => {
               © {currentYear} TNT SACCO. All rights reserved. Licensed by SASRA.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link to="/privacy-policy" className="text-gray-300 hover:text-green-400 transition-colors">Privacy Policy</Link>
-              <Link to="/terms-of-service" className="text-gray-300 hover:text-green-400 transition-colors">Terms of Service</Link>
-              <Link to="/cookie-policy" className="text-gray-300 hover:text-green-400 transition-colors">Cookie Policy</Link>
+              <Link to="/privacy-policy" className="text-gray-300 hover:text-secondary transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-gray-300 hover:text-secondary transition-colors">Terms of Service</Link>
+              <Link to="/cookie-policy" className="text-gray-300 hover:text-secondary transition-colors">Cookie Policy</Link>
             </div>
           </div>
         </div>

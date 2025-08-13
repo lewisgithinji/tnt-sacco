@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoImage from "@/assets/tnt-sacco-logo-green.png";
+const logoImage = "/lovable-uploads/a0c36e3e-2e63-48bd-b3ab-8955e29478f8.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,14 +56,14 @@ export const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 {item.name}
               </Link>
             ))}
             
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+              <DropdownMenuTrigger className="text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
                 About Us
                 <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
@@ -72,7 +72,7 @@ export const Header = () => {
                   <DropdownMenuItem key={item.name} asChild>
                     <Link
                       to={item.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 cursor-pointer"
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-secondary/20 hover:text-primary cursor-pointer"
                     >
                       {item.name}
                     </Link>
@@ -82,7 +82,7 @@ export const Header = () => {
             </DropdownMenu>
 
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+              <DropdownMenuTrigger className="text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
                 Products
                 <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
@@ -91,7 +91,7 @@ export const Header = () => {
                   <DropdownMenuItem key={item.name} asChild>
                     <Link
                       to={item.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 cursor-pointer"
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-secondary/20 hover:text-primary cursor-pointer"
                     >
                       {item.name}
                     </Link>
@@ -101,7 +101,7 @@ export const Header = () => {
             </DropdownMenu>
 
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+              <DropdownMenuTrigger className="text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
                 Resources
                 <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
@@ -110,7 +110,7 @@ export const Header = () => {
                   <DropdownMenuItem key={item.name} asChild>
                     <Link
                       to={item.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 cursor-pointer"
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-secondary/20 hover:text-primary cursor-pointer"
                     >
                       {item.name}
                     </Link>
@@ -118,31 +118,22 @@ export const Header = () => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-
-            <Link
-              to="/#contact"
-              className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-            >
-              Contact
-            </Link>
           </nav>
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
-            <Button variant="outline" size="sm" className="border-green-600 text-green-600 hover:bg-green-50">
-              <User className="w-4 h-4 mr-2" />
-              Member Login
-            </Button>
             <Button 
               size="sm" 
-              className="bg-green-600 hover:bg-green-700"
-              onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank")}
+              onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank", "noopener,noreferrer")}
             >
-              Online Portal
+              <User className="w-4 h-4 mr-2" />
+              Loans Application
             </Button>
-            <Button size="sm" className="bg-green-600 hover:bg-green-700">
-              <Phone className="w-4 h-4 mr-2" />
-              Contact Us
+            <Button size="sm" variant="secondary" asChild>
+              <Link to="/#contact">
+                <Phone className="w-4 h-4 mr-2" />
+                Contact Us
+              </Link>
             </Button>
           </div>
 
@@ -150,7 +141,7 @@ export const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-green-600 focus:outline-none"
+              className="text-gray-700 hover:text-primary focus:outline-none"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -165,7 +156,7 @@ export const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-foreground/80 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -179,7 +170,7 @@ export const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="text-gray-600 hover:text-green-600 block px-3 py-1 text-sm"
+                    className="text-gray-700 hover:text-primary block px-3 py-1 text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -194,7 +185,7 @@ export const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="text-gray-600 hover:text-green-600 block px-3 py-1 text-sm"
+                    className="text-gray-700 hover:text-primary block px-3 py-1 text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -209,7 +200,7 @@ export const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="text-gray-600 hover:text-green-600 block px-3 py-1 text-sm"
+                    className="text-gray-700 hover:text-primary block px-3 py-1 text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -217,28 +208,19 @@ export const Header = () => {
                 ))}
               </div>
 
-              <Link
-                to="/#contact"
-                className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
-
               <div className="pt-4 space-y-2">
-                <Button variant="outline" className="w-full border-green-600 text-green-600 hover:bg-green-50">
-                  <User className="w-4 h-4 mr-2" />
-                  Member Login
-                </Button>
                 <Button 
-                  className="w-full bg-green-600 hover:bg-green-700"
-                  onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank")}
+                  className="w-full"
+                  onClick={() => window.open("https://itnt.tntsacco.co.ke:55556/fxt-portal/", "_blank", "noopener,noreferrer")}
                 >
-                  Online Portal
+                  <User className="w-4 h-4 mr-2" />
+                  Loans Application
                 </Button>
-                <Button className="w-full bg-green-600 hover:bg-green-700">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Contact Us
+                <Button className="w-full" variant="secondary" asChild>
+                  <Link to="/#contact">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Contact Us
+                  </Link>
                 </Button>
               </div>
             </div>

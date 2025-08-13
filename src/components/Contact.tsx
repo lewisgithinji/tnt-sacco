@@ -64,7 +64,7 @@ export const Contact = () => {
                 />
               </div>
               
-              <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
+              <Button type="submit" className="w-full">
                 Send Message
               </Button>
             </form>
@@ -75,8 +75,8 @@ export const Contact = () => {
             {/* Contact Methods */}
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="bg-green-100 p-3 rounded-full">
-                  <Phone className="w-6 h-6 text-green-600" />
+                <div className="bg-secondary/20 p-3 rounded-full">
+                  <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Phone</h4>
@@ -86,8 +86,8 @@ export const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="bg-blue-100 p-3 rounded-full">
-                  <Mail className="w-6 h-6 text-blue-600" />
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Email</h4>
@@ -97,8 +97,8 @@ export const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="bg-purple-100 p-3 rounded-full">
-                  <MapPin className="w-6 h-6 text-purple-600" />
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Address</h4>
@@ -109,8 +109,8 @@ export const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="bg-yellow-100 p-3 rounded-full">
-                  <Clock className="w-6 h-6 text-yellow-600" />
+                <div className="bg-secondary/20 p-3 rounded-full">
+                  <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Business Hours</h4>
@@ -122,10 +122,10 @@ export const Contact = () => {
             </div>
 
             {/* WhatsApp CTA */}
-            <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+            <div className="bg-secondary/10 border border-secondary/40 rounded-2xl p-6">
               <div className="flex items-center space-x-4">
-                <div className="bg-green-100 p-3 rounded-full">
-                  <MessageSquare className="w-8 h-8 text-green-600" />
+                <div className="bg-secondary/20 p-3 rounded-full">
+                  <MessageSquare className="w-8 h-8 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">
@@ -134,7 +134,7 @@ export const Contact = () => {
                   <p className="text-gray-600 mb-4">
                     Chat with us on WhatsApp for quick assistance with your account or questions.
                   </p>
-                  <Button onClick={handleWhatsApp} className="bg-green-600 hover:bg-green-700">
+                  <Button onClick={handleWhatsApp} variant="secondary">
                     <MessageSquare className="w-4 h-4 mr-2" />
                     Chat on WhatsApp
                   </Button>
