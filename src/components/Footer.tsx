@@ -1,7 +1,7 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoImage from "@/assets/tnt-sacco-logo-flat.png";
+import logoImage from "@/assets/tnt-sacco-logo-new.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -54,12 +54,14 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Savings Accounts</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Personal Loans</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Mortgage Loans</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Vehicle Financing</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Education Loans</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Insurance Services</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Salary Processing</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Savings Accounts</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Pension Processing</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Safe Custody</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Cheque Processing</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Money Transfer</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Credit Facilities</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-secondary transition-colors">Financial Literacy</a></li>
             </ul>
           </div>
 

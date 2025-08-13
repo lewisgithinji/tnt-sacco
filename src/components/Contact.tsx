@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import Map from "./Map";
 
 export const Contact = () => {
   const handleWhatsApp = () => {
@@ -143,13 +144,7 @@ export const Contact = () => {
             </div>
 
             {/* Map */}
-            <div className="bg-gray-100 rounded-2xl h-64 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin className="w-12 h-12 mx-auto mb-2" />
-                <p>Interactive Map</p>
-                <p className="text-sm">Teachers Plaza, Kitale</p>
-              </div>
-            </div>
+            <Map />
           </div>
         </div>
       </div>
