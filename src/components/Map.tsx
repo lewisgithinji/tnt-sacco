@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Map = () => {
-  const lat = 1.0134422964522352;
-  const lng = 34.99839886613383;
+  const lat = 1.0134828658323154;
+  const lng = 34.99840230602531;
   
   // Google Maps embed URL with custom marker
   const googleMapsUrl = `https://maps.google.com/maps?q=${lat},${lng}&hl=en&z=15&output=embed`;

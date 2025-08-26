@@ -9,6 +9,7 @@ import { Contact } from "@/components/Contact";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Map from "@/components/Map";
+import { Chatbot } from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -31,6 +32,7 @@ const Index = () => {
         </div>
       </div>
       <Footer />
+      <Chatbot />
     </div>
   );
 };

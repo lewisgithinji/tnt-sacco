@@ -4,110 +4,122 @@ import { Footer } from "@/components/Footer";
 import { Users, Award, Building, Calendar } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { InteractiveTeamCard } from "@/components/InteractiveTeamCard";
+import evansImage from "@/assets/board/evans-sichangi-chairman.jpg";
+import isaacImage from "@/assets/board/isaac-famba-vice-chairman.jpg";
+import manoaImage from "@/assets/board/manoa-alichula-secretary.jpg";
+import robertOmariImage from "@/assets/board/robert-omari-treasurer.jpg";
+import robertMasindeImage from "@/assets/board/robert-masinde-director.jpg";
+import abrahamImage from "@/assets/board/abraham-kemboi-director.jpg";
+import joshuaImage from "@/assets/board/joshua-momanyi-director.jpeg";
+import phylisImage from "@/assets/board/phylis-bonareri-director.jpg";
+import steadyImage from "@/assets/board/steady-wamela-supervisory-chair.jpg";
+import mulongoImage from "@/assets/board/mulongo-wanjala-supervisory-secretary.jpg";
+import margaretImage from "@/assets/board/margaret-muiruri-supervisory-member.jpg";
 
 const BoardOfDirectors = () => {
   const boardMembers = [
     {
-      name: "Mr Evans Sichangi",
+      name: "Mr. Evans Sichangi",
       position: "Chairman",
-      image: "https://images.unsplash.com/photo-1559209172-f84cdacf134d?w=400",
-      experience: "Extensive leadership experience",
-      background: "Experienced leader with deep understanding of cooperative governance and strategic direction.",
-      tenure: "Current",
-      expertise: ["Strategic Leadership", "Corporate Governance", "Cooperative Management"]
+      image: evansImage,
+      experience: "Extensive leadership experience in cooperative governance",
+      background: "Experienced leader with deep understanding of cooperative governance and strategic direction. He provides visionary leadership and ensures the board maintains focus on member interests and organizational sustainability.",
+      tenure: "Current Term",
+      expertise: ["Strategic Leadership", "Corporate Governance", "Cooperative Management", "Policy Development"]
     },
     {
-      name: "Mr Isaac Famba",
+      name: "Mr. Isaac Famba",
       position: "Vice Chairman",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
-      experience: "Senior leadership experience",
-      background: "Strategic leader with extensive experience in cooperative development and member relations.",
-      tenure: "Current",
-      expertise: ["Leadership", "Strategy", "Member Relations"]
+      image: isaacImage,
+      experience: "Senior leadership experience in cooperative development",
+      background: "Strategic leader with extensive experience in cooperative development and member relations. He supports the chairman in steering the organization towards achieving its strategic objectives.",
+      tenure: "Current Term",
+      expertise: ["Leadership", "Strategy", "Member Relations", "Cooperative Development"]
     },
     {
-      name: "Mr Manoa Alichula",
-      position: "Hon Secretary",
-      image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400",
-      experience: "Administrative excellence",
-      background: "Dedicated professional ensuring proper governance documentation and board administration.",
-      tenure: "Current",
-      expertise: ["Administration", "Governance", "Documentation"]
+      name: "Mr. Manoa Alichula",
+      position: "Secretary",
+      image: manoaImage,
+      experience: "Administrative excellence and governance expertise",
+      background: "Dedicated professional ensuring proper governance documentation and board administration. He maintains accurate records and ensures compliance with regulatory requirements.",
+      tenure: "Current Term",
+      expertise: ["Administration", "Governance", "Documentation", "Regulatory Compliance"]
     },
     {
-      name: "Mr Robert Omari",
+      name: "Mr. Robert Omari",
       position: "Treasurer",
-      image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400",
-      experience: "Financial management expertise",
-      background: "Financial expert overseeing TNT SACCO's financial integrity and fiscal responsibility.",
-      tenure: "Current",
-      expertise: ["Financial Management", "Budget Oversight", "Fiscal Planning"]
+      image: robertOmariImage,
+      experience: "Financial management and oversight expertise",
+      background: "Financial expert overseeing TNT SACCO's financial integrity and fiscal responsibility. He ensures sound financial management and provides strategic financial guidance to the board.",
+      tenure: "Current Term",
+      expertise: ["Financial Management", "Budget Oversight", "Fiscal Planning", "Treasury Management"]
     },
     {
-      name: "Ms Leah Wafubwa",
+      name: "Ms. Leah Wafubwa",
       position: "Director",
-      image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400",
-      experience: "Cooperative development",
-      background: "Experienced professional bringing valuable insights to board governance and member service.",
-      tenure: "Current",
-      expertise: ["Member Relations", "Cooperative Development", "Strategic Planning"]
+      image: "/api/placeholder/400/400",
+      experience: "Cooperative development and member advocacy",
+      background: "Experienced professional bringing valuable insights to board governance and member service. She advocates for member interests and contributes to policy development.",
+      tenure: "Current Term",
+      expertise: ["Member Relations", "Cooperative Development", "Strategic Planning", "Advocacy"]
     },
     {
-      name: "Mr Robert Masinde",
+      name: "Mr. Robert Masinde",
       position: "Director",
-      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400",
-      experience: "Business development",
-      background: "Strategic thinker with expertise in business development and organizational growth.",
-      tenure: "Current",
-      expertise: ["Business Development", "Strategic Growth", "Market Analysis"]
+      image: robertMasindeImage,
+      experience: "Business development and strategic growth",
+      background: "Strategic thinker with expertise in business development and organizational growth. He contributes to expanding the Sacco's reach and improving service delivery.",
+      tenure: "Current Term",
+      expertise: ["Business Development", "Strategic Growth", "Market Analysis", "Innovation"]
     },
     {
       name: "Mr. Abraham Kemboi",
       position: "Director",
-      image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=400",
-      experience: "Industry expertise",
-      background: "Professional with extensive experience in cooperative governance and member advocacy.",
-      tenure: "Current",
-      expertise: ["Governance", "Member Advocacy", "Policy Development"]
+      image: abrahamImage,
+      experience: "Industry expertise and cooperative governance",
+      background: "Professional with extensive experience in cooperative governance and member advocacy. He ensures the Sacco operates in the best interests of its members.",
+      tenure: "Current Term",
+      expertise: ["Governance", "Member Advocacy", "Policy Development", "Compliance"]
     },
     {
       name: "Mr. Otwori Joshua Momanyi",
       position: "Director",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
-      experience: "Strategic leadership",
-      background: "Dedicated leader focused on cooperative excellence and member satisfaction.",
-      tenure: "Current",
-      expertise: ["Leadership", "Member Service", "Strategic Development"]
+      image: joshuaImage,
+      experience: "Strategic leadership and member service",
+      background: "Dedicated leader focused on cooperative excellence and member satisfaction. He brings fresh perspectives to board deliberations and decision-making.",
+      tenure: "Current Term",
+      expertise: ["Leadership", "Member Service", "Strategic Development", "Innovation"]
     },
     {
-      name: "Ms Phylis Bonareri",
+      name: "Ms. Phylis Bonareri",
       position: "Director",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b634?w=400",
-      experience: "Professional excellence",
-      background: "Committed professional bringing diverse perspectives to board governance and decision-making.",
-      tenure: "Current",
-      expertise: ["Governance", "Strategic Planning", "Member Relations"]
+      image: phylisImage,
+      experience: "Professional excellence and strategic planning",
+      background: "Committed professional bringing diverse perspectives to board governance and decision-making. She ensures inclusive representation and strategic thinking.",
+      tenure: "Current Term",
+      expertise: ["Governance", "Strategic Planning", "Member Relations", "Diversity"]
     }
   ];
 
   const supervisoryCommittee = [
     {
-      name: "Mr Steady Wamela",
+      name: "Mr. Steady Wamela",
       position: "Supervisory Chair",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400",
-      background: "Experienced leader overseeing the supervisory functions and ensuring compliance with cooperative regulations."
+      image: steadyImage,
+      background: "Experienced leader overseeing the supervisory functions and ensuring compliance with cooperative regulations. He provides independent oversight and maintains accountability standards."
     },
     {
-      name: "Mr Mulongo Wanjala",
+      name: "Mr. Mulongo Wanjala",
       position: "Supervisory Secretary",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400",
-      background: "Administrative professional managing supervisory committee documentation and coordination."
+      image: mulongoImage,
+      background: "Administrative professional managing supervisory committee documentation and coordination. He ensures proper record-keeping and facilitates effective committee operations."
     },
     {
-      name: "Ms Margaret Muiruri",
+      name: "Ms. Margaret Muiruri",
       position: "Supervisory Member",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
-      background: "Dedicated member ensuring oversight and accountability in SACCO operations and governance."
+      image: margaretImage,
+      background: "Dedicated member ensuring oversight and accountability in SACCO operations and governance. She brings valuable perspectives to supervisory functions."
     }
   ];
 
@@ -157,49 +169,22 @@ const BoardOfDirectors = () => {
         {/* Board Members */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Board of Directors
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Click on any board member to view their detailed background, experience, and areas of expertise.
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {boardMembers.map((member, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardHeader className="text-center pb-4">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
-                    <p className="text-green-600 font-medium">{member.position}</p>
-                    <p className="text-sm text-gray-500">{member.tenure}</p>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Background</h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {member.background}
-                      </p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Experience</h4>
-                      <p className="text-sm text-green-600 font-medium">
-                        {member.experience}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Expertise</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {member.expertise.map((skill, skillIndex) => (
-                          <span 
-                            key={skillIndex}
-                            className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <InteractiveTeamCard 
+                  key={index} 
+                  member={member} 
+                  variant="board" 
+                />
               ))}
             </div>
           </div>
@@ -220,25 +205,11 @@ const BoardOfDirectors = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {supervisoryCommittee.map((member, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardHeader className="text-center pb-4">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
-                    <p className="text-green-600 font-medium">{member.position}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Role</h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {member.background}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <InteractiveTeamCard 
+                  key={index} 
+                  member={member} 
+                  variant="board" 
+                />
               ))}
             </div>
           </div>
