@@ -1,12 +1,11 @@
 
-import { Calendar, ArrowRight, TrendingUp, DollarSign, Users, Zap, X, Clock } from "lucide-react";
+import { Calendar, ArrowRight, TrendingUp, DollarSign, Users, Zap, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const NewsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [selectedArticle, setSelectedArticle] = useState<any>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
     { id: "All", name: "All News", icon: null, color: "bg-orange-600" },
@@ -20,6 +19,7 @@ export const NewsSection = () => {
     {
       id: 1,
       title: "Kenya's Economy Maintains 4.9% Growth in Q1 2025, Driven by Financial Services Boom",
+      slug: "kenya-economy-growth-q1-2025",
       excerpt: "Kenya's economy demonstrated remarkable resilience with 4.9% GDP growth in the first quarter of 2025, matching previous year performance. The financial and insurance sector led the charge with 7.6% growth, while agriculture contributed 4.6%. This steady expansion creates favorable conditions for SACCO members seeking investment and loan opportunities.",
       date: "March 15, 2025",
       category: "Economic Outlook",
@@ -44,6 +44,7 @@ export const NewsSection = () => {
     {
       id: 2,
       title: "Digital Revolution Empowers SACCOs: Kenya's 326 Licensed Institutions Serve 6.8M Members",
+      slug: "digital-revolution-saccos-kenya",
       excerpt: "With 85.2% internet penetration and 6.8 million SACCO members nationwide, Kenya's cooperative movement is leveraging digital transformation to reach underserved communities. Over 228 regulated SACCOs now offer mobile money integration, making financial services accessible to millions previously excluded from traditional banking.",
       date: "March 10, 2025",
       category: "Economic Outlook",
@@ -68,6 +69,7 @@ export const NewsSection = () => {
     {
       id: 3,
       title: "Agricultural Sector Growth of 4.6% Opens New Investment Channels for Forward-Thinking SACCOs",
+      slug: "agricultural-investment-opportunities",
       excerpt: "Kenya's agricultural sector, contributing 33% of GDP and employing 70% of rural population, presents untapped investment opportunities. With government support through subsidized inputs and export promotion, plus technological innovations like precision farming and AgriTech startups, agriculture offers 15-20% yield increases for investors.",
       date: "March 8, 2025",
       category: "Investment Opportunities",
@@ -95,6 +97,7 @@ export const NewsSection = () => {
     {
       id: 4,
       title: "Kenya's Tech Boom Creates Investment Goldmine: From $10.57B to $14.08B in Five Years",
+      slug: "kenya-tech-boom-investment",
       excerpt: "Kenya's technology sector is projected to grow from $10.57 billion in 2024 to $14.08 billion by 2029, driven by AI, cybersecurity, and fintech innovations. With M-PESA processing two-thirds of Kenya's GDP and Kenyan startups attracting $800 million in funding, the tech sector offers exceptional investment opportunities.",
       date: "March 5, 2025",
       category: "Investment Opportunities",
@@ -122,6 +125,7 @@ export const NewsSection = () => {
     {
       id: 5,
       title: "Cooperative Relief: Government Settlement of Ksh 6.8B Debt Boosts Smallholder Farmers",
+      slug: "cooperative-relief-government-support",
       excerpt: "The government's commitment to settle Ksh 6.8 billion in verified debts owed by coffee cooperative societies provides immediate relief to hundreds of smallholder farmers. Cabinet Secretary Wycliffe Oparanya's announcement demonstrates strong government support for the cooperative movement, improving financial stability for agricultural cooperatives.",
       date: "March 3, 2025",
       category: "Member Empowerment",
@@ -149,6 +153,7 @@ export const NewsSection = () => {
     {
       id: 6,
       title: "Kenya Leads Africa: 33% SACCO Penetration Rate Drives Financial Inclusion Success Story",
+      slug: "kenya-leads-africa-sacco-penetration",
       excerpt: "Kenya achieves 33% SACCO penetration rate, ranking 11th globally and making it the only African country in the top fifteen. With 14 million cooperative members contributing 20% to national GDP, Kenya's cooperative model demonstrates how member-owned institutions can drive financial inclusion and economic empowerment.",
       date: "February 28, 2025",
       category: "Member Empowerment",
@@ -179,6 +184,7 @@ export const NewsSection = () => {
     {
       id: 7,
       title: "Digital Transformation: 228 SACCOs Now Offer Mobile Banking Through USSD Platforms",
+      slug: "digital-transformation-ussd-platforms",
       excerpt: "Mobile money integration has revolutionized SACCO operations, with 228 regulated institutions now offering USSD-based services. This digital shift enables 24/7 access to financial services, reduces transaction costs, and extends SACCO reach to remote areas. Members can now access loans, make deposits, and transfer funds using simple mobile phone commands.",
       date: "February 25, 2025",
       category: "Innovation & Technology",
@@ -209,6 +215,7 @@ export const NewsSection = () => {
     {
       id: 8,
       title: "Precision Agriculture Revolution: Technology Boosts Farm Yields While Cutting Input Costs",
+      slug: "precision-agriculture-technology-revolution",
       excerpt: "Agricultural technology is transforming Kenyan farming, with precision agriculture delivering 15-20% yield increases and 10% input cost reductions. Drone monitoring, satellite irrigation, and mobile farm management apps are becoming standard practice. For SACCO members, AgriTech investments offer both agricultural efficiency and profitable business opportunities.",
       date: "February 20, 2025",
       category: "Innovation & Technology",
@@ -238,15 +245,6 @@ export const NewsSection = () => {
     }
   ];
 
-  const openArticle = (article: any) => {
-    setSelectedArticle(article);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedArticle(null);
-  };
 
   const filteredNews = selectedCategory === "All" 
     ? news 
@@ -339,12 +337,11 @@ export const NewsSection = () => {
                 </p>
                 
                 {/* CTA Button */}
-                <button 
-                  onClick={() => openArticle(article)}
-                  className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors text-sm font-medium group-hover:shadow-md"
-                >
-                  Read Full Article
-                </button>
+                <Link to={`/news/${article.slug}`}>
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg transition-colors text-sm font-medium">
+                    Read Full Article
+                  </Button>
+                </Link>
               </div>
             </article>
           ))}
@@ -377,79 +374,6 @@ export const NewsSection = () => {
             </Button>
           </div>
         </div>
-        
-        {/* Article Modal */}
-        {isModalOpen && selectedArticle && (
-          <div 
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
-            onClick={closeModal}
-          >
-            <div 
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl transform transition-all"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Modal Header */}
-              <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-start z-10">
-                <div className="flex-1 pr-4">
-                  <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full border mb-3 ${getCategoryColor(selectedArticle.category)}`}>
-                    {selectedArticle.category}
-                  </span>
-                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-tight">
-                    {selectedArticle.title}
-                  </h1>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <Calendar className="w-4 h-4 mr-1" />
-                    <span className="mr-4">{selectedArticle.date}</span>
-                    <Clock className="w-4 h-4 mr-1" />
-                    <span>{selectedArticle.readTime}</span>
-                  </div>
-                </div>
-                <button
-                  onClick={closeModal}
-                  className="ml-4 p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
-                  aria-label="Close modal"
-                >
-                  <X className="w-6 h-6 text-gray-500" />
-                </button>
-              </div>
-
-              {/* Modal Body - Scrollable */}
-              <div className="overflow-y-auto max-h-[calc(90vh-120px)]">
-                {/* Featured Image */}
-                <div className="px-6 pt-6">
-                  <div className="aspect-video rounded-xl overflow-hidden mb-6">
-                    <img 
-                      src={selectedArticle.image} 
-                      alt={selectedArticle.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Article Content */}
-                <div className="px-6 pb-6">
-                  <div className="prose prose-lg max-w-none mb-8 text-gray-700 leading-relaxed">
-                    <div dangerouslySetInnerHTML={{ __html: selectedArticle.fullContent || selectedArticle.excerpt }} />
-                  </div>
-
-                  {/* CTA Section */}
-                  <div className="mt-8 p-6 bg-orange-50 rounded-xl border border-orange-200">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Take Action Today</h3>
-                    <p className="text-gray-600 mb-4">{selectedArticle.cta}</p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button className="bg-orange-600 hover:bg-orange-700 px-6 py-2 font-medium">
-                        Get Started
-                      </Button>
-                      <Button variant="outline" onClick={closeModal} className="px-6 py-2">
-                        Close Article
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );

@@ -18,6 +18,7 @@ import LoanProducts from "./pages/LoanProducts";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
+import ArticlePage from "./pages/ArticlePage";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/management-staff" element={<ManagementStaff />} />
           <Route path="/board-of-directors" element={<BoardOfDirectors />} />
           <Route path="/news" element={<News />} />
+          <Route path="/news/:slug" element={<ArticlePage />} />
           <Route path="/media-center" element={<MediaCenter />} />
           <Route path="/deposit-products" element={<DepositProducts />} />
           <Route path="/loan-products" element={<LoanProducts />} />
