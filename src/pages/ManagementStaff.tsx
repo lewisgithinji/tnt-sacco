@@ -73,7 +73,7 @@ const ManagementStaff = () => {
       position: "ICT Manager",
       image: douglasImage,
       bio: "Holds Master’s degree in Computer Science and B.Sc. Computer Science. Joined TNT DT Sacco Ltd in 2007. Currently serving as ICT Manager. Has an experience of 17 years in Co-operatives.",
-      qualifications: ["Masters in Information Technology", "Certified IT Manager", "Digital Banking Specialist", "Systems Administration"],
+      qualifications: ["Masters in Computer Science", "B.Sc. Computer Science", "Certified IT Manager", "Systems Administration"],
       email: "ict@tntsacco.co.ke",
       phone: "+254 700 567 890"
     },
