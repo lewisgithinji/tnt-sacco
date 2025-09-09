@@ -5,6 +5,29 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
+// Board member images
+import evansImage from '@/assets/board/evans-sichangi-chairman.jpg';
+import isaacImage from '@/assets/board/isaac-famba-vice-chairman.jpg';
+import manoaImage from '@/assets/board/manoa-alichula-secretary.jpg';
+import robertOmariImage from '@/assets/board/robert-omari-treasurer.jpg';
+import joshuaImage from '@/assets/board/joshua-momanyi-director.jpeg';
+import abrahamImage from '@/assets/board/abraham-kemboi-director.jpg';
+import phylisImage from '@/assets/board/phylis-bonareri-director.jpg';
+import robertMasindeImage from '@/assets/board/robert-masinde-director.jpg';
+import steadyImage from '@/assets/board/steady-wamela-supervisory-chair.jpg';
+import margaretImage from '@/assets/board/margaret-muiruri-supervisory-member.jpg';
+import wanjalaImage from '@/assets/board/mulongo-wanjala-supervisory-secretary.jpg';
+
+// Staff member images
+import georgeImage from '@/assets/staff/george-malava-ceo.jpeg';
+import douglasImage from '@/assets/staff/douglas-mbirika-ict.jpeg';
+import joycelineImage from '@/assets/staff/joyceline-azenga-recoveries.jpg';
+import everlyneImage from '@/assets/staff/everlyn-nyongesa-credit.jpg';
+import helgaImage from '@/assets/staff/helga-mmogi-finance.jpg';
+import maureenImage from '@/assets/staff/maureen-wasike-fosa.jpg';
+import henryImage from '@/assets/staff/henry-wetosi-auditor.jpg';
+import kevinImage from '@/assets/staff/kevin-oduor-marketing.jpg';
+
 interface StaffMember {
   id: string;
   name: string;
@@ -35,7 +58,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'evans-sichangi',
         name: 'Evans Sichangi',
         title: 'Chairman',
-        image: '/src/assets/board/evans-sichangi-chairman.jpg',
+        image: evansImage,
         qualifications: [
           'Diploma in Education',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -47,7 +70,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'isaac-famba',
         name: 'Isaac Famba',
         title: 'Vice Chairman',
-        image: '/src/assets/board/isaac-famba-vice-chairman.jpg',
+        image: isaacImage,
         qualifications: [
           'Bachelor of Science with Education',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -59,7 +82,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'manoa-alichula',
         name: 'Manoa Alichula',
         title: 'Secretary',
-        image: '/src/assets/board/manoa-alichula-secretary.jpg',
+        image: manoaImage,
         qualifications: [
           'ATS (1) Teacher',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -71,7 +94,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'robert-omari',
         name: 'Robert Omari',
         title: 'Treasurer',
-        image: '/src/assets/board/robert-omari-treasurer.jpg',
+        image: robertOmariImage,
         qualifications: [
           'Certificate level (KACE)',
           'ATS (1) Teacher',
@@ -84,7 +107,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'joshua-otwori',
         name: 'Joshua Otwori Momanyi',
         title: 'Chairman, Audit Subcommittee',
-        image: '/src/assets/board/joshua-momanyi-director.jpeg',
+        image: joshuaImage,
         qualifications: [
           'Certificate P1 Teacher',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -96,7 +119,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'abraham-kemboi',
         name: 'Abraham Kemboi',
         title: 'Credit Subcommittee Member',
-        image: '/src/assets/board/abraham-kemboi-director.jpg',
+        image: abrahamImage,
         qualifications: [
           'Certificate in PTE',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -108,7 +131,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'phylis-ogero',
         name: 'Phylis Bonareri Ogero',
         title: 'Education Subcommittee Member',
-        image: '/src/assets/board/phylis-bonareri-director.jpg',
+        image: phylisImage,
         qualifications: [
           'Degree in Education',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -120,7 +143,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'robert-masinde',
         name: 'Robert Masinde',
         title: 'Audit Subcommittee Member',
-        image: '/src/assets/board/robert-masinde-director.jpg',
+        image: robertMasindeImage,
         qualifications: [
           'Degree in Education',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -132,7 +155,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'steady-wamela',
         name: 'Steady Wamela',
         title: 'Chairman, Supervisory Committee',
-        image: '/src/assets/board/steady-wamela-supervisory-chair.jpg',
+        image: steadyImage,
         qualifications: [
           'Degree in Education',
           'Diploma in Human Resource Management',
@@ -145,7 +168,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'margaret-muiruri',
         name: 'Margaret Muiruri',
         title: 'Supervisory Committee Member',
-        image: '/src/assets/board/margaret-muiruri-supervisory-member.jpg',
+        image: margaretImage,
         qualifications: [
           'Degree in Education',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -157,7 +180,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'wanjala-mulongo',
         name: 'Wanjala Mulongo',
         title: 'Secretary, Supervisory Committee',
-        image: '/src/assets/board/mulongo-wanjala-supervisory-secretary.jpg',
+        image: wanjalaImage,
         qualifications: [
           'PTE',
           'Certified Sacco Director (Co-operative University of Kenya)'
@@ -171,7 +194,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'george-malava',
         name: 'George Malava',
         title: 'Chief Executive Officer',
-        image: '/src/assets/staff/george-malava-ceo.jpeg',
+        image: georgeImage,
         qualifications: [
           'CPA II',
           'Certified Sacco CEO (Co-operative University of Kenya)'
@@ -186,7 +209,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'douglas-mbirika',
         name: 'Douglas Mbirika',
         title: 'ICT Manager',
-        image: '/src/assets/staff/douglas-mbirika-ict.jpeg',
+        image: douglasImage,
         qualifications: [
           'Master\'s Degree in Computer Science',
           'B.Sc. Computer Science'
@@ -201,7 +224,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'joyceline-zenga',
         name: 'Joyceline Azenga',
         title: 'Credit Manager (Recovery)',
-        image: '/src/assets/staff/joyceline-azenga-recoveries.jpg',
+        image: joycelineImage,
         qualifications: [
           'Diploma in Business Management'
         ],
@@ -215,7 +238,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'everlyne-nyongesa',
         name: 'Everlyne Nyongesa',
         title: 'Credit Manager (Disbursement)',
-        image: '/src/assets/staff/everlyn-nyongesa-credit.jpg',
+        image: everlyneImage,
         qualifications: [
           'CPA(K)'
         ],
@@ -229,7 +252,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'helga-mmogi',
         name: 'Helga Mmogi',
         title: 'Finance Manager',
-        image: '/src/assets/staff/helga-mmogi-finance.jpg',
+        image: helgaImage,
         qualifications: [
           'Bachelor in Business Management (Finance Option)'
         ],
@@ -243,7 +266,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'maureen-wasike',
         name: 'Maureen Wasike',
         title: 'FOSA Manager',
-        image: '/src/assets/staff/maureen-wasike-fosa.jpg',
+        image: maureenImage,
         qualifications: [
           'Diploma in Business Management'
         ],
@@ -257,7 +280,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'henry-wetosi',
         name: 'Henry Wetosi',
         title: 'Internal Auditor',
-        image: '/src/assets/staff/henry-wetosi-auditor.jpg',
+        image: henryImage,
         qualifications: [
           'CPA(K)',
           'Bachelor Degree of Commerce (Accounting Option)'
@@ -272,7 +295,7 @@ const EnhancedStaffProfiles: React.FC = () => {
         id: 'kevin-oduor',
         name: 'Kevin Otieno Oduor',
         title: 'AG. Marketing Manager',
-        image: '/src/assets/staff/kevin-oduor-marketing.jpg',
+        image: kevinImage,
         qualifications: [
           'Bachelor of Business Information Technology'
         ],
@@ -332,15 +355,15 @@ const EnhancedStaffProfiles: React.FC = () => {
   const currentStaff = staffData[activeSection];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted">
       {/* Header Section */}
-      <div className="bg-white shadow-sm border-b">
+      <div className="bg-card shadow-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-foreground mb-4">
               {activeSection === 'management' ? 'Senior Management Team' : 'Board of Directors'}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {activeSection === 'management' 
                 ? 'Meet the experienced leadership team driving TNT SACCO\'s operational excellence and strategic vision.'
                 : 'Our Board of Directors provides strategic oversight and governance, ensuring TNT SACCO operates with integrity and transparency.'
@@ -353,7 +376,7 @@ const EnhancedStaffProfiles: React.FC = () => {
       {/* Section Toggle */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-lg p-2 shadow-lg border border-orange-200">
+          <div className="bg-card rounded-lg p-2 shadow-lg border border-border">
             <div className="flex space-x-2">
               <Button
                 variant={activeSection === 'management' ? 'default' : 'ghost'}
@@ -362,8 +385,8 @@ const EnhancedStaffProfiles: React.FC = () => {
                 className={cn(
                   "flex items-center space-x-2 px-6 py-3 rounded-md transition-all duration-300",
                   activeSection === 'management'
-                    ? 'bg-orange-600 text-white shadow-md'
-                    : 'text-gray-600 hover:text-orange-600 hover:bg-orange-50'
+                    ? 'bg-primary text-primary-foreground shadow-md'
+                    : 'text-muted-foreground hover:text-primary hover:bg-muted'
                 )}
               >
                 <Briefcase className="w-5 h-5" />
@@ -376,8 +399,8 @@ const EnhancedStaffProfiles: React.FC = () => {
                 className={cn(
                   "flex items-center space-x-2 px-6 py-3 rounded-md transition-all duration-300",
                   activeSection === 'board'
-                    ? 'bg-orange-600 text-white shadow-md'
-                    : 'text-gray-600 hover:text-orange-600 hover:bg-orange-50'
+                    ? 'bg-primary text-primary-foreground shadow-md'
+                    : 'text-muted-foreground hover:text-primary hover:bg-muted'
                 )}
               >
                 <Users className="w-5 h-5" />
@@ -395,7 +418,7 @@ const EnhancedStaffProfiles: React.FC = () => {
               className={cn(
                 "group relative overflow-hidden cursor-pointer transition-all duration-300",
                 "hover:shadow-xl hover:-translate-y-2 hover:scale-105",
-                "border border-orange-100 bg-white"
+                "border border-border bg-card"
               )}
               onClick={() => toggleExpanded(member.id)}
             >
@@ -406,8 +429,8 @@ const EnhancedStaffProfiles: React.FC = () => {
                   className={cn(
                     "text-xs font-medium",
                     activeSection === 'management' 
-                      ? 'bg-blue-100 text-blue-800' 
-                      : 'bg-orange-100 text-orange-800'
+                      ? 'bg-secondary text-secondary-foreground' 
+                      : 'bg-accent text-accent-foreground'
                   )}
                 >
                   {activeSection === 'management' ? 'Management' : 'Board'}
@@ -416,7 +439,7 @@ const EnhancedStaffProfiles: React.FC = () => {
 
               <CardContent className="p-0">
                 {/* Image Section */}
-                <div className="relative aspect-square bg-gradient-to-br from-orange-100 to-blue-100">
+                <div className="relative aspect-square bg-gradient-to-br from-muted to-accent/20">
                   <img 
                     src={member.image}
                     alt={`${member.name} - ${member.title}`}
@@ -464,13 +487,13 @@ const EnhancedStaffProfiles: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-orange-600 transition-colors">
+                      <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                         {member.name}
                       </h3>
-                      <p className="text-sm font-semibold text-orange-600 mb-2">
+                      <p className="text-sm font-semibold text-primary mb-2">
                         {member.title}
                       </p>
-                      <div className="flex items-center text-xs text-gray-500">
+                      <div className="flex items-center text-xs text-muted-foreground">
                         <Calendar className="w-3 h-3 mr-1" />
                         <span>Joined {member.joinDate}</span>
                         {member.yearsExperience && (
@@ -492,7 +515,7 @@ const EnhancedStaffProfiles: React.FC = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-muted-foreground">
                       {expandedCards.has(member.id) ? 'Click to collapse' : 'Click to view details'}
                     </div>
                   </div>
@@ -501,28 +524,28 @@ const EnhancedStaffProfiles: React.FC = () => {
                 {/* Expanded Content */}
                 {expandedCards.has(member.id) && (
                   <div className="px-6 pb-6 animate-fade-in">
-                    <div className="border-t border-gray-100 pt-6 space-y-4">
+                    <div className="border-t border-border pt-6 space-y-4">
                       {/* Experience */}
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                          <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center">
+                          <div className="w-2 h-2 bg-secondary rounded-full mr-2"></div>
                           Professional Background
                         </h4>
-                        <p className="text-sm text-gray-600 leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           {member.experience}
                         </p>
                       </div>
 
                       {/* Qualifications */}
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                          <Award className="w-4 h-4 mr-2 text-orange-500" />
+                        <h4 className="font-semibold text-foreground mb-2 flex items-center">
+                          <Award className="w-4 h-4 mr-2 text-secondary" />
                           Qualifications
                         </h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
+                        <ul className="text-sm text-muted-foreground space-y-1">
                           {member.qualifications.map((qualification, index) => (
                             <li key={index} className="flex items-start">
-                              <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
                               {qualification}
                             </li>
                           ))}
@@ -532,8 +555,8 @@ const EnhancedStaffProfiles: React.FC = () => {
                       {/* Contact Info (Management only) */}
                       {activeSection === 'management' && (member.email || member.phone) && (
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                          <h4 className="font-semibold text-foreground mb-2 flex items-center">
+                            <div className="w-2 h-2 bg-secondary rounded-full mr-2"></div>
                             Contact Information
                           </h4>
                           <div className="grid grid-cols-1 gap-2">
@@ -541,7 +564,7 @@ const EnhancedStaffProfiles: React.FC = () => {
                               <Button
                                 size="sm"
                                 variant="outline"
-                                className="justify-start text-xs h-8 border-orange-200 hover:border-orange-400 hover:bg-orange-50"
+                                className="justify-start text-xs h-8 border-border hover:border-primary hover:bg-muted"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   window.open(`mailto:${member.email}`);
@@ -555,7 +578,7 @@ const EnhancedStaffProfiles: React.FC = () => {
                               <Button
                                 size="sm"
                                 variant="outline"
-                                className="justify-start text-xs h-8 border-orange-200 hover:border-orange-400 hover:bg-orange-50"
+                                className="justify-start text-xs h-8 border-border hover:border-primary hover:bg-muted"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   window.open(`tel:${member.phone}`);
@@ -578,7 +601,7 @@ const EnhancedStaffProfiles: React.FC = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-orange-600 text-white py-16 mt-16">
+      <div className="bg-primary text-primary-foreground py-16 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold mb-4">
             {activeSection === 'management' 
@@ -593,10 +616,10 @@ const EnhancedStaffProfiles: React.FC = () => {
             }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100">
+            <Button size="lg" variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
               {activeSection === 'management' ? 'Contact Management' : 'Submit Feedback'}
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
+            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               {activeSection === 'management' ? 'View Board of Directors' : 'Contact Secretary'}
             </Button>
           </div>
