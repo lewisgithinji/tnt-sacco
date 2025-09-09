@@ -50,7 +50,16 @@ const EnhancedStaffProfiles: React.FC = () => {
   const [activeSection, setActiveSection] = useState<'board' | 'management'>('management');
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
   const [uploading, setUploading] = useState<string | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [loginCredentials, setLoginCredentials] = useState({ username: '', password: '' });
+  const [loginError, setLoginError] = useState('');
   const fileInputRefs = useRef<{ [key: string]: HTMLInputElement | null }>({});
+
+  const adminCredentials = {
+    username: 'tntadmin',
+    password: 'TNT@2025#Admin'
+  };
 
   const staffData: StaffData = {
     board: [
@@ -308,6 +317,25 @@ const EnhancedStaffProfiles: React.FC = () => {
     ]
   };
 
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (loginCredentials.username === adminCredentials.username && 
+        loginCredentials.password === adminCredentials.password) {
+      setIsAdmin(true);
+      setShowLoginModal(false);
+      setLoginCredentials({ username: '', password: '' });
+      setLoginError('');
+      alert('Admin access granted! You can now update staff photos.');
+    } else {
+      setLoginError('Invalid credentials. Please try again.');
+    }
+  };
+
+  const handleLogout = () => {
+    setIsAdmin(false);
+    alert('Logged out successfully.');
+  };
+
   const toggleExpanded = (id: string) => {
     const newExpanded = new Set(expandedCards);
     if (newExpanded.has(id)) {
@@ -319,6 +347,11 @@ const EnhancedStaffProfiles: React.FC = () => {
   };
 
   const handleImageUpload = (memberId: string, event: React.ChangeEvent<HTMLInputElement>) => {
+    if (!isAdmin) {
+      alert('Only administrators can update staff photos. Please login as admin.');
+      return;
+    }
+    
     const file = event.target.files?.[0];
     if (!file) return;
 
@@ -336,12 +369,11 @@ const EnhancedStaffProfiles: React.FC = () => {
 
     setUploading(memberId);
 
-    // Simulate upload process
+    // Simulate upload process - currently inactive
     setTimeout(() => {
-      // In a real implementation, you would upload to your server here
-      console.log(`Uploading image for ${memberId}:`, file.name);
+      console.log(`Admin uploading image for ${memberId}:`, file.name);
       setUploading(null);
-      // Show success message or update the image
+      alert('Photo upload feature is currently inactive. This will be available in a future update.');
     }, 2000);
   };
 
@@ -357,12 +389,41 @@ const EnhancedStaffProfiles: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted">
       {/* Header Section */}
-      <div className="bg-card shadow-sm border-b border-border">
+      <div className={cn(
+        "shadow-sm border-b border-border",
+        activeSection === 'management' 
+          ? "bg-gradient-to-br from-green-50 to-blue-50 py-20" 
+          : "bg-card"
+      )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-foreground mb-4">
+          <div className="flex justify-between items-center mb-4">
+            <div></div>
+            <h1 className="text-4xl font-bold text-foreground">
               {activeSection === 'management' ? 'Senior Management Team' : 'Board of Directors'}
             </h1>
+            <div className="flex items-center gap-2">
+              {isAdmin ? (
+                <Button
+                  onClick={handleLogout}
+                  variant="destructive"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
+                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                  Admin Mode - Logout
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => setShowLoginModal(true)}
+                  variant="outline"
+                  size="sm"
+                >
+                  Admin Login
+                </Button>
+              )}
+            </div>
+          </div>
+          <div className="text-center">
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {activeSection === 'management' 
                 ? 'Meet the experienced leadership team driving TNT SACCO\'s operational excellence and strategic vision.'
@@ -451,26 +512,41 @@ const EnhancedStaffProfiles: React.FC = () => {
                   />
                   
                   {/* Upload Overlay */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        triggerImageUpload(member.id);
-                      }}
-                      disabled={uploading === member.id}
-                    >
-                      {uploading === member.id ? (
-                        <Upload className="w-4 h-4 animate-spin" />
-                      ) : (
+                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                    {isAdmin ? (
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          triggerImageUpload(member.id);
+                        }}
+                        disabled={uploading === member.id}
+                      >
+                        {uploading === member.id ? (
+                          <Upload className="w-4 h-4 animate-spin" />
+                        ) : (
+                          <Camera className="w-4 h-4" />
+                        )}
+                        <span className="ml-2">
+                          {uploading === member.id ? 'Uploading...' : 'Change Photo'}
+                        </span>
+                      </Button>
+                    ) : (
+                      <Button 
+                        size="sm"
+                        variant="secondary"
+                        className="opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setShowLoginModal(true);
+                        }}
+                      >
                         <Camera className="w-4 h-4" />
-                      )}
-                      <span className="ml-2">
-                        {uploading === member.id ? 'Uploading...' : 'Change Photo'}
-                      </span>
-                    </Button>
+                        <span className="ml-2">Admin Only</span>
+                      </Button>
+                    )}
                   </div>
 
                   {/* Hidden File Input */}
@@ -625,6 +701,79 @@ const EnhancedStaffProfiles: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Admin Login Modal */}
+      {showLoginModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-card rounded-xl shadow-2xl max-w-md w-full p-6 border border-border">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-foreground mb-2">Admin Access Required</h2>
+              <p className="text-muted-foreground">Please login to update staff photos</p>
+            </div>
+            
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">Username</label>
+                <input
+                  type="text"
+                  value={loginCredentials.username}
+                  onChange={(e) => setLoginCredentials({...loginCredentials, username: e.target.value})}
+                  className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  placeholder="Enter admin username"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">Password</label>
+                <input
+                  type="password"
+                  value={loginCredentials.password}
+                  onChange={(e) => setLoginCredentials({...loginCredentials, password: e.target.value})}
+                  className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background text-foreground"
+                  placeholder="Enter admin password"
+                  required
+                />
+              </div>
+              
+              {loginError && (
+                <div className="bg-destructive/10 border border-destructive/20 text-destructive px-4 py-3 rounded-lg text-sm">
+                  {loginError}
+                </div>
+              )}
+              
+              <div className="flex gap-3">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => {
+                    setShowLoginModal(false);
+                    setLoginError('');
+                    setLoginCredentials({ username: '', password: '' });
+                  }}
+                  className="flex-1"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  className="flex-1"
+                >
+                  Login
+                </Button>
+              </div>
+            </form>
+            
+            <div className="mt-4 p-3 bg-muted rounded-lg">
+              <p className="text-xs text-muted-foreground">
+                <strong>Demo Credentials:</strong><br />
+                Username: tntadmin<br />
+                Password: TNT@2025#Admin
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
