@@ -380,15 +380,21 @@ export const NewsSection = () => {
         
         {/* Article Modal */}
         {isModalOpen && selectedArticle && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl">
+          <div 
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
+            onClick={closeModal}
+          >
+            <div 
+              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl transform transition-all"
+              onClick={(e) => e.stopPropagation()}
+            >
               {/* Modal Header */}
-              <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-start">
-                <div className="flex-1">
+              <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-start z-10">
+                <div className="flex-1 pr-4">
                   <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full border mb-3 ${getCategoryColor(selectedArticle.category)}`}>
                     {selectedArticle.category}
                   </span>
-                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-tight">
                     {selectedArticle.title}
                   </h1>
                   <div className="flex items-center text-gray-500 text-sm">
@@ -400,41 +406,44 @@ export const NewsSection = () => {
                 </div>
                 <button
                   onClick={closeModal}
-                  className="ml-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  className="ml-4 p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
+                  aria-label="Close modal"
                 >
                   <X className="w-6 h-6 text-gray-500" />
                 </button>
               </div>
 
-              {/* Featured Image */}
-              <div className="px-6">
-                <div className="aspect-video rounded-xl overflow-hidden mb-6">
-                  <img 
-                    src={selectedArticle.image} 
-                    alt={selectedArticle.title}
-                    className="w-full h-full object-cover"
-                  />
+              {/* Modal Body - Scrollable */}
+              <div className="overflow-y-auto max-h-[calc(90vh-120px)]">
+                {/* Featured Image */}
+                <div className="px-6 pt-6">
+                  <div className="aspect-video rounded-xl overflow-hidden mb-6">
+                    <img 
+                      src={selectedArticle.image} 
+                      alt={selectedArticle.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Article Content */}
-              <div className="px-6 pb-6">
-                <div 
-                  className="prose prose-lg max-w-none mb-8 text-gray-700 leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: selectedArticle.fullContent || selectedArticle.excerpt }}
-                />
+                {/* Article Content */}
+                <div className="px-6 pb-6">
+                  <div className="prose prose-lg max-w-none mb-8 text-gray-700 leading-relaxed">
+                    <div dangerouslySetInnerHTML={{ __html: selectedArticle.fullContent || selectedArticle.excerpt }} />
+                  </div>
 
-                {/* CTA Section */}
-                <div className="mt-8 p-6 bg-orange-50 rounded-xl border border-orange-200">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Take Action Today</h3>
-                  <p className="text-gray-600 mb-4">{selectedArticle.cta}</p>
-                  <div className="flex gap-3">
-                    <Button className="bg-orange-600 hover:bg-orange-700 px-6 py-2 font-medium">
-                      Get Started
-                    </Button>
-                    <Button variant="outline" onClick={closeModal} className="px-6 py-2">
-                      Continue Reading
-                    </Button>
+                  {/* CTA Section */}
+                  <div className="mt-8 p-6 bg-orange-50 rounded-xl border border-orange-200">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Take Action Today</h3>
+                    <p className="text-gray-600 mb-4">{selectedArticle.cta}</p>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button className="bg-orange-600 hover:bg-orange-700 px-6 py-2 font-medium">
+                        Get Started
+                      </Button>
+                      <Button variant="outline" onClick={closeModal} className="px-6 py-2">
+                        Close Article
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
