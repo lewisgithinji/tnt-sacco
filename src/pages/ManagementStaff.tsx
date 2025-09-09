@@ -7,7 +7,7 @@ const ManagementStaff = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-16">
-        <EnhancedStaffProfiles />
+        <EnhancedStaffProfiles defaultSection="management" />
       </main>
       <Footer />
     </div>

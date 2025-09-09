@@ -7,7 +7,7 @@ const BoardOfDirectors = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-16">
-        <EnhancedStaffProfiles />
+        <EnhancedStaffProfiles defaultSection="board" />
       </main>
       <Footer />
     </div>
