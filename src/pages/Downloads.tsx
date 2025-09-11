@@ -134,8 +134,15 @@ const Downloads = () => {
       ...prev,
       [formId]: (prev[formId] || 0) + 1
     }));
-    // Placeholder for actual download functionality
-    console.log(`Downloading form: ${formId}`);
+    
+    // Create download link for PDF
+    const pdfUrl = `/downloads/${formId}.pdf`;
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = `${formId}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const filteredForms = useMemo(() => {
