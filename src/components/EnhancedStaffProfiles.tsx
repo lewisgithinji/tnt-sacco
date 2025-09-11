@@ -14,6 +14,7 @@ import joshuaImage from '@/assets/board/joshua-momanyi-director.jpeg';
 import abrahamImage from '@/assets/board/abraham-kemboi-director.jpg';
 import phylisImage from '@/assets/board/phylis-bonareri-director.jpg';
 import robertMasindeImage from '@/assets/board/robert-masinde-director.jpg';
+import leahImage from '@/assets/board/leah-wafubwa-director.jpg';
 import steadyImage from '@/assets/board/steady-wamela-supervisory-chair.jpg';
 import margaretImage from '@/assets/board/margaret-muiruri-supervisory-member.jpg';
 import wanjalaImage from '@/assets/board/mulongo-wanjala-supervisory-secretary.jpg';
@@ -163,6 +164,18 @@ const EnhancedStaffProfiles: React.FC<EnhancedStaffProfilesProps> = ({ defaultSe
         ],
         experience: 'Board member since 2023. Currently serving as a member of the Audit Subcommittee.',
         joinDate: '2023'
+      },
+      {
+        id: 'leah-wafubwa',
+        name: 'M/S. Leah Wafubwa',
+        title: 'Director',
+        image: leahImage,
+        qualifications: [
+          'Diploma in Business Management',
+          'Certified Sacco Director (Co-operative University of Kenya)'
+        ],
+        experience: 'Board member since 2022. Currently serving as a Director on the Board.',
+        joinDate: '2022'
       },
       {
         id: 'steady-wamela',
