@@ -168,14 +168,14 @@ const EnhancedStaffProfiles: React.FC<EnhancedStaffProfilesProps> = ({ defaultSe
       {
         id: 'leah-wafubwa',
         name: 'M/S. Leah Wafubwa',
-        title: 'Director',
+        title: 'Credit Subcommittee Member',
         image: leahImage,
         qualifications: [
-          'Diploma in Business Management',
+          'Diploma in Early Childhood Education',
           'Certified Sacco Director (Co-operative University of Kenya)'
         ],
-        experience: 'Board member since 2022. Currently serving as a Director on the Board.',
-        joinDate: '2022'
+        experience: 'Joined TNT DT Sacco in 2025. Currently a member of Credit Subcommittee.',
+        joinDate: '2025'
       },
       {
         id: 'steady-wamela',
