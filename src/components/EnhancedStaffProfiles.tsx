@@ -169,7 +169,7 @@ const EnhancedStaffProfiles: React.FC<EnhancedStaffProfilesProps> = ({ defaultSe
         id: 'leah-wafubwa',
         name: 'M/S. Leah Wafubwa',
         title: 'Credit Subcommittee Member',
-        image: leahImage,
+        image: '/lovable-uploads/22743950-6822-4c77-8cc8-dd41e6577157.png',
         qualifications: [
           'Diploma in Early Childhood Education',
           'Certified Sacco Director (Co-operative University of Kenya)'
