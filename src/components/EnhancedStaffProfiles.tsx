@@ -235,7 +235,7 @@ const EnhancedStaffProfiles: React.FC<EnhancedStaffProfilesProps> = ({ defaultSe
         id: 'douglas-mbirika',
         name: 'Douglas Mbirika',
         title: 'ICT Manager',
-        image: douglasImage,
+        image: '/lovable-uploads/27da45a9-36a3-4418-8d69-a4bf0f02b3ab.png',
         qualifications: [
           'Master\'s Degree in Computer Science',
           'B.Sc. Computer Science'
