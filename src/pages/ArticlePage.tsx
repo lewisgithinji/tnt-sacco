@@ -298,11 +298,11 @@ const ArticlePage = () => {
           {/* Back navigation */}
           <div className="mb-8">
             <Link
-              to="/news"
+              to="/communication-hub"
               className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 transition-colors font-medium"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to News
+              Back to Communication Hub
             </Link>
           </div>
 
@@ -376,7 +376,7 @@ const ArticlePage = () => {
                 .map((relatedArticle) => (
                 <Link
                   key={relatedArticle.slug}
-                  to={`/news/${relatedArticle.slug}`}
+                  to={`/communication-hub/${relatedArticle.slug}`}
                   className="block p-4 rounded-lg border border-gray-200 hover:border-orange-300 hover:shadow-md transition-all"
                 >
                   <h4 className="font-medium text-gray-900 mb-2 line-clamp-2">

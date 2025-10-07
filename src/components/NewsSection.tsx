@@ -337,7 +337,7 @@ export const NewsSection = () => {
                 </p>
                 
                 {/* CTA Button */}
-                <Link to={`/news/${article.slug}`}>
+                <Link to={`/communication-hub/${article.slug}`}>
                   <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg transition-colors text-sm font-medium">
                     Read Full Article
                   </Button>

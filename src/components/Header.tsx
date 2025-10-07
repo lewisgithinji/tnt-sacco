@@ -18,10 +18,11 @@ export const Header = () => {
     { name: "Home", href: "/" },
   ];
 
-  const aboutDropdown = [
-    { name: "Management Staff", href: "/management-staff" },
-    { name: "Board of Directors", href: "/board-of-directors" },
-  ];
+  // Temporarily disabled - to be restored later
+  // const aboutDropdown = [
+  //   { name: "Management Staff", href: "/management-staff" },
+  //   { name: "Board of Directors", href: "/board-of-directors" },
+  // ];
 
   const productsDropdown = [
     { name: "Deposit Products", href: "/deposit-products" },
@@ -31,7 +32,7 @@ export const Header = () => {
   const resourcesDropdown = [
     { name: "Downloads", href: "/downloads" },
     { name: "FAQ", href: "/faq" },
-    { name: "News", href: "/news" },
+    { name: "Communication Hub", href: "/communication-hub" },
     { name: "Media Center", href: "/media-center" },
   ];
 
@@ -62,7 +63,8 @@ export const Header = () => {
               </Link>
             ))}
             
-            <DropdownMenu>
+            {/* Temporarily disabled - to be restored later */}
+            {/* <DropdownMenu>
               <DropdownMenuTrigger className="text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
                 About Us
                 <ChevronDown className="ml-1 h-4 w-4" />
@@ -79,7 +81,7 @@ export const Header = () => {
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
 
             <DropdownMenu>
               <DropdownMenuTrigger className="text-foreground/80 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
@@ -168,8 +170,8 @@ export const Header = () => {
                 </Link>
               ))}
               
-              {/* About Us Section */}
-              <div className="px-3 py-2">
+              {/* Temporarily disabled - to be restored later */}
+              {/* <div className="px-3 py-2">
                 <div className="text-gray-900 font-medium mb-2">About Us</div>
                 {aboutDropdown.map((item) => (
                   <Link
@@ -181,7 +183,7 @@ export const Header = () => {
                     {item.name}
                   </Link>
                 ))}
-              </div>
+              </div> */}
 
               {/* Products Section */}
               <div className="px-3 py-2">

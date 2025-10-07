@@ -6,106 +6,46 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useState } from "react";
 
-const News = () => {
+const CommunicationHub = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Announcements", "Technology", "Financial", "Community", "Events"];
+  const categories = ["All", "Financial", "Technology", "Community", "Announcements"];
 
   const newsArticles = [
     {
       id: 1,
-      title: "TNT SACCO Introduces New Mobile Banking App with Enhanced Security Features",
-      excerpt: "Experience seamless banking with our new mobile application featuring biometric authentication, real-time notifications, and an intuitive user interface designed for your convenience.",
-      content: "Our new mobile banking application represents a significant leap forward in digital financial services...",
-      date: "January 15, 2025",
-      author: "Communications Team",
-      category: "Technology",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
+      title: "Understanding Our Enhanced Credit Appraisal System",
+      excerpt: "Learn about TNT SACCO's comprehensive new loan appraisal system that evaluates member creditworthiness through five key components including share capital, deposits, credit history, and savings patterns.",
+      content: "Our enhanced credit appraisal system represents a significant improvement in how we assess loan applications. The new system moves beyond the simple share multiplier approach to a comprehensive evaluation that considers: Share Capital (10%), BOSA Deposits (25%), Credit History (30%), Debt-to-Savings Ratio (20%), and FOSA Deposits (15%). This approach aligns with our mission to promote a savings culture and responsible credit use for economic empowerment of our members.",
+      date: "January 20, 2025",
+      author: "Credit Department",
+      category: "Financial",
+      readTime: "5 min read",
+      image: "/communication-hub/credit-appraisal-chart.png",
       featured: true
     },
     {
       id: 2,
-      title: "Annual General Meeting 2025 - Save the Date",
-      excerpt: "Join us for our Annual General Meeting on March 25, 2025, as we review our achievements and outline strategic plans for the coming year.",
-      content: "We cordially invite all members to attend our Annual General Meeting...",
-      date: "January 12, 2025",
-      author: "Board Secretary",
-      category: "Announcements",
-      readTime: "2 min read",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a814c963?w=800",
-      featured: false
-    },
-    {
-      id: 3,
-      title: "New Branch Opening in Nakuru - Expanding Our Reach",
-      excerpt: "We're excited to announce the opening of our new Nakuru branch in February 2025, bringing our comprehensive financial services closer to our members.",
-      content: "TNT SACCO continues to expand its physical presence to better serve our growing membership...",
-      date: "January 10, 2025",
-      author: "Operations Team",
-      category: "Announcements",
+      title: "Leveraging Technology for Enhanced Service Delivery",
+      excerpt: "Discover how TNT SACCO is transforming member experience through USSD banking (*477#), the iTNT customer portal, Family Bank integration, and SWIFT network access for global transactions.",
+      content: "To improve service delivery and customer experience, TNT SACCO has embraced technology in various ways. Our USSD service (*477#) provides instant access to account balances, mini statements, fund transfers, advances, and loan repayments. The new iTNT portal enables online member registration, guarantor sourcing, loan applications, and statement access. Our integration with Family Bank gives members access to the SWIFT network, enabling global transactions from any Family Bank branch worldwide.",
+      date: "January 18, 2025",
+      author: "IT Department",
+      category: "Technology",
       readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Financial Literacy Workshop Series Kicks Off This Month",
-      excerpt: "Join our comprehensive financial literacy workshops throughout January and February. Learn about budgeting, investment strategies, and financial planning.",
-      content: "Financial education is at the heart of our member empowerment strategy...",
-      date: "January 8, 2025",
-      author: "Training Department",
-      category: "Community",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Record Dividend Payout for 2024 - 12% Return to Members",
-      excerpt: "TNT SACCO announces a record dividend payout of 12% for the financial year 2024, reflecting our strong performance and commitment to member value.",
-      content: "We are pleased to announce exceptional returns for our members in 2024...",
-      date: "January 5, 2025",
-      author: "Finance Department",
-      category: "Financial",
-      readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800",
+      image: "/communication-hub/tnt-news-technology.jpg",
       featured: true
     },
     {
-      id: 6,
-      title: "New Partnership with Local Schools for Education Loans",
-      excerpt: "TNT SACCO partners with leading educational institutions to provide streamlined education loan processes and competitive rates for our members.",
-      content: "Education is a key pillar of community development...",
-      date: "January 3, 2025",
-      author: "Credit Department",
+      id: 3,
+      title: "TNT Last Expense Insurance: Financial Protection for Your Family",
+      excerpt: "Comprehensive funeral expense coverage with KES 200 monthly contribution. Benefit from loan waivers, deposit refunds (2x), and funeral riders up to KES 50,000 for principal members.",
+      content: "The TNT Last Expense insurance policy provides financial support for funeral expenses, ensuring families can honor their loved ones without added financial burden. For just KES 200 monthly, members receive comprehensive coverage including: waiver of outstanding performing loans, 2x refund of member deposits, and funeral riders of KES 50,000 (principal member), KES 30,000 (spouse), and KES 10,000 (child). Coverage extends to one spouse and up to 4 children between 30 days and 18 years old (or 25 years if full-time student).",
+      date: "January 15, 2025",
+      author: "Insurance Department",
       category: "Community",
-      readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800",
-      featured: false
-    },
-    {
-      id: 7,
-      title: "Digital Payment Integration Now Live - Pay Bills Seamlessly",
-      excerpt: "Members can now pay utility bills, school fees, and other services directly through our digital platforms with real-time processing.",
-      content: "Our new digital payment integration makes bill payments easier than ever...",
-      date: "December 28, 2024",
-      author: "IT Department",
-      category: "Technology",
       readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
-      featured: false
-    },
-    {
-      id: 8,
-      title: "Community Outreach Program Success - Impact Report",
-      excerpt: "Our 2024 community outreach initiatives reached over 5,000 families, providing financial education and support for local development projects.",
-      content: "Community development remains central to our cooperative values...",
-      date: "December 25, 2024",
-      author: "Community Relations",
-      category: "Community",
-      readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800",
+      image: "/communication-hub/tnt-news-insurance.jpg",
       featured: false
     }
   ];
@@ -127,11 +67,11 @@ const News = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-6">
-                News & Updates
+                Communication Hub
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay informed with the latest developments, announcements, and financial insights 
-                from TNT SACCO. Get updates on new services, community initiatives, and industry news.
+                Your central source for important updates, service announcements, and member information 
+                from TNT SACCO. Stay informed about new products, policies, and initiatives designed to serve you better.
               </p>
             </div>
           </div>
@@ -310,4 +250,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default CommunicationHub;

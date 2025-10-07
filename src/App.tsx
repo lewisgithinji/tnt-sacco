@@ -9,9 +9,10 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Downloads from "./pages/Downloads";
 import FAQ from "./pages/FAQ";
-import ManagementStaff from "./pages/ManagementStaff";
-import BoardOfDirectors from "./pages/BoardOfDirectors";
-import News from "./pages/News";
+// Temporarily disabled - to be restored later
+// import ManagementStaff from "./pages/ManagementStaff";
+// import BoardOfDirectors from "./pages/BoardOfDirectors";
+import CommunicationHub from "./pages/CommunicationHub";
 import MediaCenter from "./pages/MediaCenter";
 import DepositProducts from "./pages/DepositProducts";
 import LoanProducts from "./pages/LoanProducts";
@@ -33,10 +34,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/management-staff" element={<ManagementStaff />} />
-          <Route path="/board-of-directors" element={<BoardOfDirectors />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/news/:slug" element={<ArticlePage />} />
+          {/* Temporarily disabled - to be restored later */}
+          {/* <Route path="/management-staff" element={<ManagementStaff />} /> */}
+          {/* <Route path="/board-of-directors" element={<BoardOfDirectors />} /> */}
+          <Route path="/communication-hub" element={<CommunicationHub />} />
+          <Route path="/communication-hub/:slug" element={<ArticlePage />} />
           <Route path="/media-center" element={<MediaCenter />} />
           <Route path="/deposit-products" element={<DepositProducts />} />
           <Route path="/loan-products" element={<LoanProducts />} />
