@@ -4,6 +4,68 @@ import { Shield, Users, TrendingUp, Award, Target, Heart, CheckCircle, ArrowRigh
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+
+// Counter Animation Component
+const AnimatedCounter = ({ end, duration = 2000, suffix = "", prefix = "" }: {
+  end: number;
+  duration?: number;
+  suffix?: string;
+  prefix?: string;
+}) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime: number | null = null;
+    const startValue = 0;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * (end - startValue) + startValue);
+
+      setCount(currentCount);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, end, duration]);
+
+  return (
+    <div ref={counterRef} className="text-3xl font-bold text-navy">
+      {prefix}{count.toLocaleString()}{suffix}
+    </div>
+  );
+};
 
 const AboutUs = () => {
   const values = [
@@ -46,10 +108,10 @@ const AboutUs = () => {
   ];
 
   const statistics = [
-    { value: "10,000+", label: "Active Members", icon: Users },
-    { value: "KSh 2B+", label: "Assets Under Management", icon: Building2 },
-    { value: "15+", label: "Years of Service", icon: Award },
-    { value: "98%", label: "Member Satisfaction", icon: CheckCircle }
+    { value: 10000, suffix: "+", label: "Active Members", icon: Users },
+    { value: 2, suffix: "B+", prefix: "KSh ", label: "Assets Under Management", icon: Building2 },
+    { value: 15, suffix: "+", label: "Years of Service", icon: Award },
+    { value: 98, suffix: "%", label: "Member Satisfaction", icon: CheckCircle }
   ];
 
   const whyChooseUs = [
@@ -105,21 +167,50 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Statistics Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Statistics Section - Enhanced with Animations */}
+        <section className="py-16 bg-white relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-br from-navy/5 via-transparent to-yellow/5 pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {statistics.map((stat, index) => (
-                <Card key={index} className="text-center border-2 hover:border-navy/20 transition-all hover:shadow-lg">
+                <Card
+                  key={index}
+                  className="group text-center border-2 hover:border-navy/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 bg-white/80 backdrop-blur-sm"
+                  style={{
+                    animation: `fadeIn 0.6s ease-out ${index * 0.1}s backwards`
+                  }}
+                >
                   <CardContent className="p-8">
-                    <stat.icon className="w-12 h-12 text-navy mx-auto mb-4" />
-                    <div className="text-3xl font-bold text-navy mb-2">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    <div className="bg-gradient-to-br from-navy/10 to-yellow/10 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                      <stat.icon className="w-10 h-10 text-navy" />
+                    </div>
+                    <AnimatedCounter
+                      end={stat.value}
+                      suffix={stat.suffix || ""}
+                      prefix={stat.prefix || ""}
+                      duration={2500}
+                    />
+                    <div className="text-sm text-muted-foreground mt-2 font-medium">{stat.label}</div>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
+
+          <style>{`
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+                transform: translateY(20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          `}</style>
         </section>
 
         {/* Our Story Section */}
@@ -226,8 +317,8 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Our Values Section */}
-        <section className="py-20 bg-gray-50">
+        {/* Our Values Section - Enhanced */}
+        <section className="py-20 bg-gray-50 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-4">Our Core Values</h2>
@@ -240,14 +331,23 @@ const AboutUs = () => {
               {values.map((value, index) => (
                 <Card
                   key={index}
-                  className="bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 border border-border"
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-2 border-transparent hover:border-navy/20 overflow-hidden relative"
+                  style={{
+                    animation: `fadeIn 0.6s ease-out ${index * 0.1}s backwards`
+                  }}
                 >
-                  <CardContent className="p-8">
-                    <div className={`inline-flex p-4 rounded-2xl ${value.color} mb-6 group-hover:scale-110 transition-all duration-300`}>
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-navy/0 to-yellow/0 group-hover:from-navy/5 group-hover:to-yellow/5 transition-all duration-500 pointer-events-none" />
+
+                  <CardContent className="p-8 relative z-10">
+                    <div className={`inline-flex p-4 rounded-2xl ${value.color} mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-md`}>
                       <value.icon className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-card-foreground mb-4">{value.title}</h3>
+                    <h3 className="text-xl font-bold text-card-foreground mb-4 group-hover:text-navy transition-colors duration-300">{value.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+
+                    {/* Decorative element */}
+                    <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-br from-navy/5 to-yellow/5 rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </CardContent>
                 </Card>
               ))}

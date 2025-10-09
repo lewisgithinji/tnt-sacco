@@ -7,29 +7,65 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const MediaCenter = () => {
-  // TNT SACCO YouTube Channel Videos
-  // These video IDs are from the @tntsacco1478 YouTube channel
-  const videos = [
-    {
-      id: "xvFZjo5PgG0",
-      title: "Access the new self service portal",
-      category: "Tutorial"
-    },
-    {
-      id: "dQw4w9WgXcQ",
-      title: "TNT SACCO Services Overview",
-      category: "Corporate"
-    },
-    {
-      id: "9bZkp7q19f0",
-      title: "Member Benefits and Services",
-      category: "Education"
-    },
-    {
-      id: "jNQXAC9IVRw",
-      title: "TNT SACCO Community Programs",
-      category: "Events"
-    }
+  // TNT SACCO YouTube Channel Videos organized by category
+  // Video IDs from @tntsacco1478 YouTube channel
+  const videoCategories = {
+    loanProducts: [
+      {
+        id: "wLtV8VR_5hg",
+        title: "Access an Emergency Express loan in 5 minutes",
+        description: "Learn how to quickly apply for our Emergency Express loan product"
+      },
+      {
+        id: "lrkCUQtZyuI",
+        title: "Loan Products Overview",
+        description: "Discover our comprehensive loan offerings"
+      }
+    ],
+    savingsProducts: [
+      {
+        id: "yt9Ov6BEglk",
+        title: "Savings Account Benefits",
+        description: "Explore the benefits of saving with TNT SACCO"
+      },
+      {
+        id: "rA2I_hiE8kg",
+        title: "Investment Opportunities",
+        description: "Learn about our savings and investment products"
+      }
+    ],
+    educational: [
+      {
+        id: "9iXXd8kkwJM",
+        title: "Financial Literacy Workshop",
+        description: "Educational content to improve your financial knowledge"
+      },
+      {
+        id: "xd9xmVXMwMA",
+        title: "How to Use Our Services",
+        description: "Step-by-step guide to TNT SACCO services"
+      }
+    ],
+    aboutUs: [
+      {
+        id: "VxgD7L1iaw8",
+        title: "A little about TNT SACCO",
+        description: "Learn about our history, mission, and values"
+      },
+      {
+        id: "c5iDQ21HUuE",
+        title: "Welcome to our Endebess Branch",
+        description: "Tour of our Endebess branch and services"
+      }
+    ]
+  };
+
+  // Flatten all videos for the "All Videos" view
+  const allVideos = [
+    ...videoCategories.loanProducts,
+    ...videoCategories.savingsProducts,
+    ...videoCategories.educational,
+    ...videoCategories.aboutUs
   ];
 
   const images = [
@@ -179,40 +215,201 @@ const MediaCenter = () => {
                   </a>
                 </div>
 
-                {/* Video Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {videos.map((video) => (
-                    <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="relative aspect-video">
-                        <iframe
-                          src={`https://www.youtube.com/embed/${video.id}`}
-                          title={video.title}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full"
-                          style={{ border: 'none' }}
-                        />
-                        <div className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-lg">
-                          {video.category}
-                        </div>
-                      </div>
-                      <CardContent className="p-6">
-                        <h3 className="text-lg font-bold text-gray-900 mb-3">
-                          {video.title}
-                        </h3>
-                        <a
-                          href={`https://www.youtube.com/watch?v=${video.id}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
-                        >
-                          <Play className="w-4 h-4 mr-1" />
-                          Watch on YouTube
-                        </a>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                {/* Video Categories Tabs */}
+                <Tabs defaultValue="all" className="w-full">
+                  <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
+                    <TabsTrigger value="all">All Videos</TabsTrigger>
+                    <TabsTrigger value="loans">🏦 Loan Products</TabsTrigger>
+                    <TabsTrigger value="savings">💰 Savings</TabsTrigger>
+                    <TabsTrigger value="educational">📚 Educational</TabsTrigger>
+                    <TabsTrigger value="about">ℹ️ About Us</TabsTrigger>
+                  </TabsList>
+
+                  {/* All Videos */}
+                  <TabsContent value="all">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {allVideos.map((video) => (
+                        <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <div className="relative aspect-video bg-gray-100">
+                            <iframe
+                              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                              title={video.title}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen
+                              loading="lazy"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              className="w-full h-full"
+                              style={{ border: 'none' }}
+                            />
+                          </div>
+                          <CardContent className="p-6">
+                            <h3 className="text-lg font-bold text-gray-900 mb-2">
+                              {video.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-4">{video.description}</p>
+                            <a
+                              href={`https://www.youtube.com/watch?v=${video.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
+                            >
+                              <Play className="w-4 h-4 mr-1" />
+                              Watch on YouTube
+                            </a>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+
+                  {/* Loan Products */}
+                  <TabsContent value="loans">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {videoCategories.loanProducts.map((video) => (
+                        <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <div className="relative aspect-video bg-gray-100">
+                            <iframe
+                              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                              title={video.title}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen
+                              loading="lazy"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              className="w-full h-full"
+                              style={{ border: 'none' }}
+                            />
+                          </div>
+                          <CardContent className="p-6">
+                            <h3 className="text-lg font-bold text-gray-900 mb-2">
+                              {video.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-4">{video.description}</p>
+                            <a
+                              href={`https://www.youtube.com/watch?v=${video.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
+                            >
+                              <Play className="w-4 h-4 mr-1" />
+                              Watch on YouTube
+                            </a>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+
+                  {/* Savings Products */}
+                  <TabsContent value="savings">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {videoCategories.savingsProducts.map((video) => (
+                        <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <div className="relative aspect-video bg-gray-100">
+                            <iframe
+                              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                              title={video.title}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen
+                              loading="lazy"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              className="w-full h-full"
+                              style={{ border: 'none' }}
+                            />
+                          </div>
+                          <CardContent className="p-6">
+                            <h3 className="text-lg font-bold text-gray-900 mb-2">
+                              {video.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-4">{video.description}</p>
+                            <a
+                              href={`https://www.youtube.com/watch?v=${video.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
+                            >
+                              <Play className="w-4 h-4 mr-1" />
+                              Watch on YouTube
+                            </a>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+
+                  {/* Educational Content */}
+                  <TabsContent value="educational">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {videoCategories.educational.map((video) => (
+                        <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <div className="relative aspect-video bg-gray-100">
+                            <iframe
+                              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                              title={video.title}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen
+                              loading="lazy"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              className="w-full h-full"
+                              style={{ border: 'none' }}
+                            />
+                          </div>
+                          <CardContent className="p-6">
+                            <h3 className="text-lg font-bold text-gray-900 mb-2">
+                              {video.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-4">{video.description}</p>
+                            <a
+                              href={`https://www.youtube.com/watch?v=${video.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
+                            >
+                              <Play className="w-4 h-4 mr-1" />
+                              Watch on YouTube
+                            </a>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+
+                  {/* About Us */}
+                  <TabsContent value="about">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {videoCategories.aboutUs.map((video) => (
+                        <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <div className="relative aspect-video bg-gray-100">
+                            <iframe
+                              src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                              title={video.title}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen
+                              loading="lazy"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              className="w-full h-full"
+                              style={{ border: 'none' }}
+                            />
+                          </div>
+                          <CardContent className="p-6">
+                            <h3 className="text-lg font-bold text-gray-900 mb-2">
+                              {video.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-4">{video.description}</p>
+                            <a
+                              href={`https://www.youtube.com/watch?v=${video.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
+                            >
+                              <Play className="w-4 h-4 mr-1" />
+                              Watch on YouTube
+                            </a>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </TabsContent>
+                </Tabs>
 
                 {/* View More Link */}
                 <div className="mt-12 text-center">
