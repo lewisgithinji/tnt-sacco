@@ -16,6 +16,7 @@ export const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
+    { name: "About Us", href: "/about-us" },
   ];
 
   // Temporarily disabled - to be restored later

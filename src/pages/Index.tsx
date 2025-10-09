@@ -4,7 +4,7 @@ import { Services } from "@/components/Services";
 import { ProductsSection } from "@/components/ProductsSection";
 import { UssdSection } from "@/components/UssdSection";
 import { LoanCalculator } from "@/components/LoanCalculator";
-import { NewsSection } from "@/components/NewsSection";
+import { CommunicationHubSection } from "@/components/CommunicationHubSection";
 import { Contact } from "@/components/Contact";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -20,7 +20,7 @@ const Index = () => {
       <ProductsSection />
       <UssdSection />
       <LoanCalculator />
-      <NewsSection />
+      <CommunicationHubSection />
       <Contact />
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/5">
         <div className="max-w-7xl mx-auto">

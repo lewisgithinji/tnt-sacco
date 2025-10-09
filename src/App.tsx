@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import AboutUs from "./pages/AboutUs";
 import Downloads from "./pages/Downloads";
 import FAQ from "./pages/FAQ";
 // Temporarily disabled - to be restored later
@@ -32,6 +33,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/faq" element={<FAQ />} />
           {/* Temporarily disabled - to be restored later */}

@@ -42,11 +42,56 @@ const FAQ = () => {
         },
         {
           question: "What is the minimum amount to open an account?",
-          answer: "The minimum share capital contribution is KES 5,000. This amount earns dividends based on our annual performance and remains your share in the SACCO."
+          answer: "The minimum share capital contribution is KES 2,000. This amount earns dividends based on our annual performance and remains your share in the SACCO."
         },
         {
           question: "Can I have multiple accounts?",
           answer: "Yes, you can open multiple savings accounts for different purposes such as holiday savings, emergency funds, or investment savings. Each account may have different terms and benefits."
+        }
+      ]
+    },
+    {
+      title: "Online Portal & Loan Applications",
+      faqs: [
+        {
+          question: "What do I need to log in to the TNT Members Portal and access services or apply for a loan?",
+          answer: "You need an internet-enabled device such as a smartphone, tablet, or computer connected to a secure internet connection."
+        },
+        {
+          question: "How do I apply for a loan online using the TNT Members Portal?",
+          answer: "To apply for a loan online:\n\n1. Log in to your Members Portal\n2. Navigate to the menu and click Loans → Apply Loan\n3. Select the loan type, purpose, amount, and repayment period. Click Next\n4. If eligible, you may choose to self-guarantee your loan. In this case, you will not be required to add guarantors, and you can skip directly to the stage of offsetting other active loans (if any)\n5. (If not self-guaranteeing) Confirm your details and click Next\n6. Add guarantors by clicking Add Guarantor (you may use member number, ID, or phone number)\n7. Enter committed amounts for each guarantor. The total commitments must equal your loan amount\n8. If you have other active loans, you may choose to offset them\n9. Review and confirm all details, then click Submit\n10. Your guarantors will receive requests to accept or decline your application"
+        },
+        {
+          question: "How do I check my loan application status online?",
+          answer: "Log in to your portal and go to Loans → Loans Pending Approval."
+        },
+        {
+          question: "How do I track whether my guarantors have accepted or declined my request?",
+          answer: "Log in to your portal, go to Loans → Loans Pending Approval, then click View Guarantors."
+        },
+        {
+          question: "Can I change, remove, or replace a guarantor whose status is still pending?",
+          answer: "Yes. You can remove or replace any guarantor whose status is pending or declined, then immediately add another guarantor."
+        },
+        {
+          question: "How do I know if all my guarantors have accepted my request?",
+          answer: "When all guarantors' statuses change to Confirmed, a green Submit button will appear under the guarantors' list, allowing you to proceed."
+        },
+        {
+          question: "How do I submit my loan application to TNT SACCO for review?",
+          answer: "Go to Loans Pending Approval and click the button labeled Proceed to SACCO Appraisal. A confirmation message will appear, and your loan status will change to Awaiting SACCO Review."
+        },
+        {
+          question: "How do I know if my loan is under review or being processed by TNT SACCO?",
+          answer: "When your loan status changes from Awaiting SACCO Review to Paid on CBS, it means your loan is being processed."
+        },
+        {
+          question: "How do I know if my guarantor qualifies to guarantee my loan application?",
+          answer: "When you add a guarantor, the system will immediately display a decline message if the guarantor does not qualify."
+        },
+        {
+          question: "How do I know the loan amount I qualify for?",
+          answer: "After submitting your application, TNT SACCO will review it and send you an offer response indicating the approved loan amount. Additionally, a member may be contacted by the SACCO via phone call to update them on the loan processing progress and the amount they qualify for."
         }
       ]
     },

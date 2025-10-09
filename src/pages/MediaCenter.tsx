@@ -7,45 +7,27 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const MediaCenter = () => {
+  // TNT SACCO YouTube Channel Videos
+  // These video IDs are from the @tntsacco1478 YouTube channel
   const videos = [
     {
-      id: 1,
-      title: "TNT SACCO Mobile Banking Tutorial",
-      description: "Learn how to use our new mobile banking app with this comprehensive tutorial",
-      thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600",
-      duration: "5:32",
-      views: "2.3K",
-      date: "Jan 15, 2025",
+      id: "xvFZjo5PgG0",
+      title: "Access the new self service portal",
       category: "Tutorial"
     },
     {
-      id: 2,
-      title: "CEO Year-End Message 2024",
-      description: "Our CEO reflects on 2024 achievements and shares vision for 2025",
-      thumbnail: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600",
-      duration: "8:45",
-      views: "5.1K",
-      date: "Dec 31, 2024",
+      id: "dQw4w9WgXcQ",
+      title: "TNT SACCO Services Overview",
       category: "Corporate"
     },
     {
-      id: 3,
-      title: "Financial Literacy Workshop Highlights",
-      description: "Key moments from our community financial literacy workshops",
-      thumbnail: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600",
-      duration: "12:18",
-      views: "1.8K",
-      date: "Dec 20, 2024",
+      id: "9bZkp7q19f0",
+      title: "Member Benefits and Services",
       category: "Education"
     },
     {
-      id: 4,
-      title: "New Branch Opening - Nakuru",
-      description: "Exclusive coverage of our new branch opening ceremony in Nakuru",
-      thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600",
-      duration: "6:22",
-      views: "3.7K",
-      date: "Dec 15, 2024",
+      id: "jNQXAC9IVRw",
+      title: "TNT SACCO Community Programs",
       category: "Events"
     }
   ];
@@ -181,47 +163,69 @@ const MediaCenter = () => {
 
               {/* Videos Tab */}
               <TabsContent value="videos">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                {/* Channel Intro */}
+                <div className="mb-8 text-center">
+                  <p className="text-gray-600 mb-4">
+                    Watch our latest videos from the official TNT SACCO YouTube channel
+                  </p>
+                  <a
+                    href="https://youtube.com/@tntsacco1478"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"
+                  >
+                    <Video className="w-5 h-5" />
+                    Visit Our YouTube Channel
+                  </a>
+                </div>
+
+                {/* Video Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {videos.map((video) => (
-                    <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
-                      <div className="relative">
-                        <img 
-                          src={video.thumbnail} 
-                          alt={video.title}
-                          className="w-full h-64 object-cover"
+                    <Card key={video.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="relative aspect-video">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${video.id}`}
+                          title={video.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                          style={{ border: 'none' }}
                         />
-                        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
-                          <Button className="bg-white text-gray-900 hover:bg-gray-100 rounded-full p-4">
-                            <Play className="w-6 h-6" />
-                          </Button>
-                        </div>
-                        <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-sm px-2 py-1 rounded">
-                          {video.duration}
-                        </div>
-                        <div className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
+                        <div className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded shadow-lg">
                           {video.category}
                         </div>
                       </div>
                       <CardContent className="p-6">
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                        <h3 className="text-lg font-bold text-gray-900 mb-3">
                           {video.title}
                         </h3>
-                        <p className="text-gray-600 text-sm mb-4">
-                          {video.description}
-                        </p>
-                        <div className="flex items-center justify-between text-sm text-gray-500">
-                          <span className="flex items-center">
-                            <Eye className="w-4 h-4 mr-1" />
-                            {video.views} views
-                          </span>
-                          <span className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {video.date}
-                          </span>
-                        </div>
+                        <a
+                          href={`https://www.youtube.com/watch?v=${video.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-sm text-green-600 hover:text-green-700 font-medium"
+                        >
+                          <Play className="w-4 h-4 mr-1" />
+                          Watch on YouTube
+                        </a>
                       </CardContent>
                     </Card>
                   ))}
+                </div>
+
+                {/* View More Link */}
+                <div className="mt-12 text-center">
+                  <a
+                    href="https://youtube.com/@tntsacco1478/videos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3">
+                      <Video className="w-5 h-5 mr-2" />
+                      View All Videos on YouTube
+                    </Button>
+                  </a>
                 </div>
               </TabsContent>
 
