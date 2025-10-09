@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SEO } from "@/components/SEO";
 
 const FAQ = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -162,6 +163,12 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Frequently Asked Questions - Get Answers"
+        description="Find answers to common questions about TNT SACCO services, membership, loans, digital banking, online portal, guarantors, and account management. Quick help for members."
+        canonical="https://www.tntsacco.co.ke/faq"
+        keywords="TNT SACCO FAQ, SACCO questions Kenya, loan application help, guarantor questions, online portal help, membership questions, savings account FAQ, digital banking help"
+      />
       <Header />
       
       <main className="pt-16">

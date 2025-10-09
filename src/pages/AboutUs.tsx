@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Shield, Users, TrendingUp, Award, Target, Heart, CheckCircle, ArrowRight, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -127,6 +128,12 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="About Us - Your Trusted Financial Partner"
+        description="Learn about TNT SACCO's 15+ year history of empowering 10,000+ Kenyan families and businesses with KSh 2B+ in assets. Discover our mission, vision, values, and commitment to member-focused financial services."
+        canonical="https://www.tntsacco.co.ke/about-us"
+        keywords="about TNT SACCO, SACCO history Kenya, member-owned cooperative, SASRA licensed SACCO, financial cooperative Kenya, TNT SACCO mission, community SACCO"
+      />
       <Header />
 
       <main className="pt-16">

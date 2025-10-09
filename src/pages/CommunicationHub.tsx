@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { articles, categories, getFeaturedArticles, getArticlesByCategory } from "@/data/articles";
+import { SEO } from "@/components/SEO";
 
 // Icon mapping for categories
 const iconMap: Record<string, any> = {
@@ -40,6 +41,12 @@ const CommunicationHub = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Communication Hub - News, Updates & Articles"
+        description="Stay informed with the latest news, updates, and articles from TNT SACCO. Read about financial tips, member stories, product updates, and community announcements."
+        canonical="https://www.tntsacco.co.ke/communication-hub"
+        keywords="TNT SACCO news, SACCO updates Kenya, financial tips, member stories, community news, SACCO announcements, financial education articles"
+      />
       <Header />
 
       <main className="pt-16">

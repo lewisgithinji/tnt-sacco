@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState, useMemo } from "react";
+import { SEO } from "@/components/SEO";
 
 const Downloads = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -160,6 +161,12 @@ const Downloads = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Downloads - Forms, Documents & Resources"
+        description="Download TNT SACCO forms, membership applications, loan application forms, financial statements, product guides, and other essential documents. Access all resources in one place."
+        canonical="https://www.tntsacco.co.ke/downloads"
+        keywords="TNT SACCO forms, loan application forms Kenya, membership forms, financial statements, product guides, SACCO documents download, guarantor forms"
+      />
       <Header />
       
       <main className="pt-16">

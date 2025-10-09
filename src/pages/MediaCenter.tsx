@@ -5,6 +5,7 @@ import { Play, Download, Calendar, Eye, Image as ImageIcon, Video, FileText } fr
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
 
 const MediaCenter = () => {
   // TNT SACCO YouTube Channel Videos organized by category
@@ -168,6 +169,12 @@ const MediaCenter = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Media Center - Videos, Photos & Resources"
+        description="Watch educational videos on TNT SACCO loan products, savings accounts, and financial services. Access our media gallery, financial education content, and product tutorials."
+        canonical="https://www.tntsacco.co.ke/media-center"
+        keywords="TNT SACCO videos, financial education videos, loan product tutorials, savings account videos, SACCO media center Kenya, financial literacy content"
+      />
       <Header />
       
       <main className="pt-16">

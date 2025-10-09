@@ -10,10 +10,17 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Map from "@/components/Map";
 import { Chatbot } from "@/components/Chatbot";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Home - Your Trusted Financial Partner"
+        description="TNT SACCO offers competitive savings accounts, affordable loans, digital banking, and financial services in Kenya. Join over 10,000+ members building their financial future with us."
+        canonical="https://www.tntsacco.co.ke/"
+        keywords="TNT SACCO Kenya, SACCO services Kenya, savings accounts, loans Kenya, digital banking, financial services Kitale, SACCO membership"
+      />
       <Header />
       <Hero />
       <Services />

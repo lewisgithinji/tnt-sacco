@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Users, Building2, Wallet, PiggyBank, Target, Heart, TrendingUp } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const DepositProducts = () => {
   const products = [
@@ -98,6 +99,12 @@ const DepositProducts = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Deposit Products - Grow Your Savings"
+        description="Discover TNT SACCO's range of deposit products including Share Capital, BOSA Deposits, Payroll Account, Akiba Savings, Junior Savings, and Yield Plus accounts with competitive returns."
+        canonical="https://www.tntsacco.co.ke/deposit-products"
+        keywords="TNT SACCO savings, deposit accounts Kenya, share capital account, BOSA deposits, payroll savings, junior savings account, retirement savings, high yield savings Kenya"
+      />
       <Header />
       
       <main className="py-16">

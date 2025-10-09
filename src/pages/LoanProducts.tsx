@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, GraduationCap, Heart, CreditCard, Car, Building, Smartphone, TrendingUp, Briefcase, DollarSign, Truck, Wheat, Milk, Shield } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const LoanProducts = () => {
   const loanProducts = [
@@ -87,6 +88,12 @@ const LoanProducts = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Loan Products - Affordable Credit Solutions"
+        description="Explore TNT SACCO's competitive loan products including education loans, emergency loans, personal loans, asset finance, business loans, and agricultural loans with flexible repayment terms."
+        canonical="https://www.tntsacco.co.ke/loan-products"
+        keywords="TNT SACCO loans, education loans Kenya, emergency loans, personal loans, asset finance, business loans, agricultural loans, affordable credit, SACCO loans Kenya"
+      />
       <Header />
       
       <main className="py-16">
