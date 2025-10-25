@@ -10,6 +10,13 @@ export const Hero = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
+              {/* Slogan Badge */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-navy to-yellow animate-fade-in">
+                <span className="text-sm lg:text-base font-semibold text-white">
+                  Tujitegemee Kiuchumi
+                </span>
+              </div>
+              
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                 Your Partner in
                 <span className="bg-gradient-to-r from-navy to-yellow bg-clip-text text-transparent">
