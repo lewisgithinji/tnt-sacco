@@ -124,7 +124,7 @@ const AboutUs = () => {
   const statistics = [
     { value: 10000, suffix: "+", label: "Active Members", icon: Users },
     { value: 2, suffix: "B+", prefix: "KSh ", label: "Assets Under Management", icon: Building2 },
-    { value: 15, suffix: "+", label: "Years of Service", icon: Award },
+    { value: 48, suffix: "+", label: "Years of Service", icon: Award },
     { value: 98, suffix: "%", label: "Member Satisfaction", icon: CheckCircle },
   ];
 
@@ -143,7 +143,7 @@ const AboutUs = () => {
     <div className="min-h-screen bg-white">
       <SEO
         title="About Us - Your Trusted Financial Partner"
-        description="Learn about TNT SACCO's 15+ year history of empowering 10,000+ Kenyan families and businesses with KSh 2B+ in assets. Discover our mission, vision, values, and commitment to member-focused financial services."
+        description="Learn about TNT SACCO's 48+ year history of empowering 10,000+ Kenyan families and businesses with KSh 2B+ in assets. Discover our mission, vision, values, and commitment to member-focused financial services."
         canonical="https://www.tntsacco.co.ke/about-us"
         keywords="about TNT SACCO, SACCO history Kenya, member-owned cooperative, SASRA licensed SACCO, financial cooperative Kenya, TNT SACCO mission, community SACCO"
       />
@@ -263,7 +263,7 @@ const AboutUs = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">Established Excellence</h3>
                       <p className="text-sm text-muted-foreground">
-                        Over 15 years of trusted financial services to the Kenyan community
+                        Over 48 years of trusted financial services to the Kenyan community
                       </p>
                     </div>
                   </div>
