@@ -10,19 +10,14 @@ export const Hero = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              {/* Slogan Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-navy to-yellow animate-fade-in">
-                <span className="text-sm lg:text-base font-semibold text-white">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-navy to-yellow bg-clip-text text-transparent">
                   Tujitegemee Kiuchumi
                 </span>
-              </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                Your Partner in
-                <span className="bg-gradient-to-r from-navy to-yellow bg-clip-text text-transparent">
-                  {" "}Financial Growth
-                </span>
               </h1>
+              <p className="text-xl lg:text-2xl text-muted-foreground font-medium">
+                Your Partner in Financial Growth
+              </p>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 TNT SACCO is a deposit-taking entity that empowers Kenyan citizens and businesses with comprehensive financial services including affordable credit and competitive savings accounts. Join thousands of members in building your financial future.
               </p>
