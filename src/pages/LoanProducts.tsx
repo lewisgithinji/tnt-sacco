@@ -1,54 +1,73 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, GraduationCap, Heart, CreditCard, Car, Building, Smartphone, TrendingUp, Briefcase, DollarSign, Truck, Wheat, Milk, Shield } from "lucide-react";
+import {
+  CheckCircle,
+  GraduationCap,
+  Heart,
+  CreditCard,
+  Car,
+  Building,
+  Smartphone,
+  TrendingUp,
+  Briefcase,
+  DollarSign,
+  Truck,
+  Wheat,
+  Milk,
+  Shield,
+} from "lucide-react";
 import { SEO } from "@/components/SEO";
 
 const LoanProducts = () => {
   const loanProducts = [
     {
       title: "Elimu Plus",
-      description: "A comprehensive facility that enables members for self-development through education advancement for themselves or their loved ones",
+      description:
+        "A comprehensive facility that enables members for self-development through education advancement for themselves or their loved ones",
       features: [
         "Longer repayment period for flexibility",
         "Covers education advancement costs",
         "Supports personal and family education goals",
-        "Competitive rates for education"
+        "Competitive rates for education",
       ],
-      icon: <GraduationCap className="h-8 w-8 text-navy" />
+      icon: <GraduationCap className="h-8 w-8 text-navy" />,
     },
     {
       title: "iPremium Loan",
-      description: "An emergency facility designed to address urgent financial needs such as medical expenses and funeral costs",
+      description:
+        "An emergency facility designed to address urgent financial needs such as medical expenses and funeral costs",
       features: [
         "Quick approval for emergency situations",
         "Covers medical and healthcare expenses",
         "Funeral and bereavement support",
-        "Flexible repayment terms"
+        "Flexible repayment terms",
       ],
-      icon: <Heart className="h-8 w-8 text-navy" />
+      icon: <Heart className="h-8 w-8 text-navy" />,
     },
     {
       title: "Emergency Express",
-      description: "An instant phone advance to finance budget deficits and discreet personal needs, available for Fosa salary earners",
+      description:
+        "An instant phone advance to finance budget deficits and discreet personal needs, available for Fosa salary earners",
       features: [
         "Instant phone-based application",
         "Quick budget deficit financing",
         "Available 24/7 through mobile platform",
-        "For members earning salary through Fosa"
+        "For members earning salary through Fosa",
       ],
-      icon: <Smartphone className="h-8 w-8 text-navy" />
+      icon: <Smartphone className="h-8 w-8 text-navy" />,
     },
     {
       title: "Elimu Bora",
-      description: "Education financing facility for members and their dependents covering fees and costs from primary to university level",
+      description:
+        "Education financing facility for members and their dependents covering fees and costs from primary to university level",
       features: [
         "Covers primary, secondary, college, and university education",
         "One-year flexible repayment period",
         "Supports both fees and educational materials",
-        "Available for members and dependents"
+        "Available for members and dependents",
       ],
-      icon: <GraduationCap className="h-8 w-8 text-navy" />
+      icon: <GraduationCap className="h-8 w-8 text-navy" />,
     },
     {
       title: "Tuliza Loan",
@@ -57,34 +76,35 @@ const LoanProducts = () => {
         "Mobile lending credit system",
         "Instant phone advance",
         "Budget deficit financing",
-        "Discreet personal needs"
+        "Discreet personal needs",
       ],
-      icon: <Smartphone className="h-8 w-8 text-navy" />
+      icon: <Smartphone className="h-8 w-8 text-navy" />,
     },
     {
       title: "Jipange Loan",
-      description: "Long-term FOSA loan specifically designed for newly employed teachers before they qualify for other facilities",
+      description:
+        "Long-term FOSA loan specifically designed for newly employed teachers before they qualify for other facilities",
       features: [
         "Long-term financing",
         "For newly employed teachers",
         "Bridge to other facilities",
-        "FOSA-based lending"
+        "FOSA-based lending",
       ],
-      icon: <Briefcase className="h-8 w-8 text-navy" />
+      icon: <Briefcase className="h-8 w-8 text-navy" />,
     },
     {
       title: "Asset Finance",
-      description: "Enables SACCO members to acquire productive assets including land, motor vehicles, motorcycles, and machinery",
+      description:
+        "Enables SACCO members to acquire productive assets including land, motor vehicles, motorcycles, and machinery",
       features: [
         "Land acquisition financing",
         "New and used motor vehicles",
         "Motorcycles and equipment",
-        "Productive business machinery"
+        "Productive business machinery",
       ],
-      icon: <Car className="h-8 w-8 text-yellow" />
-    }
+      icon: <Car className="h-8 w-8 text-yellow" />,
+    },
   ];
-
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -95,7 +115,7 @@ const LoanProducts = () => {
         keywords="TNT SACCO loans, education loans Kenya, emergency loans, personal loans, asset finance, business loans, agricultural loans, affordable credit, SACCO loans Kenya"
       />
       <Header />
-      
+
       <main className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -113,9 +133,7 @@ const LoanProducts = () => {
                     {product.icon}
                     <CardTitle className="text-xl">{product.title}</CardTitle>
                   </div>
-                  <CardDescription className="text-gray-600">
-                    {product.description}
-                  </CardDescription>
+                  <CardDescription className="text-gray-600">{product.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
@@ -130,7 +148,6 @@ const LoanProducts = () => {
               </Card>
             ))}
           </div>
-
 
           <div className="mt-16 grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-sm p-8">
@@ -160,14 +177,12 @@ const LoanProducts = () => {
 
           <div className="mt-12 bg-gradient-to-r from-navy to-yellow text-white rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">Ready to Apply?</h2>
-            <p className="text-lg mb-6">Visit any of our branches or contact us to start your credit application today.</p>
+            <p className="text-lg mb-6">
+              Visit any of our branches or contact us to start your credit application today.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <span className="bg-white text-navy px-6 py-3 rounded-lg font-semibold">
-                Email: loans@tntsacco.co.ke
-              </span>
-              <span className="bg-white text-navy px-6 py-3 rounded-lg font-semibold">
-                Call: +254 700 000 000 (final number will be provided later)
-              </span>
+              <span className="bg-white text-navy px-6 py-3 rounded-lg font-semibold">Email: loans@tntsacco.co.ke</span>
+              <span className="bg-white text-navy px-6 py-3 rounded-lg font-semibold">Call: +254 111 050 510</span>
             </div>
           </div>
         </div>
