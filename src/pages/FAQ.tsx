@@ -39,11 +39,7 @@ const FAQ = () => {
       faqs: [
         {
           question: "How do I open an account with TNT SACCO?",
-          answer: "Visit any of our branches with your original ID/Passport, passport photos, and the minimum share capital. Fill out the membership application form and complete the KYC process. Your account will be activated within 24 hours."
-        },
-        {
-          question: "What is the minimum amount to open an account?",
-          answer: "The minimum share capital contribution is KES 2,000. This amount earns dividends based on our annual performance and remains your share in the SACCO."
+          answer: "You can open an account by visiting any of our branches with your original ID/Passport, passport photos, and the minimum share capital. Fill out the membership application form and complete the KYC process. Alternatively, you can apply online by downloading the membership application form available on our website. Your account will be activated within 24 hours."
         },
         {
           question: "Can I have multiple accounts?",
@@ -101,19 +97,19 @@ const FAQ = () => {
       faqs: [
         {
           question: "What types of loans do you offer?",
-          answer: "We offer personal loans, vehicle loans, mortgage loans, education loans, business loans, and emergency loans. Each loan product has specific terms, rates, and requirements."
+          answer: "We offer Elimu Plus Loan, iPremium Loan, Elimu Bora, Jipange Loan, Asset Finance, Emergency Express, and Tuliza Loan. For more information on our loan products, visit the credit product page."
         },
         {
           question: "How much can I borrow?",
-          answer: "Your borrowing limit depends on your savings history, monthly income, guarantors, and loan type. Generally, you can borrow up to 3 times your savings or as determined by our credit assessment."
+          answer: "We don't apply the *3, 4, 5 multiplier factor. Your borrowing capacity is based on factors such as your savings history, share capital contribution, BOSA deposits contribution, credit history, FOSA deposits, and Debt to Savings ratio. For more information, review the credit appraisal article under Resources → Communication Hub."
         },
         {
           question: "What is the loan application process?",
-          answer: "Complete the loan application form, provide required documents (payslips, bank statements, guarantor forms), undergo credit assessment, and upon approval, the loan is disbursed to your account within 48 hours."
+          answer: "Most of our loans are applied through the online member's portal (Elimu Plus Loan, iPremium Loan, Elimu Bora Loan). Some loans can be applied through the SACCO USSD *477# (Tuliza Loan and Emergency Express). Others like Advance on Pension Lumpsum and Jipange Loan are applied physically. Loan disbursement timeline depends on the loan amount and type."
         },
         {
           question: "Do I need guarantors for all loans?",
-          answer: "Guarantor requirements vary by loan type and amount. Small personal loans may not require guarantors, while larger amounts typically require 1-2 guarantors who are also SACCO members."
+          answer: "No, you don't need guarantors for all loans. Mobile loans (Emergency Express, Tuliza) don't require guarantors. You can also guarantee yourself as long as your share deposits exceed the loan amount being applied. For loans requiring external guarantors, the number depends on the amount each guarantor is willing to commit towards the loan."
         }
       ]
     },
@@ -122,7 +118,7 @@ const FAQ = () => {
       faqs: [
         {
           question: "How do I access mobile banking?",
-          answer: "Download our mobile app from Google Play Store or Apple App Store. Register using your member number and follow the setup instructions. You can also use our USSD code *483# for quick transactions."
+          answer: "Access mobile banking through the SACCO's USSD *477# for quick transactions and services."
         },
         {
           question: "What services are available on mobile banking?",
@@ -143,7 +139,7 @@ const FAQ = () => {
         },
         {
           question: "Are there transaction fees?",
-          answer: "We maintain competitive transaction fees. M-Pesa deposits are free, while other transaction fees are outlined in our tariff guide available at branches and on our website."
+          answer: "M-Pesa deposits apply a fee depending on the amount being transacted. Other transaction fees are outlined in our tariff guide available at branches."
         },
         {
           question: "How long do transfers take?",

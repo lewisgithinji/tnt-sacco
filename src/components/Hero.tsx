@@ -39,7 +39,7 @@ export const Hero = () => {
                 <div className="text-sm text-muted-foreground">Assets Under Management</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-navy">15+</div>
+                <div className="text-2xl font-bold text-navy">48+</div>
                 <div className="text-sm text-muted-foreground">Years of Service</div>
               </div>
             </div>

@@ -79,44 +79,44 @@ const AboutUs = () => {
   const values = [
     {
       icon: Shield,
-      title: "Secure & Licensed",
+      title: "Integrity",
       description:
-        "Registered under the Co-operative Act and licensed by SASRA. We are insured by Kenya Deposit Insurance Corporation, ensuring your deposits are protected.",
+        "We uphold the highest standards of honesty, ethical conduct, and transparency in all our dealings with members, partners, and stakeholders.",
       color: "bg-navy/10 text-navy",
     },
     {
       icon: Users,
-      title: "Community Focused",
+      title: "Team Work",
       description:
-        "Owned and governed by our members for our members. Every decision we make prioritizes the welfare and growth of our cooperative community.",
+        "We foster collaboration and cooperation among our staff and members, working together towards shared goals and mutual success.",
       color: "bg-yellow/10 text-yellow",
     },
     {
-      icon: TrendingUp,
-      title: "Competitive Returns",
+      icon: Heart,
+      title: "Customer Focus",
       description:
-        "We offer attractive annual dividends on your savings and competitive interest rates on loans, maximizing value for our members.",
+        "We prioritize member needs and satisfaction in everything we do, ensuring our services and products truly serve our community.",
       color: "bg-navy/10 text-navy",
     },
     {
       icon: Award,
-      title: "Transparency",
+      title: "Competence and Professionalism",
       description:
-        "We maintain open communication with our members, providing clear information about all our services, fees, and performance.",
+        "We maintain high standards of expertise and service delivery through continuous learning, skill development, and professional excellence.",
       color: "bg-yellow/10 text-yellow",
     },
     {
       icon: Target,
-      title: "Innovation",
+      title: "Equity",
       description:
-        "We continuously invest in technology and modern banking solutions to provide convenient, efficient services to our members.",
+        "We ensure fair treatment and equal opportunities for all members, upholding justice and impartiality in our policies and practices.",
       color: "bg-navy/10 text-navy",
     },
     {
-      icon: Heart,
-      title: "Member-Centric",
+      icon: TrendingUp,
+      title: "Innovation",
       description:
-        "Every product and service we offer is designed with our members' needs and financial wellbeing at the forefront.",
+        "We embrace new technologies and creative solutions to continuously improve our services and meet the evolving needs of our members.",
       color: "bg-yellow/10 text-yellow",
     },
   ];
@@ -308,8 +308,7 @@ const AboutUs = () => {
                     <h2 className="text-2xl font-bold">Our Mission</h2>
                   </div>
                   <p className="text-white/90 leading-relaxed text-lg">
-                    To empower Kenyan citizens and businesses with comprehensive, accessible, and affordable financial
-                    services, fostering economic growth and financial security for all our members.
+                    To promote a savings culture and responsible credit use for economic empowerment of members.
                   </p>
                 </CardContent>
               </Card>
@@ -323,8 +322,7 @@ const AboutUs = () => {
                     <h2 className="text-2xl font-bold">Our Vision</h2>
                   </div>
                   <p className="text-white/90 leading-relaxed text-lg">
-                    To be the leading SACCO in Kenya, recognized for innovation, member satisfaction, and providing
-                    transformative financial solutions that uplift communities and create lasting prosperity.
+                    To be a world class financial service provider.
                   </p>
                 </CardContent>
               </Card>

@@ -30,10 +30,11 @@ export const LoanCalculator = () => {
   const totalInterest = totalAmount - parseFloat(loanAmount);
 
   const loanTypes = {
-    personal: { name: "Personal Loan", rate: "12%" },
-    mortgage: { name: "Mortgage", rate: "10%" },
-    vehicle: { name: "Vehicle Loan", rate: "14%" },
-    education: { name: "Education Loan", rate: "8%" }
+    elimuPlus: { name: "Elimu Plus Loan", rate: "12%" },
+    iPremium: { name: "iPremium Loan", rate: "14%" },
+    elimuBora: { name: "Elimu Bora", rate: "10%" },
+    jipange: { name: "Jipange Loan", rate: "12%" },
+    assetFinance: { name: "Asset Finance", rate: "13%" }
   };
 
   return (

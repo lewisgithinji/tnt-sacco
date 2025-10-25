@@ -124,15 +124,6 @@ const MediaCenter = () => {
       downloads: "2.8K"
     },
     {
-      id: 3,
-      title: "Press Release - New Mobile App",
-      description: "Official announcement of our enhanced mobile banking platform",
-      type: "PDF",
-      size: "1.1 MB",
-      date: "Jan 2025",
-      downloads: "567"
-    },
-    {
       id: 4,
       title: "Community Impact Report",
       description: "Our social responsibility and community development initiatives",
@@ -145,25 +136,11 @@ const MediaCenter = () => {
 
   const pressReleases = [
     {
-      id: 1,
-      title: "TNT SACCO Launches Revolutionary Mobile Banking App",
-      excerpt: "New app features biometric security, real-time notifications, and seamless user experience",
-      date: "January 15, 2025",
-      author: "Communications Department"
-    },
-    {
       id: 2,
       title: "Record Dividend Payout Announced - 12% Return to Members",
       excerpt: "Strong financial performance in 2024 enables highest dividend payout in SACCO history",
       date: "January 5, 2025",
       author: "Finance Department"
-    },
-    {
-      id: 3,
-      title: "TNT SACCO Expands with New Nakuru Branch",
-      excerpt: "Strategic expansion brings comprehensive financial services closer to Western Kenya members",
-      date: "December 28, 2024",
-      author: "Operations Team"
     }
   ];
 
