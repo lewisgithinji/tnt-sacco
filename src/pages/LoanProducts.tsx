@@ -18,6 +18,13 @@ import {
   Shield,
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import elimuPlusImg from "@/assets/loans/elimu-plus.jpg";
+import iPremiumImg from "@/assets/loans/ipremium.jpg";
+import emergencyExpressImg from "@/assets/loans/emergency-express.jpg";
+import elimuBoraImg from "@/assets/loans/elimu-bora.jpg";
+import assetFinanceImg from "@/assets/loans/asset-finance.jpg";
+import jipangeImg from "@/assets/loans/jipange.jpg";
+import tulizaImg from "@/assets/loans/tuliza.jpg";
 
 const LoanProducts = () => {
   const loanProducts = [
@@ -31,7 +38,9 @@ const LoanProducts = () => {
         "Supports personal and family education goals",
         "Competitive rates for education",
       ],
-      icon: <GraduationCap className="h-8 w-8 text-navy" />,
+      icon: <GraduationCap className="h-6 w-6 text-navy" />,
+      image: elimuPlusImg,
+      imageAlt: "Graduate celebrating achievement",
     },
     {
       title: "iPremium Loan",
@@ -43,7 +52,9 @@ const LoanProducts = () => {
         "Funeral and bereavement support",
         "Flexible repayment terms",
       ],
-      icon: <Heart className="h-8 w-8 text-navy" />,
+      icon: <Heart className="h-6 w-6 text-navy" />,
+      image: iPremiumImg,
+      imageAlt: "Emergency medical support",
     },
     {
       title: "Emergency Express",
@@ -55,7 +66,9 @@ const LoanProducts = () => {
         "Available 24/7 through mobile platform",
         "For members earning salary through Fosa",
       ],
-      icon: <Smartphone className="h-8 w-8 text-navy" />,
+      icon: <Smartphone className="h-6 w-6 text-navy" />,
+      image: emergencyExpressImg,
+      imageAlt: "Mobile phone emergency loan service",
     },
     {
       title: "Elimu Bora",
@@ -67,7 +80,9 @@ const LoanProducts = () => {
         "Supports both fees and educational materials",
         "Available for members and dependents",
       ],
-      icon: <GraduationCap className="h-8 w-8 text-navy" />,
+      icon: <GraduationCap className="h-6 w-6 text-navy" />,
+      image: elimuBoraImg,
+      imageAlt: "Students in classroom learning",
     },
     {
       title: "Tuliza Loan",
@@ -78,7 +93,9 @@ const LoanProducts = () => {
         "Budget deficit financing",
         "Discreet personal needs",
       ],
-      icon: <Smartphone className="h-8 w-8 text-navy" />,
+      icon: <Smartphone className="h-6 w-6 text-navy" />,
+      image: tulizaImg,
+      imageAlt: "Tuliza loan mobile service",
     },
     {
       title: "Jipange Loan",
@@ -90,7 +107,9 @@ const LoanProducts = () => {
         "Bridge to other facilities",
         "FOSA-based lending",
       ],
-      icon: <Briefcase className="h-8 w-8 text-navy" />,
+      icon: <Briefcase className="h-6 w-6 text-navy" />,
+      image: jipangeImg,
+      imageAlt: "Family moving into new home",
     },
     {
       title: "Asset Finance",
@@ -102,7 +121,9 @@ const LoanProducts = () => {
         "Motorcycles and equipment",
         "Productive business machinery",
       ],
-      icon: <Car className="h-8 w-8 text-yellow" />,
+      icon: <Car className="h-6 w-6 text-navy" />,
+      image: assetFinanceImg,
+      imageAlt: "Person with car keys for asset financing",
     },
   ];
 
@@ -125,22 +146,30 @@ const LoanProducts = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {loanProducts.map((product, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    {product.icon}
-                    <CardTitle className="text-xl">{product.title}</CardTitle>
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.imageAlt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-2xl font-bold text-white">{product.title}</h3>
                   </div>
-                  <CardDescription className="text-gray-600">{product.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
+                  <div className="absolute top-4 right-4 bg-yellow p-3 rounded-full shadow-lg">
+                    {product.icon}
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground mb-4">{product.description}</p>
                   <ul className="space-y-2">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-navy" />
-                        <span className="text-sm text-gray-700">{feature}</span>
+                        <CheckCircle className="h-4 w-4 text-navy flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
