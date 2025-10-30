@@ -1,5 +1,6 @@
 
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
+import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logoImage from "@/assets/tnt-sacco-logo-flat.png";
 
@@ -22,17 +23,50 @@ export const Footer = () => {
               Your trusted partner in building a secure financial future.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
-                <Facebook className="w-5 h-5" />
+              <a 
+                href="https://www.facebook.com/TntSacco" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
+                className="bg-gray-800 p-2 rounded-full hover:bg-[#1877F2] hover:scale-110 hover:rotate-6 transition-all duration-300 group"
+              >
+                <Facebook className="w-5 h-5 group-hover:animate-pulse" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a 
+                href="https://x.com/Tnt_Sacco" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Follow us on X"
+                className="bg-gray-800 p-2 rounded-full hover:bg-black hover:scale-110 hover:rotate-6 transition-all duration-300 group"
+              >
+                <FaXTwitter className="w-5 h-5 group-hover:animate-pulse" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-pink-600 transition-colors">
-                <Instagram className="w-5 h-5" />
+              <a 
+                href="https://www.instagram.com/tnt_sacco/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
+                className="bg-gray-800 p-2 rounded-full hover:bg-gradient-to-r hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737] hover:scale-110 hover:rotate-6 transition-all duration-300 group"
+              >
+                <Instagram className="w-5 h-5 group-hover:animate-pulse" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-blue-700 transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a 
+                href="https://www.youtube.com/@tntsacco1478" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Subscribe on YouTube"
+                className="bg-gray-800 p-2 rounded-full hover:bg-[#FF0000] hover:scale-110 hover:rotate-6 transition-all duration-300 group"
+              >
+                <Youtube className="w-5 h-5 group-hover:animate-pulse" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@tnt.sacco" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Follow us on TikTok"
+                className="bg-gray-800 p-2 rounded-full hover:bg-black hover:scale-110 hover:rotate-6 transition-all duration-300 group"
+              >
+                <FaTiktok className="w-5 h-5 text-white group-hover:animate-pulse" />
               </a>
             </div>
           </div>
