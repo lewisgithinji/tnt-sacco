@@ -387,7 +387,7 @@ export const articles: Article[] = [
     author: "Procurement Department",
     category: "Announcements",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&h=450&fit=crop&q=80",
+    image: "https://dwu32cgxelq1c.cloudfront.net/local_newspapers/sites/22/2016/10/borehole4.jpg",
     featured: false,
     cta: "Download tender documents and submit your application before November 22, 2025.",
     fullContent: `
