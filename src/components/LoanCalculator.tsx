@@ -8,17 +8,24 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 export const LoanCalculator = () => {
   const [loanAmount, setLoanAmount] = useState<string>("500000");
-  const [interestRate, setInterestRate] = useState<string>("12");
   const [loanTerm, setLoanTerm] = useState<string>("24");
-  const [loanType, setLoanType] = useState<string>("personal");
+  const [loanType, setLoanType] = useState<string>("elimu-plus");
+
+  // Loan types with monthly interest rates on reducing balance
+  const loanTypes = {
+    "elimu-plus": { name: "Elimu Plus", monthlyRate: 1.8 },
+    "ipremium": { name: "iPremium", monthlyRate: 2.0 },
+    "elimu-bora": { name: "Elimu Bora Loan", monthlyRate: 1.5 },
+    "jipange": { name: "Jipange Loan", monthlyRate: 1.6 }
+  };
 
   const calculateMonthlyPayment = () => {
     const principal = parseFloat(loanAmount);
-    const monthlyRate = parseFloat(interestRate) / 100 / 12;
+    const monthlyRate = loanTypes[loanType as keyof typeof loanTypes].monthlyRate / 100; // Convert to decimal
     const numberOfPayments = parseFloat(loanTerm);
 
     if (principal && monthlyRate && numberOfPayments) {
-      const monthlyPayment = (principal * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
+      const monthlyPayment = (principal * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) /
                             (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
       return monthlyPayment;
     }
@@ -28,14 +35,7 @@ export const LoanCalculator = () => {
   const monthlyPayment = calculateMonthlyPayment();
   const totalAmount = monthlyPayment * parseFloat(loanTerm);
   const totalInterest = totalAmount - parseFloat(loanAmount);
-
-  const loanTypes = {
-    elimuPlus: { name: "Elimu Plus Loan", rate: "12%" },
-    iPremium: { name: "iPremium Loan", rate: "14%" },
-    elimuBora: { name: "Elimu Bora", rate: "10%" },
-    jipange: { name: "Jipange Loan", rate: "12%" },
-    assetFinance: { name: "Asset Finance", rate: "13%" }
-  };
+  const currentMonthlyRate = loanTypes[loanType as keyof typeof loanTypes].monthlyRate;
 
   return (
     <section id="loans" className="py-20 bg-white">
@@ -45,7 +45,7 @@ export const LoanCalculator = () => {
             Loan Calculator
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Calculate your monthly payments and see how much you can borrow 
+            Calculate your monthly payments and see how much you can borrow
             with our interactive loan calculator.
           </p>
         </div>
@@ -70,7 +70,7 @@ export const LoanCalculator = () => {
                   <SelectContent>
                     {Object.entries(loanTypes).map(([key, type]) => (
                       <SelectItem key={key} value={key}>
-                        {type.name} - {type.rate}
+                        {type.name}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -88,21 +88,6 @@ export const LoanCalculator = () => {
                   onChange={(e) => setLoanAmount(e.target.value)}
                   className="h-12 text-lg"
                   placeholder="500,000"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="interestRate" className="text-base font-medium mb-2 block">
-                  Interest Rate (% per annum)
-                </Label>
-                <Input
-                  id="interestRate"
-                  type="number"
-                  value={interestRate}
-                  onChange={(e) => setInterestRate(e.target.value)}
-                  className="h-12 text-lg"
-                  placeholder="12"
-                  step="0.1"
                 />
               </div>
 
@@ -166,7 +151,7 @@ export const LoanCalculator = () => {
                     </div>
                     <div>
                       <span className="text-gray-600">Interest Rate:</span>
-                      <span className="font-medium ml-2">{interestRate}% p.a.</span>
+                      <span className="font-medium ml-2">{currentMonthlyRate}% per month</span>
                     </div>
                     <div>
                       <span className="text-gray-600">Term:</span>
@@ -184,6 +169,7 @@ export const LoanCalculator = () => {
             <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
               <h4 className="font-semibold text-yellow-800 mb-2">Important Notes</h4>
               <ul className="text-sm text-yellow-700 space-y-1">
+                <li>• Interest rates are calculated on reducing balance method</li>
                 <li>• This is an estimate. Actual rates may vary based on your credit profile</li>
                 <li>• Processing fees and insurance may apply</li>
                 <li>• All loans subject to approval and terms & conditions</li>

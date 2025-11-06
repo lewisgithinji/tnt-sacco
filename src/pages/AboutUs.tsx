@@ -161,7 +161,18 @@ const AboutUs = () => {
                 building a secure financial future.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/downloads/membership-application.pdf';
+                    link.download = 'TNT-SACCO-Membership-Application.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                >
                   Become a Member
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -476,7 +487,18 @@ const AboutUs = () => {
               member-focused cooperative that puts your financial wellbeing first.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-yellow text-navy hover:bg-yellow/90 font-semibold px-8">
+              <Button
+                size="lg"
+                className="bg-yellow text-navy hover:bg-yellow/90 font-semibold px-8"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/downloads/membership-application.pdf';
+                  link.download = 'TNT-SACCO-Membership-Application.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
                 <Users className="w-5 h-5 mr-2" />
                 Become a Member
               </Button>
