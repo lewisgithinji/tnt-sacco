@@ -380,6 +380,111 @@ export const articles: Article[] = [
   },
   {
     id: 11,
+    title: "Tender Notice: Prequalification of Borehole Drilling Contractors",
+    slug: "tender-prequalification-borehole-drilling",
+    excerpt: "Trans-National Times DT SACCO Limited invites applications from interested, eligible, and qualified firms for prequalification to undertake borehole drilling, testing, installation of submersible pumps, and related works. Closing date: November 22, 2025.",
+    date: "November 6, 2025",
+    author: "Procurement Department",
+    category: "Announcements",
+    readTime: "4 min read",
+    image: "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&h=450&fit=crop&q=80",
+    featured: false,
+    cta: "Download tender documents and submit your application before November 22, 2025.",
+    fullContent: `
+      <p>Trans-National Times DT SACCO Limited is pleased to announce the opening of prequalification for borehole drilling contractors. This tender presents an opportunity for qualified firms with proven experience in water resource development and borehole construction projects to participate in our upcoming water infrastructure development initiative.</p>
+
+      <h3>Tender Information</h3>
+      <ul>
+        <li><strong>Tender Reference:</strong> TNT/SACCO/TENDER/2025/001</li>
+        <li><strong>Category:</strong> Construction & Infrastructure</li>
+        <li><strong>Publication Date:</strong> November 6, 2025</li>
+        <li><strong>Closing Date:</strong> November 22, 2025</li>
+        <li><strong>Status:</strong> Open</li>
+      </ul>
+
+      <h3>Scope of Work</h3>
+      <p>The prequalification is open to contractors with proven experience in the following areas:</p>
+      <ul>
+        <li>Borehole drilling and exploration</li>
+        <li>Borehole testing and assessment</li>
+        <li>Installation of submersible pumps</li>
+        <li>Water quality testing and treatment</li>
+        <li>Related water infrastructure works</li>
+      </ul>
+
+      <h3>Eligibility Criteria</h3>
+      <p>Interested firms must meet the following minimum requirements:</p>
+      <ul>
+        <li><strong>Registration:</strong> Must be a registered company/firm in Kenya with valid business registration documents</li>
+        <li><strong>Experience:</strong> Minimum 5 years demonstrated experience in borehole drilling and related works</li>
+        <li><strong>Tax Compliance:</strong> Valid Tax Compliance Certificate from KRA</li>
+        <li><strong>Incorporation:</strong> Certificate of Registration/Incorporation</li>
+        <li><strong>Financial Capability:</strong> Proof of financial capability and access to credit facilities</li>
+        <li><strong>References:</strong> Evidence of completed similar projects (at least 3 references)</li>
+        <li><strong>Personnel:</strong> Qualified and experienced technical personnel</li>
+        <li><strong>Equipment:</strong> Appropriate drilling equipment and machinery</li>
+        <li><strong>Licenses:</strong> Valid licenses and permits for borehole drilling operations</li>
+      </ul>
+
+      <h3>Estimated Value</h3>
+      <p>The estimated value will be determined based on project scope and specifications. Detailed information will be provided in the tender documents.</p>
+
+      <h3>How to Apply</h3>
+      <ol>
+        <li><strong>Download Documents:</strong> Download the complete prequalification document from our <a href="/tenders">Tenders page</a></li>
+        <li><strong>Review Requirements:</strong> Carefully review all eligibility criteria and submission requirements</li>
+        <li><strong>Prepare Application:</strong> Compile all required documents and information as specified in the tender document</li>
+        <li><strong>Submit Application:</strong> Submit your application in a sealed envelope clearly marked with the tender reference number</li>
+      </ol>
+
+      <h3>Submission Guidelines</h3>
+      <ul>
+        <li>All tender documents must be submitted before the closing date and time specified</li>
+        <li>Submissions should be made in sealed envelopes clearly marked with the tender reference number: <strong>TNT/SACCO/TENDER/2025/001</strong></li>
+        <li>Late submissions will not be accepted under any circumstances</li>
+        <li>Only prequalified firms will be invited to participate in the main tender process</li>
+      </ul>
+
+      <h3>Important Dates</h3>
+      <table>
+        <tr>
+          <td><strong>Publication Date</strong></td>
+          <td>November 6, 2025</td>
+        </tr>
+        <tr>
+          <td><strong>Closing Date</strong></td>
+          <td>November 22, 2025</td>
+        </tr>
+        <tr>
+          <td><strong>Days Remaining</strong></td>
+          <td>16 days</td>
+        </tr>
+      </table>
+
+      <h3>Contact Information</h3>
+      <p>For inquiries or clarifications regarding this tender, please contact:</p>
+      <p><strong>Procurement Office</strong><br>
+      Email: <a href="mailto:procurement@tntsacco.co.ke">procurement@tntsacco.co.ke</a><br>
+      Phone: +254 111 050 510<br>
+      Office: Trans-National Times DT SACCO Limited, Teachers Plaza, Ground Floor, Kitale</p>
+
+      <h3>Transparency and Fairness</h3>
+      <p>TNT SACCO is committed to transparent and competitive procurement processes. All applications will be evaluated fairly based on the stated eligibility criteria. We encourage all qualified firms to submit their applications.</p>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
+        <p class="font-semibold text-yellow-800">⏰ Time-Sensitive Notice</p>
+        <p class="text-yellow-700">This tender closes on November 22, 2025. Ensure you download the complete tender documents and submit your application well before the deadline.</p>
+      </div>
+
+      <p class="text-center mt-8">
+        <a href="/tenders" class="inline-block bg-navy text-white px-8 py-3 rounded-lg hover:bg-navy/90 transition-colors font-semibold">
+          View Full Tender Details & Download Documents
+        </a>
+      </p>
+    `
+  },
+  {
+    id: 12,
     title: "TNT Last Expense Insurance: Financial Protection for Your Family",
     slug: "tnt-last-expense-insurance",
     excerpt: "Comprehensive funeral expense coverage with KES 200 monthly contribution. Benefit from loan waivers, deposit refunds (2x), and funeral riders up to KES 50,000 for principal members.",
