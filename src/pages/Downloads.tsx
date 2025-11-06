@@ -13,6 +13,7 @@ const Downloads = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [downloadCounts, setDownloadCounts] = useState<Record<string, number>>({
+    "prequalification-borehole": 0,
     "alternate-guarantee": 245,
     "atm-pin-reset-82": 189,
     "authority-recover-5": 156,
@@ -27,6 +28,15 @@ const Downloads = () => {
   });
 
   const downloadForms = [
+    {
+      id: "prequalification-borehole",
+      title: "Prequalification Tender Document - Borehole",
+      category: "Tenders",
+      description: "Prequalification tender document for borehole drilling services. Download and submit your application.",
+      size: "2.5 MB",
+      uploadDate: "Nov 22, 2024",
+      keywords: ["prequalification", "tender", "borehole", "drilling", "application"]
+    },
     {
       id: "alternate-guarantee",
       title: "Alternate Guarantee Form",
@@ -128,19 +138,27 @@ const Downloads = () => {
     }
   ];
 
-  const categories = ["all", "Membership", "Banking", "Loans", "Insurance"];
+  const categories = ["all", "Tenders", "Membership", "Banking", "Loans", "Insurance"];
 
   const handleDownload = (formId: string) => {
     setDownloadCounts(prev => ({
       ...prev,
       [formId]: (prev[formId] || 0) + 1
     }));
-    
+
     // Create download link for PDF
-    const pdfUrl = `/downloads/${formId}.pdf`;
+    let pdfUrl = `/downloads/${formId}.pdf`;
+    let fileName = `${formId}.pdf`;
+
+    // Special handling for prequalification document with actual file name
+    if (formId === 'prequalification-borehole') {
+      pdfUrl = '/PREQUALIFICATION-Borehole-22112025.pdf';
+      fileName = 'PREQUALIFICATION-Borehole-22112025.pdf';
+    }
+
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = `${formId}.pdf`;
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
