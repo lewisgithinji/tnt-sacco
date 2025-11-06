@@ -11,6 +11,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import Downloads from "./pages/Downloads";
+import Tenders from "./pages/Tenders";
 import FAQ from "./pages/FAQ";
 // Temporarily disabled - to be restored later
 // import ManagementStaff from "./pages/ManagementStaff";
@@ -38,6 +39,7 @@ const App = () => (
           <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/tenders" element={<Tenders />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/faq" element={<FAQ />} />
           {/* Temporarily disabled - to be restored later */}

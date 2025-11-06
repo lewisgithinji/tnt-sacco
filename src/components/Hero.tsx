@@ -116,41 +116,25 @@ export const Hero = () => {
             </div>
 
             {/* Paybill Info Card */}
-            <div className="bg-gradient-to-br from-navy to-navy/90 rounded-2xl p-5 shadow-lg border-2 border-yellow/20">
-              <div className="flex items-start space-x-3">
-                <div className="bg-yellow/20 p-2 rounded-full flex-shrink-0">
-                  <svg className="w-6 h-6 text-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-gradient-to-br from-navy to-navy/90 rounded-2xl p-6 shadow-lg border-2 border-yellow/20">
+              <div className="flex items-start space-x-4">
+                <div className="bg-yellow/20 p-3 rounded-full flex-shrink-0">
+                  <svg className="w-8 h-8 text-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base font-semibold text-white mb-2">Pay via M-PESA</h3>
-                  <div className="space-y-1.5">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-white/70">Paybill Number:</span>
-                      <span className="text-lg font-bold text-yellow">533888</span>
+                  <h3 className="text-xl font-semibold text-white mb-3">Pay via M-PESA</h3>
+                  <div className="space-y-3">
+                    <div className="text-center py-2">
+                      <span className="text-base text-white/80 block mb-2">Paybill Number</span>
+                      <span className="text-5xl font-bold text-yellow tracking-wider">533888</span>
                     </div>
-                    <div className="flex items-start justify-between">
-                      <span className="text-xs text-white/70">Account No:</span>
-                      <span className="text-xs font-semibold text-white text-right">Your ID or<br/>Membership No.</span>
+                    <div className="flex items-center justify-between border-t border-white/20 pt-3">
+                      <span className="text-sm text-white/80">Account Number:</span>
+                      <span className="text-base font-semibold text-white">Your ID or Membership No.</span>
                     </div>
                   </div>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-yellow text-yellow hover:bg-yellow hover:text-navy text-xs w-full mt-3 font-semibold"
-                    onClick={() => {
-                      navigator.clipboard.writeText('533888');
-                      const btn = document.activeElement as HTMLButtonElement;
-                      const originalText = btn.textContent;
-                      btn.textContent = 'Copied!';
-                      setTimeout(() => {
-                        btn.textContent = originalText;
-                      }, 2000);
-                    }}
-                  >
-                    Copy Paybill
-                  </Button>
                 </div>
               </div>
             </div>

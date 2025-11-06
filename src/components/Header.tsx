@@ -31,6 +31,7 @@ export const Header = () => {
   ];
 
   const resourcesDropdown = [
+    { name: "Tenders", href: "/tenders" },
     { name: "Downloads", href: "/downloads" },
     { name: "FAQ", href: "/faq" },
     { name: "Communication Hub", href: "/communication-hub" },
