@@ -464,7 +464,7 @@ export const articles: Article[] = [
       <h3>Contact Information</h3>
       <p>For inquiries or clarifications regarding this tender, please contact:</p>
       <p><strong>Procurement Office</strong><br>
-      Email: <a href="mailto:procurement@tntsacco.co.ke">procurement@tntsacco.co.ke</a><br>
+      Email: <a href="mailto:info@tntsacco.co.ke">info@tntsacco.co.ke</a><br>
       Phone: +254 111 050 510<br>
       Office: Trans-National Times DT SACCO Limited, Teachers Plaza, Ground Floor, Kitale</p>
 

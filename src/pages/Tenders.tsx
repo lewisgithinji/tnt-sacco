@@ -364,7 +364,7 @@ const Tenders = () => {
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-              <span>For inquiries, contact our procurement office at procurement@tntsacco.co.ke</span>
+              <span>For inquiries, contact our procurement office at info@tntsacco.co.ke</span>
             </li>
           </ul>
         </div>
