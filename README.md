@@ -110,8 +110,8 @@ Optional:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/lewisgithinji/kenyan-sacco-portal.git
-cd kenyan-sacco-portal
+git clone https://github.com/lewisgithinji/tnt-sacco.git
+cd tnt-sacco
 ```
 
 ### 2. Install Dependencies
@@ -189,8 +189,8 @@ npm run lint
 
 ## 📁 Project Structure
 
-```
-kenyan-sacco-portal/
+```text
+tnt-sacco/
 ├── public/                 # Static assets
 │   ├── favicon.svg
 │   └── images/
