@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, Tag, ExternalLink, Share2, User } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
+import DOMPurify from "dompurify";
 
 const ArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -125,7 +126,7 @@ const ArticlePage = () => {
           <article className="prose prose-lg max-w-none mb-12">
             <div
               className="text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: article.fullContent }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.fullContent) }}
             />
           </article>
 
@@ -137,7 +138,7 @@ const ArticlePage = () => {
                   <h3 className="text-lg font-semibold text-navy mb-2">💡 Take Action Today</h3>
                   <p className="text-gray-700">{article.cta}</p>
                 </div>
-                <Link to="/deposit-products">
+                <Link to={article.category === "Announcements" ? "/tenders" : "/deposit-products"}>
                   <Button className="bg-navy hover:bg-navy/90 text-white px-6 py-2 rounded-lg transition-colors font-medium inline-flex items-center gap-2 whitespace-nowrap">
                     Get Started
                     <ExternalLink className="h-4 w-4" />
