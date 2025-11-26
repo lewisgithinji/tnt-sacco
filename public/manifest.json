@@ -1,0 +1,57 @@
+{
+  "name": "TNT SACCO - Trans-National Times DT SACCO Limited",
+  "short_name": "TNT SACCO",
+  "description": "Your Partner in Financial Growth. Competitive savings, affordable loans, and comprehensive financial services for Kenyan families and businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["finance", "business"],
+  "lang": "en-KE",
+  "dir": "ltr",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Loan Products",
+      "short_name": "Loans",
+      "description": "View available loan products",
+      "url": "/loan-products",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Deposit Products",
+      "short_name": "Savings",
+      "description": "View savings and deposit accounts",
+      "url": "/deposit-products",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Tenders",
+      "short_name": "Tenders",
+      "description": "View current tenders",
+      "url": "/tenders",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}
