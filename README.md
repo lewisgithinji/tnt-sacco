@@ -6,9 +6,36 @@
 [![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-Proprietary-red)]()
 
-Professional corporate website for **Trans-National Times DT SACCO Limited** (TNT SACCO), a deposit-taking SACCO offering competitive savings accounts, affordable loans, mortgages, and comprehensive financial services to Kenyan families and businesses.
+## Overview
+
+Enterprise-grade corporate website for **Trans-National Times DT SACCO Limited** (TNT SACCO), a Kenyan deposit-taking SACCO. This production-ready React application features comprehensive financial services showcase, interactive loan calculator, tender management system, and advanced security implementation for the financial services sector.
+
+### 🎯 Project Highlights
+
+- **Financial Platform**: Complete product showcase for savings accounts, loans, mortgages, and insurance services with interactive loan calculator
+- **Advanced Features**: Tender management system with document tracking, news/announcements hub, media center, and downloads portal
+- **Enterprise Security**: DOMPurify XSS protection, security headers (HSTS, CSP), zero npm vulnerabilities, and WCAG accessibility compliance
+- **Modern Stack**: React 18.3, TypeScript 5.5, Vite 7.2, shadcn/ui, Leaflet/Mapbox mapping, TanStack Query for state management
+- **Performance**: Code splitting, lazy loading, asset optimization, and SEO with structured data
+
+This project demonstrates expertise in React development, financial services platforms, interactive calculators, security implementation, mapping integration, and production-grade TypeScript architecture.
 
 🌐 **Live Site**: [https://www.tntsacco.co.ke](https://www.tntsacco.co.ke)
+
+### 💼 Key Technologies
+
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | React 18.3, TypeScript 5.5, Vite 7.2 |
+| **UI Framework** | Tailwind CSS 3.4, shadcn/ui, Radix UI |
+| **State Management** | TanStack Query 5.56, React Hook Form 7.53 |
+| **Routing** | React Router 6.26 |
+| **Forms & Validation** | React Hook Form, Zod 3.23 |
+| **Maps** | Leaflet 1.9, React Leaflet 4.2, Mapbox GL 3.14 |
+| **Security** | DOMPurify 3.3, Security Headers |
+| **Data Visualization** | Recharts |
+| **SEO** | React Helmet Async 2.0 |
+| **Development** | ESLint 9.9, TypeScript ESLint 8.0 |
 
 ---
 
