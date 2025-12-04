@@ -2,6 +2,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Play, Download, Calendar, Eye, Image as ImageIcon, Video, FileText } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -112,7 +113,10 @@ const MediaCenter = () => {
       type: "PDF",
       size: "3.2 MB",
       date: "Jan 2025",
-      downloads: "1.2K"
+      downloads: "1.2K",
+      // file available in public/documents
+      url: "/documents/TNT-sacco-products-bronchure-2025.pdf",
+      fileName: "TNT-sacco-products-bronchure-2025.pdf"
     },
     {
       id: 2,
@@ -131,8 +135,77 @@ const MediaCenter = () => {
       size: "4.7 MB",
       date: "Nov 2024",
       downloads: "892"
+    },
+    {
+      id: 3,
+      title: "TNT SACCO BY LAWS 2022",
+      description: "The official TNT SACCO By-Laws (2022 edition).",
+      type: "PDF",
+      size: "4.0 MB",
+      date: "2022",
+      downloads: "0",
+      // use exact filename from public/documents (case-sensitive on some hosts)
+      url: "/documents/TNT-SACCO-BYLAWS-2022.pdf",
+      fileName: "TNT-SACCO-BYLAWS-2022.pdf"
     }
   ];
+
+  // Helper to parse existing downloads strings like "1.2K" or "892" into numbers
+  const parseDownloads = (s: string | number | undefined) => {
+    if (s === undefined || s === null) return 0;
+    if (typeof s === "number") return s;
+    const str = String(s).trim();
+    if (/k$/i.test(str)) {
+      return Math.round(parseFloat(str.replace(/k$/i, "")) * 1000);
+    }
+    const n = parseInt(str.replace(/,/g, ""), 10);
+    return Number.isNaN(n) ? 0 : n;
+  };
+
+  const formatDisplay = (n: number) => {
+    if (n >= 1000) {
+      return (n / 1000).toFixed(n % 1000 === 0 ? 0 : 1) + "K";
+    }
+    return String(n);
+  };
+
+  const STORAGE_KEY = "documentsDownloadCounts";
+
+  // use fileName (or title fallback) as the key for shared persistence
+  const [downloadCounts, setDownloadCounts] = useState<Record<string, number>>(() => {
+    const map: Record<string, number> = {};
+    documents.forEach((d) => {
+      const key = (d as any).fileName || d.title;
+      map[key] = parseDownloads((d as any).downloads);
+    });
+
+    try {
+      if (typeof window !== "undefined") {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const stored = JSON.parse(raw) as Record<string, number>;
+          Object.keys(stored).forEach((k) => {
+            map[k] = stored[k];
+          });
+        }
+      }
+    } catch (e) {
+      // ignore storage errors
+    }
+
+    return map;
+  });
+
+  // Persist counts to localStorage whenever they change
+  useEffect(() => {
+    try {
+      if (typeof window !== "undefined") {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(downloadCounts));
+      }
+    } catch (e) {
+      // ignore storage set errors
+    }
+  }, [downloadCounts]);
 
   const pressReleases = [
     {
@@ -465,11 +538,30 @@ const MediaCenter = () => {
                         
                         <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                           <span>Size: {doc.size}</span>
-                          <span>Downloads: {doc.downloads}</span>
+                          <span>Downloads: {formatDisplay(downloadCounts[doc.id] || 0)}</span>
                           <span>{doc.date}</span>
                         </div>
-                        
-                        <Button className="w-full bg-green-600 hover:bg-green-700">
+
+                        <Button
+                          className="w-full bg-green-600 hover:bg-green-700"
+                          onClick={() => {
+                            const url = (doc as any).url;
+                            if (url) {
+                              // increment local counter
+                              setDownloadCounts((prev) => ({
+                                ...prev,
+                                [doc.id]: (prev[doc.id] || 0) + 1,
+                              }));
+
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.download = (doc as any).fileName || '';
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                            }
+                          }}
+                        >
                           <Download className="w-4 h-4 mr-2" />
                           Download
                         </Button>

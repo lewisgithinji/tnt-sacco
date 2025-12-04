@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 
 const Downloads = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [downloadCounts, setDownloadCounts] = useState<Record<string, number>>({
+  // initial download counts (legacy values) keyed by form id
+  const legacyCounts: Record<string, number> = {
     "alternate-guarantee": 245,
     "atm-pin-reset-82": 189,
     "authority-recover-5": 156,
@@ -24,7 +25,42 @@ const Downloads = () => {
     "pin-reset-26": 234,
     "share-loan-adjustment-12": 178,
     "insurance-90": 145
+  };
+
+  const STORAGE_KEY = "documentsDownloadCounts";
+
+  // downloadCounts keyed by fileName (e.g., membership-application.pdf)
+  const [downloadCounts, setDownloadCounts] = useState<Record<string, number>>(() => {
+    const map: Record<string, number> = {};
+    // seed from legacyCounts mapped to file names
+    Object.keys(legacyCounts).forEach((id) => {
+      map[`${id}.pdf`] = legacyCounts[id];
+    });
+
+    try {
+      if (typeof window !== "undefined") {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const stored = JSON.parse(raw) as Record<string, number>;
+          Object.keys(stored).forEach((k) => (map[k] = stored[k]));
+        }
+      }
+    } catch (e) {
+      // ignore
+    }
+
+    return map;
   });
+
+  useEffect(() => {
+    try {
+      if (typeof window !== "undefined") {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(downloadCounts));
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, [downloadCounts]);
 
   const downloadForms = [
     {
@@ -131,14 +167,14 @@ const Downloads = () => {
   const categories = ["all", "Membership", "Banking", "Loans", "Insurance"];
 
   const handleDownload = (formId: string) => {
+    const fileName = `${formId}.pdf`;
     setDownloadCounts(prev => ({
       ...prev,
-      [formId]: (prev[formId] || 0) + 1
+      [fileName]: (prev[fileName] || 0) + 1
     }));
 
     // Create download link for PDF
     const pdfUrl = `/downloads/${formId}.pdf`;
-    const fileName = `${formId}.pdf`;
 
     const link = document.createElement('a');
     link.href = pdfUrl;
@@ -240,7 +276,7 @@ const Downloads = () => {
                             {form.category}
                           </span>
                           <span className="text-xs text-muted-foreground">
-                            {downloadCounts[form.id]} downloads
+                            {(downloadCounts[`${form.id}.pdf`] || 0).toLocaleString()} downloads
                           </span>
                         </div>
                       </div>
